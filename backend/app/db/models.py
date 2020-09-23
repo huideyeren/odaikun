@@ -4,6 +4,13 @@ from .session import Base
 
 
 class User(Base):
+    """
+    User [summary]
+
+    Args:
+        Base ([type]): [description]
+    """
+
     __tablename__ = "user"
 
     id = Column(Integer, primary_key=True, index=True)

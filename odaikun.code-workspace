@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "frontend"
+		},
+		{
+			"path": "backend"
+		}
+	],
+	"settings": {
+		"appService.enablePythonRemoteDebugging": true,
+		"python.languageServer": "Pylance",
+		"eslint.alwaysShowStatus": true,
+		"monorepoWorkspace.folders.regex.tools": "^tool|script|scripts|util"
+	}
+}
