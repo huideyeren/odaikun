@@ -14,6 +14,12 @@ Base = declarative_base()
 
 # Dependency
 def get_db():
+    """
+    get_db DBに接続する
+
+    Yields:
+        sessionmaker: DBのセッション
+    """    
     db = SessionLocal()
     try:
         yield db
