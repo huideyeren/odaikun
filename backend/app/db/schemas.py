@@ -7,7 +7,7 @@ class UserBase(BaseModel):
     UserBase ユーザーの基礎的な情報
 
     Args:
-        BaseModel ([type]): [description]
+        BaseModel (BaseModel): Pydanticでモデルのベースとなるクラス
 
     Attributes:
         email (str): ユーザーのメールアドレス
@@ -34,32 +34,96 @@ class UserOut(UserBase):
 
 
 class UserCreate(UserBase):
-    
+    """
+    UserCreate ユーザーを作成するときの情報
+
+    Args:
+        UserBase (UserBase): ユーザーの基礎的な情報
+
+    Attributes:
+        password (str): パスワード
+    """
     password: str
 
     class Config:
+        """
+        UserCreateクラスの設定
+
+        Attributes:
+            orm_mode (bool): ORMモードか
+        """
         orm_mode = True
 
 
 class UserEdit(UserBase):
+    """
+    UserEdit ユーザーを編集するときの情報
+
+    Args:
+        UserBase (UserBase): ユーザーの基礎的な情報
+
+    Attributes:
+        password (t.Optional[str]): パスワード
+    """
     password: t.Optional[str] = None
 
     class Config:
+        """
+        UserEditクラスの設定
+
+        Attributes:
+            orm_mode (bool): ORMモードか
+        """
         orm_mode = True
 
 
 class User(UserBase):
+    """
+    User ユーザーの情報
+
+    Args:
+        UserBase (UserBase): ユーザーの基礎的な情報
+    
+    Attributes:
+        id (int): ユーザーID
+    """    
     id: int
 
     class Config:
+        """
+        Userクラスの設定
+
+        Attributes:
+            orm_mode (bool): ORMモードか
+        """
         orm_mode = True
 
 
 class Token(BaseModel):
+    """
+    Token JWTトークン
+
+    Args:
+        BaseModel (BaseModel): Pydanticでモデルのベースとなるクラス
+
+    Attributes:
+        access_token (str): アクセストークン本体
+        token_type (str): アクセストークンの型情報
+    """
     access_token: str
     token_type: str
 
 
 class TokenData(BaseModel):
+    """
+    TokenData JWTトークンに格納するデータ
+
+    Args:
+        BaseModel (BaseModel): Pydanticでモデルのベースとなるクラス
+
+    Attributes:
+        email (str): メールアドレス
+        permissions (str): 権限を表す文字列
+    """
     email: str = None
     permissions: str = "user"
