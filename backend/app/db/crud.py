@@ -6,7 +6,20 @@ from . import models, schemas
 from app.core.security import get_password_hash
 
 
-def get_user(db: Session, user_id: int):
+def get_user(db: Session, user_id: int) -> schemas.UserBase:
+    """
+    get_user ユーザー情報を取得する
+
+    Args:
+        db (Session): データベース接続
+        user_id (int): ユーザーのID
+
+    Raises:
+        HTTPException: ユーザーが見つからない旨のHTTP 404 エラー
+
+    Returns:
+        schemas.UserBase: ユーザー情報
+    """
     user = db.query(models.User).filter(models.User.id == user_id).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
@@ -14,16 +27,47 @@ def get_user(db: Session, user_id: int):
 
 
 def get_user_by_email(db: Session, email: str) -> schemas.UserBase:
+    """
+    get_user_by_email 指定したメールアドレスを持つユーザー情報を取得する
+
+    Args:
+        db (Session): データベース接続
+        email (str): メールアドレス
+
+    Returns:
+        schemas.UserBase: [description]
+    """
     return db.query(models.User).filter(models.User.email == email).first()
 
 
 def get_users(
     db: Session, skip: int = 0, limit: int = 100
 ) -> t.List[schemas.UserOut]:
+    """
+    get_users 複数のユーザー情報を取得する
+
+    Args:
+        db (Session): データベース接続
+        skip (int, optional): スキップする件数。デフォルトは0件
+        limit (int, optional): 最大件数。デフォルトは100件
+
+    Returns:
+        t.List[schemas.UserOut]: ユーザー情報のリスト
+    """    
     return db.query(models.User).offset(skip).limit(limit).all()
 
 
-def create_user(db: Session, user: schemas.UserCreate):
+def create_user(db: Session, user: schemas.UserCreate) -> models.User:
+    """
+    create_user ユーザーを作成する
+
+    Args:
+        db (Session): データベース接続
+        user (schemas.UserCreate): 作成するユーザーの情報
+
+    Returns:
+        models.User: 作成されるユーザーの情報
+    """
     hashed_password = get_password_hash(user.password)
     db_user = models.User(
         first_name=user.first_name,
@@ -39,7 +83,20 @@ def create_user(db: Session, user: schemas.UserCreate):
     return db_user
 
 
-def delete_user(db: Session, user_id: int):
+def delete_user(db: Session, user_id: int) -> schemas.UserBase:
+    """
+    delete_user ユーザー情報を削除する
+
+    Args:
+        db (Session): データベース接続
+        user_id (int): 削除するユーザーのID
+
+    Raises:
+        HTTPException: ユーザーが見つからない旨のHTTP 404 エラー
+
+    Returns:
+        schemas.UserBase: 削除されるユーザー情報
+    """
     user = get_user(db, user_id)
     if not user:
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail="User not found")
@@ -51,6 +108,20 @@ def delete_user(db: Session, user_id: int):
 def edit_user(
     db: Session, user_id: int, user: schemas.UserEdit
 ) -> schemas.User:
+    """
+    edit_user [summary]
+
+    Args:
+        db (Session): データベース接続
+        user_id (int): 編集するユーザーのID
+        user (schemas.UserEdit): 編集するユーザーのデータ
+
+    Raises:
+        HTTPException: ユーザーが見つからない旨のHTTP 404 エラー
+
+    Returns:
+        schemas.User: 編集されるユーザー情報
+    """
     db_user = get_user(db, user_id)
     if not db_user:
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail="User not found")
