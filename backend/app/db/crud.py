@@ -2,6 +2,8 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 import typing as t
 
+from sqlalchemy.orm import session
+
 from . import models, schemas
 from app.core.security import get_password_hash
 
@@ -138,3 +140,40 @@ def edit_user(
     db.commit()
     db.refresh(db_user)
     return db_user
+
+
+def get_topic(db: Session, topic_id: int) -> schemas.TopicBase:
+    topic = db.query(models.Topic).filter(models.Topic.id == topic_id).first()
+    if not topic:
+        raise HTTPException(status_code=404, detail="Topic not found")
+    return topic
+
+
+def get_topics(
+    db: Session, skip: int = 0, limit: int = 100
+) -> t[schemas.TopicBase]:
+    return db.query(models.Topic).offset(skip).limit(limit).all()
+
+
+def get_topics_by_user(
+    db: Session, user_id: int, skip: int = 0, limit: int = 100
+) -> t[schemas.TopicBase]:
+    return db.query(models.Topic).filter(models.Topic.contributor_id == user_id).offset(skip).limit(limit).all()
+
+
+def get_adopted_topics_by_user(
+    db: Session, user_id: int, skip: int = 0, limit: int = 100
+) -> t[schemas.TopicBase]:
+    return db.query(models.Topic).filter(models.Topic.contributor_id == user_id).filter(models.Topic.is_adopted).offset(skip).limit(limit).all()
+
+
+def get_topics_by_keyword(
+    db: Session, keyword: str, skip: int = 0, limit: int = 100
+) -> t[schemas.TopicBase]:
+    return db.query(models.Topic).filter(models.Topic.topic.like('%\\' +keyword + '%', escape='\\')).offset(skip).limit(limit).all()
+
+
+def get_adopted_topcs(
+    db: Session, skip: int = 0, limit: int = 100
+) -> t[schemas.TopicBase]:
+    return db.query(models.Topic).filter(models.Topic.is_adopted).offset(skip).limit(limit).all()

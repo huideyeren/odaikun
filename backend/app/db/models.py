@@ -1,4 +1,6 @@
+from enum import unique
 from sqlalchemy import Boolean, Column, Integer, String
+from sqlalchemy.sql.sqltypes import Date
 
 from .session import Base
 
@@ -31,3 +33,13 @@ class User(Base):
     hashed_password = Column(String, nullable=False)
     is_active = Column(Boolean, default=True)
     is_superuser = Column(Boolean, default=False)
+
+
+class Topic(Base):
+    id = Column(Integer, primary_key=True, index=True)
+    topic = Column(String, unique=True, index=True, nullable=False)
+    picture_url = Column(String)
+    post_date = Column(Date)
+    is_visible = Column(Boolean, default=True)
+    is_adopted = Column(Boolean, default=False)
+    contributor_id = Column(Integer, nullable=False)

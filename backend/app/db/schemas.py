@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 import typing as t
 
+from sqlalchemy.sql.sqltypes import Date
+
 
 class UserBase(BaseModel):
     """
@@ -127,3 +129,34 @@ class TokenData(BaseModel):
     """
     email: str = None
     permissions: str = "user"
+
+
+class TopicBase(BaseModel):
+    topic: str
+    picture_url: str = None
+    post_date: Date
+    is_visible: bool = True
+    is_adopted: bool = False
+    contributor: User
+
+
+class TopicOut(TopicBase):
+    pass
+
+
+class TopicCreate(TopicBase):
+    class Config:
+        orm_mode: True
+
+
+class TopicEdit(TopicBase):
+    class Config:
+        orm_mode: True
+
+
+class Topic(TopicBase):
+    id: int
+
+    class Config:
+        orm_mode: True
+
