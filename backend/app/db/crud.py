@@ -5,11 +5,10 @@ from sqlalchemy.orm import Session
 import typing as t
 
 from . import models, schemas
-from app.core.auth import get_current_active_user
 from app.core.security import get_password_hash
 
 
-def get_user(db: Session, user_id: int) -> schemas.UserBase:
+def get_user(db: Session, user_id: int):
     """
     get_user ユーザー情報を取得する
 
@@ -29,7 +28,7 @@ def get_user(db: Session, user_id: int) -> schemas.UserBase:
     return user
 
 
-def get_user_by_email(db: Session, email: str) -> schemas.UserBase:
+def get_user_by_email(db: Session, email: str):
     """
     get_user_by_email 指定したメールアドレスを持つユーザー情報を取得する
 
@@ -45,7 +44,7 @@ def get_user_by_email(db: Session, email: str) -> schemas.UserBase:
 
 def get_users(
     db: Session, skip: int = 0, limit: int = 100
-) -> t.List[schemas.UserOut]:
+):
     """
     get_users 複数のユーザー情報を取得する
 
@@ -60,7 +59,7 @@ def get_users(
     return db.query(models.User).offset(skip).limit(limit).all()
 
 
-def create_user(db: Session, user: schemas.UserCreate) -> models.User:
+def create_user(db: Session, user: schemas.UserCreate):
     """
     create_user ユーザーを作成する
 
@@ -86,7 +85,7 @@ def create_user(db: Session, user: schemas.UserCreate) -> models.User:
     return db_user
 
 
-def delete_user(db: Session, user_id: int) -> schemas.UserBase:
+def delete_user(db: Session, user_id: int):
     """
     delete_user ユーザー情報を削除する
 
@@ -110,7 +109,7 @@ def delete_user(db: Session, user_id: int) -> schemas.UserBase:
 
 def edit_user(
     db: Session, user_id: int, user: schemas.UserEdit
-) -> schemas.User:
+):
     """
     edit_user [summary]
 
@@ -143,35 +142,35 @@ def edit_user(
     return db_user
 
 
-def get_topic(db: Session, topic_id: int) -> schemas.TopicBase:
+def get_topic(db: Session, topic_id: int):
     topic = db.query(models.Topic).filter(models.Topic.id == topic_id).first()
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
     return topic
 
 
-def get_topics(db: Session) -> t[schemas.TopicBase]:
+def get_topics(db: Session):
     return db.query(models.Topic).filter(models.Topic.is_visible).all()
 
 
-def get_all_topics(db: Session) -> t[schemas.TopicBase]:
+def get_all_topics(db: Session):
     return db.query(models.Topic).all()
 
 
-def get_topics_by_user(db: Session, user_id: int) -> t[schemas.TopicBase]:
+def get_topics_by_user(db: Session, user_id: int):
     return db.query(models.Topic) \
         .filter(models.Topic.is_visible) \
         .filter(models.Topic.contributor_id == user_id) \
         .all()
 
 
-def get_all_topics_by_user(db: Session, user_id: int) -> t[schemas.TopicBase]:
+def get_all_topics_by_user(db: Session, user_id: int):
     return db.query(models.Topic) \
         .filter(models.Topic.contributor_id == user_id) \
         .all()
 
 
-def get_adopted_topics(db: Session) -> t[schemas.TopicBase]:
+def get_adopted_topics(db: Session):
     return db.query(models.Topic) \
         .filter(models.Topic.is_visible) \
         .filter(models.Topic.is_adopted) \
@@ -180,7 +179,7 @@ def get_adopted_topics(db: Session) -> t[schemas.TopicBase]:
 
 def get_adopted_topics_by_user(
     db: Session, user_id: int
-) -> t[schemas.TopicBase]:
+):
     return db.query(models.Topic) \
         .filter(models.Topic.is_visible) \
         .filter(models.Topic.contributor_id == user_id) \
@@ -190,7 +189,7 @@ def get_adopted_topics_by_user(
 
 def get_topics_by_keyword(
     db: Session, keyword: str
-) -> t[schemas.TopicBase]:
+):
     return db.query(models.Topic) \
         .filter(models.Topic.is_visible) \
         .filter(models.Topic.topic.like('%\\' + keyword + '%', escape='\\')) \
@@ -199,7 +198,7 @@ def get_topics_by_keyword(
 
 def get_all_topics_by_keyword(
     db: Session, keyword: str
-) -> t[schemas.TopicBase]:
+):
     return db.query(models.Topic).filter(
         models.Topic.topic.like('%\\' + keyword + '%', escape='\\')
     ).all()
@@ -208,8 +207,8 @@ def get_all_topics_by_keyword(
 def create_topic(
     db: Session,
     topic: schemas.TopicCreate,
-    current_user: schemas.User = get_current_active_user()
-) -> models.Topic:
+    current_user: schemas.User
+):
     if not current_user:
         raise HTTPException(
             status.HTTP_401_UNAUTHORIZED, detail="Login required"
@@ -219,7 +218,7 @@ def create_topic(
         topic=topic.topic,
         picture_url=topic.picture_url,
         post_date=datetime.date.today(),
-        contributor_id=topic.contributor.id
+        contributor=topic.contributor
     )
     db.add(db_topic)
     db.commit()
@@ -231,7 +230,7 @@ def edit_topic(
     db: Session,
     topic_id: int,
     topic: schemas.TopicEdit,
-    current_user: schemas.User = get_current_active_user()
+    current_user: schemas.User
 ):
     if not current_user:
         raise HTTPException(
@@ -259,8 +258,8 @@ def edit_topic(
 def drop_topic(
     db: Session,
     topic_id: int,
-    current_user: schemas.User = get_current_active_user()
-) -> schemas.TopicBase:
+    current_user: schemas.User
+):
     if not current_user:
         raise HTTPException(
             status.HTTP_401_UNAUTHORIZED,

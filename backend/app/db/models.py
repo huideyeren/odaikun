@@ -25,7 +25,7 @@ class User(Base):
         is_superuser (bool): 管理者権限があるかどうかを表すフラグ
     """
 
-    __tablename__ = "users"
+    __tablename__ = "user"
 
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True, nullable=False)
@@ -37,7 +37,7 @@ class User(Base):
 
 
 class Topic(Base):
-    __tablename__ = "topics"
+    __tablename__ = "topic"
 
     id = Column(Integer, primary_key=True, index=True)
     topic = Column(Text, index=True, nullable=False)
@@ -45,7 +45,7 @@ class Topic(Base):
     post_date = Column(Date)
     is_visible = Column(Boolean, default=True)
     is_adopted = Column(Boolean, default=False)
-    contributor_id = Column(Integer, ForeignKey("users.id"))
+    contributor_id = Column(Integer, ForeignKey("user.id"))
     contributor = sqlalchemy.orm.relationship(
-        "user", backref=sqlalchemy.orm.backref("Topics", order_by=id)
+        User, backref=sqlalchemy.orm.backref("Topic", order_by=id)
     )

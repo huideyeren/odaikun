@@ -1,3 +1,4 @@
+from datetime import date
 from pydantic import BaseModel
 import typing as t
 
@@ -134,7 +135,7 @@ class TokenData(BaseModel):
 class TopicBase(BaseModel):
     topic: str
     picture_url: str = None
-    post_date: Date
+    post_date: date
     is_visible: bool = True
     is_adopted: bool = False
     contributor: User
