@@ -1,6 +1,7 @@
-from enum import unique
 from sqlalchemy import Boolean, Column, Integer, String
-from sqlalchemy.sql.sqltypes import Date
+from sqlalchemy.sql.schema import ForeignKey
+from sqlalchemy.sql.sqltypes import Date, Text
+import sqlalchemy.orm
 
 from .session import Base
 
@@ -24,7 +25,7 @@ class User(Base):
         is_superuser (bool): 管理者権限があるかどうかを表すフラグ
     """
 
-    __tablename__ = "user"
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True, nullable=False)
@@ -36,10 +37,15 @@ class User(Base):
 
 
 class Topic(Base):
+    __tablename__ = "topics"
+
     id = Column(Integer, primary_key=True, index=True)
-    topic = Column(String, unique=True, index=True, nullable=False)
+    topic = Column(Text, index=True, nullable=False)
     picture_url = Column(String)
     post_date = Column(Date)
     is_visible = Column(Boolean, default=True)
     is_adopted = Column(Boolean, default=False)
-    contributor_id = Column(Integer, nullable=False)
+    contributor_id = Column(Integer, ForeignKey("users.id"))
+    contributor = sqlalchemy.orm.relationship(
+        "user", backref=sqlalchemy.orm.backref("Topics", order_by=id)
+    )
