@@ -1,8 +1,7 @@
 from sqlalchemy import Boolean, Column, Integer, String
-from sqlalchemy.orm import backref, relationship
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql.schema import ForeignKey
 from sqlalchemy.sql.sqltypes import Date, Text
-import sqlalchemy.orm
 
 from .session import Base
 

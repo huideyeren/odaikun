@@ -1,5 +1,4 @@
-from app.db import schemas
-from app.db.crud import get_user, get_user_by_email
+from app.db.crud import get_user_by_email
 import pytest
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
@@ -153,7 +152,7 @@ def test_topic(test_db) -> models.Topic:
         post_date=date.fromisoformat('2019-12-04'),
         is_visible=True,
         is_adopted=False,
-        contributor=test_contributor
+        contributor_id=test_contributor.id
     )
     test_db.add(topic)
     test_db.commit()

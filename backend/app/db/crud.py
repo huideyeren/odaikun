@@ -2,7 +2,6 @@ import datetime
 
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-import typing as t
 
 from . import models, schemas
 from app.core.security import get_password_hash
@@ -55,7 +54,7 @@ def get_users(
 
     Returns:
         t.List[schemas.UserOut]: ユーザー情報のリスト
-    """    
+    """
     return db.query(models.User).offset(skip).limit(limit).all()
 
 
@@ -213,12 +212,12 @@ def create_topic(
         raise HTTPException(
             status.HTTP_401_UNAUTHORIZED, detail="Login required"
         )
-    topic.contributor = current_user
+    topic.contributor_id = current_user.id
     db_topic = models.Topic(
         topic=topic.topic,
         picture_url=topic.picture_url,
         post_date=datetime.date.today(),
-        contributor=topic.contributor
+        contributor_id=topic.contributor_id
     )
     db.add(db_topic)
     db.commit()
@@ -236,7 +235,7 @@ def edit_topic(
         raise HTTPException(
             status.HTTP_401_UNAUTHORIZED, detail="Login required"
         )
-    if current_user.id != topic.contributor.id:
+    if current_user.id != topic.contributor_id:
         raise HTTPException(
             status.HTTP_403_FORBIDDEN, detail="You are not contributor"
         )
@@ -268,7 +267,7 @@ def drop_topic(
     topic = get_topic(db, topic_id)
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
-    if current_user.is_superuser or current_user.id != topic.contributor.id:
+    if current_user.is_superuser or current_user.id != topic.contributor_id:
         raise HTTPException(
             status.HTTP_403_FORBIDDEN,
             detail="You don't have permission"
