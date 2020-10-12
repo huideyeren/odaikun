@@ -145,17 +145,7 @@ def test_topic(test_db) -> models.Topic:
     Returns:
         models.Topic: [description]
     """
-    user = models.User(
-        email="fakeauthor@email.com",
-        first_name="Taro",
-        last_name="Yamada",
-        hashed_password=get_password_hash(),
-        is_active=True,
-    )
-    test_db.add(user)
-    test_db.commit()
-
-    test_contributor = get_user_by_email(test_db, "fakeauthor@email.com")
+    test_contributor = get_user_by_email(test_db, "fake@email.com")
 
     topic = models.Topic(
         topic="今日のお題のテスト",
@@ -163,7 +153,7 @@ def test_topic(test_db) -> models.Topic:
         post_date=date.fromisoformat('2019-12-04'),
         is_visible=True,
         is_adopted=False,
-        contributor_id=test_contributor.id
+        contributor=test_contributor
     )
     test_db.add(topic)
     test_db.commit()
@@ -199,6 +189,23 @@ def superuser_token_headers(
 
     login_data = {
         "username": test_superuser.email,
+        "password": test_password,
+    }
+    r = client.post("/api/token", data=login_data)
+    tokens = r.json()
+    a_token = tokens["access_token"]
+    headers = {"Authorization": f"Bearer {a_token}"}
+    return headers
+
+
+@pytest.fixture
+def topic_token_headers(
+    client: TestClient, test_user, test_password, monkeypatch
+) -> t.Dict[str, str]:
+    monkeypatch.setattr(security, "verify_password", verify_password_mock)
+
+    login_data = {
+        "username": test_user.email,
         "password": test_password,
     }
     r = client.post("/api/token", data=login_data)

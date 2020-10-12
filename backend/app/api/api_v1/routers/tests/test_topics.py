@@ -12,6 +12,6 @@ def test_get_topics(client, test_topic, user_token_headers):
             "post_date": test_topic.post_date,
             "is_visible": test_topic.is_visible,
             "is_adopted": test_topic.is_adopted,
-            "contributor_id": test_topic.contributor_id
+            "contributor": test_topic.contributor
         }
     ]

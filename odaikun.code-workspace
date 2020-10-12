@@ -14,6 +14,18 @@
 		"appService.enablePythonRemoteDebugging": true,
 		"python.languageServer": "Pylance",
 		"eslint.alwaysShowStatus": true,
-		"monorepoWorkspace.folders.regex.tools": "^tool|script|scripts|util"
+		"monorepoWorkspace.folders.regex.tools": "^tool|script|scripts|util",
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 5432,
+				"driver": "PostgreSQL",
+				"name": "odaikun",
+				"username": "postgres",
+				"password": "password",
+				"database": "postgres"
+			}
+		]
 	}
 }
