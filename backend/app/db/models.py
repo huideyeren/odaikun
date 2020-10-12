@@ -1,4 +1,5 @@
 from sqlalchemy import Boolean, Column, Integer, String
+from sqlalchemy.orm import backref, relationship
 from sqlalchemy.sql.schema import ForeignKey
 from sqlalchemy.sql.sqltypes import Date, Text
 import sqlalchemy.orm
@@ -35,6 +36,8 @@ class User(Base):
     is_active = Column(Boolean, default=True)
     is_superuser = Column(Boolean, default=False)
 
+    topics = relationship("Topic", backref="user")
+
 
 class Topic(Base):
     __tablename__ = "topic"
@@ -46,6 +49,4 @@ class Topic(Base):
     is_visible = Column(Boolean, default=True)
     is_adopted = Column(Boolean, default=False)
     contributor_id = Column(Integer, ForeignKey("user.id"))
-    contributor = sqlalchemy.orm.relationship(
-        User, backref=sqlalchemy.orm.backref("Topic", order_by=id)
-    )
+    contributor = relationship("User", foreign_keys=[contributor_id])

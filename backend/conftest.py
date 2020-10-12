@@ -1,5 +1,5 @@
 from app.db import schemas
-from app.db.crud import get_user
+from app.db.crud import get_user, get_user_by_email
 import pytest
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
@@ -145,6 +145,17 @@ def test_topic(test_db) -> models.Topic:
     Returns:
         models.Topic: [description]
     """
+    user = models.User(
+        email="fakeauthor@email.com",
+        first_name="Taro",
+        last_name="Yamada",
+        hashed_password=get_password_hash(),
+        is_active=True,
+    )
+    test_db.add(user)
+    test_db.commit()
+
+    test_contributor = get_user_by_email(test_db, "fakeauthor@email.com")
 
     topic = models.Topic(
         topic="今日のお題のテスト",
@@ -152,7 +163,7 @@ def test_topic(test_db) -> models.Topic:
         post_date=date.fromisoformat('2019-12-04'),
         is_visible=True,
         is_adopted=False,
-        contributor_id=1
+        contributor_id=test_contributor.id
     )
     test_db.add(topic)
     test_db.commit()
