@@ -1,3 +1,28 @@
 {
-    "python.pythonPath": "/Users/yusuketakakura/.local/share/virtualenvs/backend-cZGO6YOD/bin/python"
+    "editor.rulers": [
+        88
+    ],
+    "appService.enablePythonRemoteDebugging": true,
+    "python.formatting.provider": "black",
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "88",
+        "--ignore=E203,W503,W504"
+    ],
+    "editor.formatOnPaste": false,
+    "python.autoComplete.addBrackets": true,
+    "python.venvFolders": [
+        "./backend"
+    ],
+    "python.languageServer": "Pylance",
+    "eslint.alwaysShowStatus": true,
+    "eslint.workingDirectories": [
+    "./frontend"
+    ],
+    "python.pythonPath": "/Users/yusuketakakura/.local/share/virtualenvs/backend-cZGO6YOD/bin/python",
+    "python.analysis.completeFunctionParens": true
 }

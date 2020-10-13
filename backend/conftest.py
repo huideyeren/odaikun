@@ -1,8 +1,10 @@
+from app.db.crud import get_user_by_email
 import pytest
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy_utils import database_exists, create_database, drop_database
 from fastapi.testclient import TestClient
+from datetime import date
 import typing as t
 
 from app.core import config, security
@@ -131,6 +133,60 @@ def test_superuser(test_db) -> models.User:
     return user
 
 
+@pytest.fixture
+def test_topic(test_db, test_user) -> models.Topic:
+    """
+    test_topic Topic for testing
+
+    Args:
+        test_db ([type]): [description]
+
+    Returns:
+        models.Topic: [description]
+    """
+
+    user = test_user
+
+    topic = models.Topic(
+        topic="今日のお題のテスト",
+        picture_url="https://huideyeren.info/images/mongolian-6cd0fdc2.jpg",
+        post_date=date.fromisoformat('2019-12-04'),
+        is_visible=True,
+        is_adopted=False,
+        contributor_id=user.id
+    )
+    test_db.add(topic)
+    test_db.commit()
+    return topic
+
+
+@pytest.fixture
+def test_topic_written_by_superuser(test_db, test_superuser) -> models.Topic:
+    """
+    test_topic Topic for testing
+
+    Args:
+        test_db ([type]): [description]
+
+    Returns:
+        models.Topic: [description]
+    """
+
+    user = test_superuser
+
+    topic = models.Topic(
+        topic="今日のお題のテスト",
+        picture_url="https://huideyeren.info/images/mongolian-6cd0fdc2.jpg",
+        post_date=date.fromisoformat('2019-12-04'),
+        is_visible=True,
+        is_adopted=False,
+        contributor_id=user.id
+    )
+    test_db.add(topic)
+    test_db.commit()
+    return topic
+
+
 def verify_password_mock(first: str, second: str) -> bool:
     return True
 
@@ -160,6 +216,23 @@ def superuser_token_headers(
 
     login_data = {
         "username": test_superuser.email,
+        "password": test_password,
+    }
+    r = client.post("/api/token", data=login_data)
+    tokens = r.json()
+    a_token = tokens["access_token"]
+    headers = {"Authorization": f"Bearer {a_token}"}
+    return headers
+
+
+@pytest.fixture
+def topic_token_headers(
+    client: TestClient, test_user, test_password, monkeypatch
+) -> t.Dict[str, str]:
+    monkeypatch.setattr(security, "verify_password", verify_password_mock)
+
+    login_data = {
+        "username": test_user.email,
         "password": test_password,
     }
     r = client.post("/api/token", data=login_data)

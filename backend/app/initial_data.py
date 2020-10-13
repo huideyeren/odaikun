@@ -13,6 +13,8 @@ def init() -> None:
         db,
         UserCreate(
             email="takakura.yusuke@gmail.com",
+            first_name="Iosif",
+            last_name="Takakura",
             password="password",
             is_active=True,
             is_superuser=True,

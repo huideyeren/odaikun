@@ -1,3 +1,4 @@
+from app.db.models import User
 from fastapi import APIRouter, Request, Depends, Response, encoders
 import typing as t
 
