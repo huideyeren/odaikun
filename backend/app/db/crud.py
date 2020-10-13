@@ -267,7 +267,9 @@ def drop_topic(
     topic = get_topic(db, topic_id)
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
-    if current_user.is_superuser or current_user.id != topic.contributor_id:
+    if current_user.id != topic.contributor_id and not current_user.is_superuser:
+        print(current_user.id)
+        print(topic.contributor_id)
         raise HTTPException(
             status.HTTP_403_FORBIDDEN,
             detail="You don't have permission"

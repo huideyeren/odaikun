@@ -1,8 +1,7 @@
+from conftest import client, test_topic, test_topic_written_by_superuser, user_token_headers
 from fastapi import Depends
 from fastapi.param_functions import Header
 from starlette import responses
-from conftest import superuser_token_headers
-from app.core.auth import get_current_user
 from app.db import models
 
 
@@ -21,13 +20,50 @@ def test_get_topics(client, test_topic, user_token_headers):
         }
     ]
 
-def test_delete_topic_on_superuser(
+
+def test_delete_topic(
     client, test_topic, test_db, user_token_headers
 ):
     response = client.delete(
-        f"/api/v1/topics/{test_topic.id}", headers=user_token_headers
+        f"/api/v1/topics/{test_topic.id}",
+        headers=user_token_headers
     )
-    print(f"contributor_id is {test_topic.contributor_id}")
-    # print(f"current_user.id is {Depends(get_current_user()).id}")
     assert response.status_code == 200
-    assert test_db.query(models.Topic).all() == []
+    assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
+
+
+def test_delete_topic_on_superuser(
+    client, test_topic_written_by_superuser, test_db, superuser_token_headers
+):
+    response = client.delete(
+        f"/api/v1/topics/{test_topic_written_by_superuser.id}",
+        headers=superuser_token_headers
+    )
+    assert response.status_code == 200
+    assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
+
+
+def test_delete_topic_by_others(
+    client, test_topic_written_by_superuser, test_db, user_token_headers
+):
+    response = client.delete(
+        f"/api/v1/topics/{test_topic_written_by_superuser.id}",
+        headers=user_token_headers
+    )
+    assert response.status_code == 403
+    assert test_db.query(models.Topic).filter(
+        models.Topic.id == test_topic_written_by_superuser.id
+    ).first() == test_topic_written_by_superuser
+
+
+def test_delete_topic_is_not_found(
+    client, test_topic_written_by_superuser, test_db, user_token_headers
+):
+    response = client.delete(
+        f"/api/v1/topics/{test_topic_written_by_superuser.id}",
+        headers=user_token_headers
+    )
+    assert response.status_code == 403
+    assert test_db.query(models.Topic).filter(
+        models.Topic.id == test_topic_written_by_superuser.id
+    ).first() == test_topic_written_by_superuser
