@@ -1,4 +1,3 @@
-from app.db.crud import get_user_by_email
 import pytest
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker

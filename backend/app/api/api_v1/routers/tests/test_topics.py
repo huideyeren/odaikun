@@ -1,7 +1,3 @@
-from conftest import client, test_topic, test_topic_written_by_superuser, user_token_headers
-from fastapi import Depends
-from fastapi.param_functions import Header
-from starlette import responses
 from app.db import models
 
 
