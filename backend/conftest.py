@@ -134,7 +134,7 @@ def test_superuser(test_db) -> models.User:
 
 
 @pytest.fixture
-def test_topic(test_db) -> models.Topic:
+def test_topic(test_db, test_user) -> models.Topic:
     """
     test_topic Topic for testing
 
@@ -144,7 +144,8 @@ def test_topic(test_db) -> models.Topic:
     Returns:
         models.Topic: [description]
     """
-    test_contributor = get_user_by_email(test_db, "fake@email.com")
+
+    user = test_user
 
     topic = models.Topic(
         topic="今日のお題のテスト",
@@ -152,7 +153,7 @@ def test_topic(test_db) -> models.Topic:
         post_date=date.fromisoformat('2019-12-04'),
         is_visible=True,
         is_adopted=False,
-        contributor_id=test_contributor.id
+        contributor_id=user.id
     )
     test_db.add(topic)
     test_db.commit()
