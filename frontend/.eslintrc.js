@@ -22,12 +22,18 @@ let rules = {
     'error',
     {
       singleQuote: true,
+      trailingComma: 'es5',
     },
   ],
 };
 
 module.exports = {
-  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'plugin:prettier/recommended',
+    'prettier',
+    'prettier/react',
+  ],
   parser: 'babel-eslint',
   rules,
   env: {

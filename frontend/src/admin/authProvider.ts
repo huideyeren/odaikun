@@ -21,12 +21,12 @@ const authProvider = {
         }
         return response.json();
       })
-      .then(({ access_token }) => {
-        const decodedToken: any = decodeJwt(access_token);
+      .then(({ accessToken }) => {
+        const decodedToken: any = decodeJwt(accessToken);
         if (decodedToken.permissions !== 'admin') {
           throw new Error('Forbidden');
         }
-        localStorage.setItem('token', access_token);
+        localStorage.setItem('token', accessToken);
         localStorage.setItem('permissions', decodedToken.permissions);
       });
   },
