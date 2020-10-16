@@ -18,7 +18,7 @@ jobs:
           docker-compose run --rm backend alembic upgrade head
           docker-compose run --rm backend python3 app/initial_data.py
       - name: Run black.
-        run: docker-compose run backend black /app --check --diff --version 
+        run: docker-compose run backend black /app --diff
       - name: Check Python syntax.
         run: docker-compose run backend flake8 /app
       - name: Tests for backend.
