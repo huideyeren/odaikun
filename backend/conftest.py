@@ -31,9 +31,7 @@ def test_db():
     trans = connection.begin()
 
     # Run a parent transaction that can roll back all changes
-    test_session_maker = sessionmaker(
-        autocommit=False, autoflush=False, bind=engine
-    )
+    test_session_maker = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     test_session = test_session_maker()
     test_session.begin_nested()
 
@@ -149,10 +147,10 @@ def test_topic(test_db, test_user) -> models.Topic:
     topic = models.Topic(
         topic="今日のお題のテスト",
         picture_url="https://huideyeren.info/images/mongolian-6cd0fdc2.jpg",
-        post_date=date.fromisoformat('2019-12-04'),
+        post_date=date.fromisoformat("2019-12-04"),
         is_visible=True,
         is_adopted=False,
-        contributor_id=user.id
+        contributor_id=user.id,
     )
     test_db.add(topic)
     test_db.commit()
@@ -176,10 +174,10 @@ def test_topic_written_by_superuser(test_db, test_superuser) -> models.Topic:
     topic = models.Topic(
         topic="今日のお題のテスト",
         picture_url="https://huideyeren.info/images/mongolian-6cd0fdc2.jpg",
-        post_date=date.fromisoformat('2019-12-04'),
+        post_date=date.fromisoformat("2019-12-04"),
         is_visible=True,
         is_adopted=False,
-        contributor_id=user.id
+        contributor_id=user.id,
     )
     test_db.add(topic)
     test_db.commit()

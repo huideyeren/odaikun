@@ -12,17 +12,14 @@ def test_get_topics(client, test_topic, user_token_headers):
             "is_visible": test_topic.is_visible,
             "is_adopted": test_topic.is_adopted,
             "contributor_id": test_topic.contributor_id,
-            "id": test_topic.id
+            "id": test_topic.id,
         }
     ]
 
 
-def test_delete_topic(
-    client, test_topic, test_db, user_token_headers
-):
+def test_delete_topic(client, test_topic, test_db, user_token_headers):
     response = client.delete(
-        f"/api/v1/topics/{test_topic.id}",
-        headers=user_token_headers
+        f"/api/v1/topics/{test_topic.id}", headers=user_token_headers
     )
     assert response.status_code == 200
     assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
@@ -33,7 +30,7 @@ def test_delete_topic_on_superuser(
 ):
     response = client.delete(
         f"/api/v1/topics/{test_topic_written_by_superuser.id}",
-        headers=superuser_token_headers
+        headers=superuser_token_headers,
     )
     assert response.status_code == 200
     assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
@@ -44,20 +41,22 @@ def test_delete_topic_by_others(
 ):
     response = client.delete(
         f"/api/v1/topics/{test_topic_written_by_superuser.id}",
-        headers=user_token_headers
+        headers=user_token_headers,
     )
     assert response.status_code == 403
-    assert test_db.query(models.Topic).filter(
-        models.Topic.id == test_topic_written_by_superuser.id
-    ).first() == test_topic_written_by_superuser
+    assert (
+        test_db.query(models.Topic)
+        .filter(models.Topic.id == test_topic_written_by_superuser.id)
+        .first()
+        == test_topic_written_by_superuser
+    )
 
 
 def test_delete_my_topic_by_superuser(
     client, test_topic, test_db, superuser_token_headers
 ):
     response = client.delete(
-        f"/api/v1/topics/{test_topic.id}",
-        headers=superuser_token_headers
+        f"/api/v1/topics/{test_topic.id}", headers=superuser_token_headers
     )
     assert response.status_code == 200
     assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
@@ -66,11 +65,11 @@ def test_delete_my_topic_by_superuser(
 def test_delete_topic_is_not_found(
     client, test_topic_written_by_superuser, test_db, superuser_token_headers
 ):
-    response = client.delete(
-        f"/api/v1/topics/9999",
-        headers=superuser_token_headers
-    )
+    response = client.delete(f"/api/v1/topics/9999", headers=superuser_token_headers)
     assert response.status_code == 404
-    assert test_db.query(models.Topic).filter(
-        models.Topic.id == test_topic_written_by_superuser.id
-    ).first() == test_topic_written_by_superuser
+    assert (
+        test_db.query(models.Topic)
+        .filter(models.Topic.id == test_topic_written_by_superuser.id)
+        .first()
+        == test_topic_written_by_superuser
+    )
