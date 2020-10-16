@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.54",
     "jwt-decode": "^2.2.0",
     "ra-data-json-server": "^3.5.2",
@@ -24,7 +26,6 @@
     "prettier-docker": "prettier --write /app/src/**/*.ts /app/src/**/*.tsx",
     "eslint": "eslint --fix src/**/*.ts src/**/*.tsx",
     "eslint-docker": "eslint --fix /app/src/**/*.ts /app/src/**/*.tsx"
-
   },
   "eslintConfig": {
     "extends": "airbnb"
