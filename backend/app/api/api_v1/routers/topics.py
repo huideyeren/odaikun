@@ -1,10 +1,9 @@
-from app.db.models import Topic
 from fastapi import APIRouter, Request, Depends, Response
 import typing as t
 
 from app.db.session import get_db
 from app.db.crud import get_topics, create_topic, drop_topic, edit_topic
-from app.db.schemas import TopicCreate, TopicEdit
+from app.db.schemas import TopicCreate, TopicEdit, Topic
 from app.core.auth import get_current_active_user
 
 topics_router = r = APIRouter()
