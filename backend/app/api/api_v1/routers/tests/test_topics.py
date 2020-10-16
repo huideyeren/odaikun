@@ -65,7 +65,7 @@ def test_delete_my_topic_by_superuser(
 def test_delete_topic_is_not_found(
     client, test_topic_written_by_superuser, test_db, superuser_token_headers
 ):
-    response = client.delete(f"/api/v1/topics/9999", headers=superuser_token_headers)
+    response = client.delete("/api/v1/topics/9999", headers=superuser_token_headers)
     assert response.status_code == 404
     assert (
         test_db.query(models.Topic)
