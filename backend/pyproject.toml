@@ -1,2 +1,15 @@
 [tool.black]
-line-length = 80
+line-length = 88
+exclude = '''
+(
+    migrations
+    | .mypy_cache
+    | .pytest_cache
+    | .tox
+    | venv
+)
+'''
+
+[flake8]
+max-line-length = 88
+ignore = E203,W503,W504
