@@ -13,6 +13,6 @@ case $1 in
     yarn test $@
     ;;
   *)
-    yarn "$@"
+    yarn -s run "$@"
     ;;
 esac
