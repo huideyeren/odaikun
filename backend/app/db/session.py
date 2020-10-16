@@ -19,7 +19,7 @@ def get_db():
 
     Yields:
         sessionmaker: DBのセッション
-    """    
+    """
     db = SessionLocal()
     try:
         yield db

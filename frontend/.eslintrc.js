@@ -18,6 +18,26 @@ let rules = {
     'always',
     { exceptAfterSingleLine: true },
   ],
+  'prettier/prettier': [
+    'error',
+    {
+      singleQuote: true,
+      trailingComma: 'es5',
+    },
+  ],
+  'no-unused-vars': 'warn',
+  'func-names': 'off',
+  'no-process-exit': 'off',
+  'object-shorthand': 'off',
+  'class-methods-use-this': 'off',
+  'import/prefer-default-export': 'warn',
+  'prefer-promise-reject-errors': 'warn',
+  'import/no-extraneous-dependencies': 'warn',
+  'react/jsx-props-no-spreading': "warn",
+  'no-param-reassign': "warn",
+  'import/prefer-default-export': 'warn',
+  'no-shadow': 'warn',
+  'jsx-a11y/anchor-is-valid': 'warn'
 };
 
 module.exports = {

@@ -41,9 +41,7 @@ def get_user_by_email(db: Session, email: str):
     return db.query(models.User).filter(models.User.email == email).first()
 
 
-def get_users(
-    db: Session, skip: int = 0, limit: int = 100
-):
+def get_users(db: Session, skip: int = 0, limit: int = 100):
     """
     get_users 複数のユーザー情報を取得する
 
@@ -106,9 +104,7 @@ def delete_user(db: Session, user_id: int):
     return user
 
 
-def edit_user(
-    db: Session, user_id: int, user: schemas.UserEdit
-):
+def edit_user(db: Session, user_id: int, user: schemas.UserEdit):
     """
     edit_user [summary]
 
@@ -157,67 +153,63 @@ def get_all_topics(db: Session):
 
 
 def get_topics_by_user(db: Session, user_id: int):
-    return db.query(models.Topic) \
-        .filter(models.Topic.is_visible) \
-        .filter(models.Topic.contributor_id == user_id) \
+    return (
+        db.query(models.Topic)
+        .filter(models.Topic.is_visible)
+        .filter(models.Topic.contributor_id == user_id)
         .all()
+    )
 
 
 def get_all_topics_by_user(db: Session, user_id: int):
-    return db.query(models.Topic) \
-        .filter(models.Topic.contributor_id == user_id) \
-        .all()
+    return db.query(models.Topic).filter(models.Topic.contributor_id == user_id).all()
 
 
 def get_adopted_topics(db: Session):
-    return db.query(models.Topic) \
-        .filter(models.Topic.is_visible) \
-        .filter(models.Topic.is_adopted) \
+    return (
+        db.query(models.Topic)
+        .filter(models.Topic.is_visible)
+        .filter(models.Topic.is_adopted)
         .all()
+    )
 
 
-def get_adopted_topics_by_user(
-    db: Session, user_id: int
-):
-    return db.query(models.Topic) \
-        .filter(models.Topic.is_visible) \
-        .filter(models.Topic.contributor_id == user_id) \
-        .filter(models.Topic.is_adopted) \
+def get_adopted_topics_by_user(db: Session, user_id: int):
+    return (
+        db.query(models.Topic)
+        .filter(models.Topic.is_visible)
+        .filter(models.Topic.contributor_id == user_id)
+        .filter(models.Topic.is_adopted)
         .all()
+    )
 
 
-def get_topics_by_keyword(
-    db: Session, keyword: str
-):
-    return db.query(models.Topic) \
-        .filter(models.Topic.is_visible) \
-        .filter(models.Topic.topic.like('%\\' + keyword + '%', escape='\\')) \
+def get_topics_by_keyword(db: Session, keyword: str):
+    return (
+        db.query(models.Topic)
+        .filter(models.Topic.is_visible)
+        .filter(models.Topic.topic.like("%\\" + keyword + "%", escape="\\"))
         .all()
+    )
 
 
-def get_all_topics_by_keyword(
-    db: Session, keyword: str
-):
-    return db.query(models.Topic).filter(
-        models.Topic.topic.like('%\\' + keyword + '%', escape='\\')
-    ).all()
+def get_all_topics_by_keyword(db: Session, keyword: str):
+    return (
+        db.query(models.Topic)
+        .filter(models.Topic.topic.like("%\\" + keyword + "%", escape="\\"))
+        .all()
+    )
 
 
-def create_topic(
-    db: Session,
-    topic: schemas.TopicCreate,
-    current_user: schemas.User
-):
+def create_topic(db: Session, topic: schemas.TopicCreate, current_user: schemas.User):
     if not current_user:
-        raise HTTPException(
-            status.HTTP_401_UNAUTHORIZED, detail="Login required"
-        )
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
     topic.contributor_id = current_user.id
     db_topic = models.Topic(
         topic=topic.topic,
         picture_url=topic.picture_url,
         post_date=datetime.date.today(),
-        contributor_id=topic.contributor_id
+        contributor_id=topic.contributor_id,
     )
     db.add(db_topic)
     db.commit()
@@ -226,24 +218,15 @@ def create_topic(
 
 
 def edit_topic(
-    db: Session,
-    topic_id: int,
-    topic: schemas.TopicEdit,
-    current_user: schemas.User
+    db: Session, topic_id: int, topic: schemas.TopicEdit, current_user: schemas.User
 ):
     if not current_user:
-        raise HTTPException(
-            status.HTTP_401_UNAUTHORIZED, detail="Login required"
-        )
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
     if current_user.id != topic.contributor_id:
-        raise HTTPException(
-            status.HTTP_403_FORBIDDEN, detail="You are not contributor"
-        )
+        raise HTTPException(status.HTTP_403_FORBIDDEN, detail="You are not contributor")
     db_topic = get_topic(db, topic_id)
     if not db_topic:
-        raise HTTPException(
-            status.HTTP_404_NOT_FOUND, detail="Topic not found"
-        )
+        raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Topic not found")
     update_data = topic.dict(exclude_unset=True)
     for key, value in update_data.items():
         setattr(db_topic, key, value)
@@ -254,16 +237,9 @@ def edit_topic(
     return db_topic
 
 
-def drop_topic(
-    db: Session,
-    topic_id: int,
-    current_user: schemas.User
-):
+def drop_topic(db: Session, topic_id: int, current_user: schemas.User):
     if not current_user:
-        raise HTTPException(
-            status.HTTP_401_UNAUTHORIZED,
-            detail="Login required"
-        )
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
     topic = get_topic(db, topic_id)
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
@@ -271,8 +247,7 @@ def drop_topic(
         print(current_user.id)
         print(topic.contributor_id)
         raise HTTPException(
-            status.HTTP_403_FORBIDDEN,
-            detail="You don't have permission"
+            status.HTTP_403_FORBIDDEN, detail="You don't have permission"
         )
     setattr(topic, "is_visible", False)
     db.add(topic)
