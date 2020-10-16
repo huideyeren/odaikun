@@ -26,6 +26,6 @@ jobs:
       - name: Run Prettier.
         run: docker-compose run frontend yarn prettier /app --write
       - name: Check JavaScript/TypeScript syntax.
-        run: docker-compose run frontend yarn eslint /app
+        run: docker-compose run frontend yarn eslint --fix /app/src/**/*.ts /app/src/**/*.tsx
       - name: Tests for frontend.
         run: docker-compose run frontend test

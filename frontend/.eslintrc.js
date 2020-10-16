@@ -18,6 +18,12 @@ let rules = {
     'always',
     { exceptAfterSingleLine: true },
   ],
+  'prettier/prettier': [
+    'error',
+    {
+      singleQuote: true,
+    },
+  ],
 };
 
 module.exports = {

@@ -7,7 +7,7 @@ type loginFormType = {
 
 const authProvider = {
   login: ({ username, password }: loginFormType) => {
-    let formData = new FormData();
+    const formData = new FormData();
     formData.append('username', username);
     formData.append('password', password);
     const request = new Request('/api/token', {
@@ -36,7 +36,7 @@ const authProvider = {
     return Promise.resolve();
   },
   checkError: (error: { status: number }) => {
-    const status = error.status;
+    const { status } = error;
     if (status === 401 || status === 403) {
       localStorage.removeItem('token');
       return Promise.reject();
