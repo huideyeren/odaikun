@@ -1,0 +1,16 @@
+[mypy]
+
+[mypy-celery]
+ignore_missing_imports = True
+
+[mypy-sqlalchemy]
+ignore_missing_imports = True
+
+[mypy-alembic]
+ignore_missing_imports = True
+
+[mypy-passlib]
+ignore_missing_imports = True
+
+[mypy-uvicorn]
+ignore_missing_imports = True
