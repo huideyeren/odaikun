@@ -17,10 +17,14 @@ jobs:
           sleep 5
           docker-compose run --rm backend alembic upgrade head
           docker-compose run --rm backend python3 app/initial_data.py
-      - name: Run black.
+      - name: Check Python syntax by black.
         run: docker-compose run backend black /app --check --diff
-      - name: Check Python syntax.
+      - name: Check Python syntax by flake8.
         run: docker-compose run backend flake8 /app
+      - name: Check Python Imports.
+        run: docker-compose run backend isort -c /app
+      - name: Check Python Types.
+        run: docker-compose run backend mypy /app
       - name: Tests for backend.
         run: docker-compose run backend pytest -v
       - name: Check JavaScript/TypeScript syntax.

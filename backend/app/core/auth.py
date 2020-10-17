@@ -2,9 +2,9 @@ import jwt
 from fastapi import Depends, HTTPException, status
 from jwt import PyJWTError
 
+from app.core import security
 from app.db import models, schemas, session
 from app.db.crud import create_user, get_user_by_email
-from app.core import security
 
 
 async def get_current_user(

@@ -1,14 +1,15 @@
+import typing as t
+from datetime import date
+
 import pytest
+from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy_utils import database_exists, create_database, drop_database
-from fastapi.testclient import TestClient
-from datetime import date
-import typing as t
+from sqlalchemy_utils import create_database, database_exists, drop_database
 
 from app.core import config, security
-from app.db.session import Base, get_db
 from app.db import models
+from app.db.session import Base, get_db
 from app.main import app
 
 
