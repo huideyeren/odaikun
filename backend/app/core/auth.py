@@ -1,4 +1,5 @@
-from typing import Any, Optional
+from typing import Optional
+
 import jwt
 from fastapi import Depends, HTTPException, status
 from jwt import PyJWTError
