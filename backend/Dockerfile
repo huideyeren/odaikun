@@ -7,9 +7,9 @@ WORKDIR /app
 RUN apt update && \
     apt install -y postgresql-client
 
-RUN pip install pipenv
-RUN pipenv lock -r
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && pip install pipenv --no-cache-dir
+COPY Pipfile /app
+COPY Pipfile.lock /app
+RUN pipenv install --system --deploy --dev
 
 COPY . .

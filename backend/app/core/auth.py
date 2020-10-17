@@ -1,10 +1,12 @@
+from typing import Optional
+
 import jwt
 from fastapi import Depends, HTTPException, status
 from jwt import PyJWTError
 
+from app.core import security
 from app.db import models, schemas, session
 from app.db.crud import create_user, get_user_by_email
-from app.core import security
 
 
 async def get_current_user(
@@ -19,14 +21,16 @@ async def get_current_user(
         payload = jwt.decode(
             token, security.SECRET_KEY, algorithms=[security.ALGORITHM]
         )
-        email: str = payload.get("sub")
+        email: Optional[str] = payload.get("sub")
         if email is None:
             raise credentials_exception
-        permissions: str = payload.get("permissions")
+        permissions: Optional[str] = payload.get("permissions")
+        if permissions is None:
+            raise credentials_exception
         token_data = schemas.TokenData(email=email, permissions=permissions)
     except PyJWTError:
         raise credentials_exception
-    user = get_user_by_email(db, token_data.email)
+    user = get_user_by_email(db, str(token_data.email))
     if user is None:
         raise credentials_exception
     return user

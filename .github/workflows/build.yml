@@ -2,18 +2,32 @@ name: Build and Test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, develop ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build containers.
-        run: ./scripts/build.sh
-      - name: Tests for backend
+      - name: Build and run containers.
+        run: |
+          docker-compose up -d
+          sleep 5
+          docker-compose run --rm backend alembic upgrade head
+          docker-compose run --rm backend python3 app/initial_data.py
+      - name: Check Python syntax by black.
+        run: docker-compose run backend black /app --check --diff
+      - name: Check Python syntax by flake8.
+        run: docker-compose run backend flake8 /app
+      - name: Check Python Imports.
+        run: docker-compose run backend isort -c /app
+      - name: Check Python Types.
+        run: docker-compose run backend mypy /app
+      - name: Tests for backend.
         run: docker-compose run backend pytest -v
-      - name: Tests for frontend
+      - name: Check JavaScript/TypeScript syntax.
+        run: docker-compose run frontend eslint-docker
+      - name: Tests for frontend.
         run: docker-compose run frontend test

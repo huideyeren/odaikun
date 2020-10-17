@@ -23,6 +23,6 @@
     "eslint.workingDirectories": [
     "./frontend"
     ],
-    "python.pythonPath": "/Users/yusuketakakura/.local/share/virtualenvs/backend-cZGO6YOD/bin/python",
-    "python.analysis.completeFunctionParens": true
+    "python.pythonPath": "/home/iosif/.virtualenvs/backend-zTC0KHjJ/bin/python",
+    "python.analysis.completeFunctionParens": true,
 }

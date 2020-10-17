@@ -1,5 +1,6 @@
 from datetime import date
 from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -17,6 +18,7 @@ class UserBase(BaseModel):
         first_name (Optional[str]): ユーザーの名
         last_name (Optional[str]): ユーザーの姓
     """
+
     email: str
     is_active: bool = True
     is_superuser: bool = False
@@ -31,6 +33,7 @@ class UserOut(UserBase):
     Args:
         UserBase (UserBase): ユーザーの基礎的な情報
     """
+
     pass
 
 
@@ -44,6 +47,7 @@ class UserCreate(UserBase):
     Attributes:
         password (str): パスワード
     """
+
     password: str
 
     class Config:
@@ -53,6 +57,7 @@ class UserCreate(UserBase):
         Attributes:
             orm_mode (bool): ORMモードか
         """
+
         orm_mode = True
 
 
@@ -66,6 +71,7 @@ class UserEdit(UserBase):
     Attributes:
         password (t.Optional[str]): パスワード
     """
+
     password: str
 
     class Config:
@@ -75,6 +81,7 @@ class UserEdit(UserBase):
         Attributes:
             orm_mode (bool): ORMモードか
         """
+
         orm_mode = True
 
 
@@ -84,10 +91,11 @@ class User(UserBase):
 
     Args:
         UserBase (UserBase): ユーザーの基礎的な情報
-    
+
     Attributes:
         id (int): ユーザーID
-    """    
+    """
+
     id: int
 
     class Config:
@@ -97,6 +105,7 @@ class User(UserBase):
         Attributes:
             orm_mode (bool): ORMモードか
         """
+
         orm_mode = True
 
 
@@ -111,6 +120,7 @@ class Token(BaseModel):
         access_token (str): アクセストークン本体
         token_type (str): アクセストークンの型情報
     """
+
     access_token: str
     token_type: str
 
@@ -126,6 +136,7 @@ class TokenData(BaseModel):
         email (Optional[str]): メールアドレス
         permissions (str): 権限を表す文字列
     """
+
     email: Optional[str] = None
     permissions: str = "user"
 
@@ -158,4 +169,3 @@ class Topic(TopicBase):
 
     class Config:
         orm_mode = True
-

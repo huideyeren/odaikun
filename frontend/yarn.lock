@@ -1372,7 +1372,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@material-ui/core@^4.3.3":
+"@material-ui/core@^4.11.0", "@material-ui/core@^4.3.3":
   version "4.11.0"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.11.0.tgz#b69b26e4553c9e53f2bfaf1053e216a0af9be15a"
   integrity sha512-bYo9uIub8wGhZySHqLQ833zi4ZML+XCBE1XwJ8EuUVSpTWWG57Pm+YugQToJNFsEyiKFhPh8DPD0bgupz8n01g==
@@ -1390,7 +1390,7 @@
     react-is "^16.8.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/icons@^4.2.1":
+"@material-ui/icons@^4.2.1", "@material-ui/icons@^4.9.1":
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.9.1.tgz#fdeadf8cb3d89208945b33dbc50c7c616d0bd665"
   integrity sha512-GBitL3oBWO0hzBhvA9KxqcowRUsA0qzwKkURyC8nppnC3fw54KPKZ+d4V1Eeg/UnDRSzDaI9nGCdel/eh9AQMg==
@@ -4457,6 +4457,13 @@ eslint-config-airbnb@^18.1.0:
     object.assign "^4.1.0"
     object.entries "^1.1.2"
 
+eslint-config-prettier@^6.12.0:
+  version "6.12.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.12.0.tgz#9eb2bccff727db1c52104f0b49e87ea46605a0d2"
+  integrity sha512-9jWPlFlgNwRUYVoujvWTQ1aMO8o6648r+K7qU7K5Jmkbyqav1fuEZC0COYpGBxyiAJb65Ra9hrmFx19xRGwXWw==
+  dependencies:
+    get-stdin "^6.0.0"
+
 eslint-config-react-app@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/eslint-config-react-app/-/eslint-config-react-app-5.2.1.tgz#698bf7aeee27f0cea0139eaef261c7bf7dd623df"
@@ -4620,6 +4627,13 @@ eslint-plugin-node@~10.0.0:
     minimatch "^3.0.4"
     resolve "^1.10.1"
     semver "^6.1.0"
+
+eslint-plugin-prettier@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.4.tgz#168ab43154e2ea57db992a2cd097c828171f75c2"
+  integrity sha512-jZDa8z76klRqo+TdGDTFJSavwbnWK2ZpqGKNZ+VvweMW516pDUMmQ2koXvxEE4JhzNvTv+radye/bWGBmA6jmg==
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
 
 eslint-plugin-promise@~4.2.1:
   version "4.2.1"
@@ -4995,6 +5009,11 @@ fast-deep-equal@^3.1.1:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
+
+fast-diff@^1.1.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
+  integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
 fast-glob@^2.0.2:
   version "2.2.7"
@@ -5387,6 +5406,11 @@ get-own-enumerable-property-symbols@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.2.tgz#b5fde77f22cbe35f390b4e089922c50bce6ef664"
   integrity sha512-I0UBV/XOz1XkIJHEUDMZAbzCThU/H8DxmSfmdGcKPnVhu2VfFqr34jr9777IyaTYvxjedWhqVIilEDsCdP5G6g==
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stdin@^7.0.0:
   version "7.0.0"
@@ -9113,6 +9137,13 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
+  dependencies:
+    fast-diff "^1.1.2"
+
 prettier@^2.0.5:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
@@ -9337,6 +9368,21 @@ ra-core@^3.9.0:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
+ra-core@^3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.9.4.tgz#9151e1f4948e06ed2bbc5efdda207b28ac7f9281"
+  integrity sha512-nDVoOOGzyQ0WCo+tyI0qRO6iQv+ExkAapGfM4Jc/+ARvzmktuRomkrWdBCx5msIxH6w17/n+s6J1OtscohR15w==
+  dependencies:
+    "@testing-library/react" "^8.0.7"
+    classnames "~2.2.5"
+    date-fns "^1.29.0"
+    eventemitter3 "^3.0.0"
+    inflection "~1.12.0"
+    lodash "~4.17.5"
+    prop-types "^15.6.1"
+    query-string "^5.1.1"
+    reselect "~3.0.0"
+
 ra-data-json-server@^3.5.2:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.9.0.tgz#79613e4759ef97dfafb429ff41a644a21994f201"
@@ -9352,25 +9398,25 @@ ra-data-simple-rest@^3.3.2:
   dependencies:
     query-string "^5.1.1"
 
-ra-i18n-polyglot@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-3.9.0.tgz#c2349e5982b1819bedbe1b052f1fe817b41f27ae"
-  integrity sha512-8sNGq6VjDH3OWWbxdcxtL18H6OcHPVe/lJ9epxpJZyx0vQdUOR6jd3ZxqmD2mKvKHT0gbzYGyVSLzMW47dNoAA==
+ra-i18n-polyglot@^3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-3.9.4.tgz#5c66609e841acc72aa96417931b48fbe9ae23aed"
+  integrity sha512-2lTDFVvzqnZo/gZXmng2y+NCgcm6hY3W4Sk8zBRP9MwausSi7g3M3E9jepZG4FBZaJYdfKaSrdJjBQesnB5ajg==
   dependencies:
     node-polyglot "^2.2.2"
-    ra-core "^3.9.0"
+    ra-core "^3.9.4"
 
-ra-language-english@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-3.9.0.tgz#2eaaa4c6444b1168931e3de8d5fb03282c4c6ad2"
-  integrity sha512-E3bMPStUiUueHyljzaDY6Q1jsuq0rKOTNk1RSbgAfgrrmJBymptJNgUU1M1C8JC8nD4C9bnYV+b86l5XXHwP4Q==
+ra-language-english@^3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/ra-language-english/-/ra-language-english-3.9.4.tgz#0b76e663cfceee5af277b1c49f5a36c865017a21"
+  integrity sha512-D+HJhvLM60LMKCCghslgcks5hpzcoIbD/sfuG0J2VlOiZMl/TcYtFefpETC/9t0cf9lxuApRCDL5YtSaUoA/CQ==
   dependencies:
-    ra-core "^3.9.0"
+    ra-core "^3.9.4"
 
-ra-ui-materialui@^3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-3.9.0.tgz#535abf6f99e533b16a9b5df3be705eae47e67b48"
-  integrity sha512-WDuu+Leyz48d6ji7I7THNiQb0k42THPe63UxOt81OXCHHKbRwBpDJMc24Td62FcKKBCrfEmVbfTz03bYIgIWXQ==
+ra-ui-materialui@^3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/ra-ui-materialui/-/ra-ui-materialui-3.9.4.tgz#c68958492aa25790198d7101117178b034c97da3"
+  integrity sha512-qx6TcVFwVkqqp9tB4tulgVMH2zhpzJTcTvYZlsIEa17jlBNLM9l1iR7LcVbKZDafKacWD14G6+g9R+y/46qDjg==
   dependencies:
     autosuggest-highlight "^3.1.1"
     classnames "~2.2.5"
@@ -9422,10 +9468,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-admin@^3.5.2:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-3.9.0.tgz#3fe3bb8e1dc6e6a913841382b4992935e9cbfb49"
-  integrity sha512-pDQjiclVByYfL/ElDmDmpSbvst3yplBIwcswuLtIWFVzpvxmpL42JPPIelUFHhcAo3mqjXCW6L2rz4twH4bNow==
+react-admin@^3.9.0:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/react-admin/-/react-admin-3.9.4.tgz#3738ef8ca7fa68140f0555f177aec2d6f0d12151"
+  integrity sha512-IoORnrjFSwC2I1bM364JgUbg0Moeb8EImuPwKFiNLXWsOTuhsCTLzZW76+7zb+QS5XCvRosGLrkv8mgrXY/HUw==
   dependencies:
     "@material-ui/core" "^4.3.3"
     "@material-ui/icons" "^4.2.1"
@@ -9433,10 +9479,10 @@ react-admin@^3.5.2:
     connected-react-router "^6.5.2"
     final-form "^4.18.5"
     final-form-arrays "^3.0.1"
-    ra-core "^3.9.0"
-    ra-i18n-polyglot "^3.9.0"
-    ra-language-english "^3.9.0"
-    ra-ui-materialui "^3.9.0"
+    ra-core "^3.9.4"
+    ra-i18n-polyglot "^3.9.4"
+    ra-language-english "^3.9.4"
+    ra-ui-materialui "^3.9.4"
     react-final-form "^6.3.3"
     react-final-form-arrays "^3.1.1"
     react-redux "^7.1.0"
@@ -9554,7 +9600,7 @@ react-router-dom@^5.1.0, react-router-dom@^5.1.2:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-router@5.2.0, react-router@^5.1.0:
+react-router@5.2.0, react-router@^5.1.0, react-router@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-5.2.0.tgz#424e75641ca8747fbf76e5ecca69781aa37ea293"
   integrity sha512-smz1DUuFHRKdcJC0jobGo8cVbhO3x50tCL4icacOlcwDOEQPq4TMqwx3sY1TP+DvtTgz4nm3thuo7A+BK2U0Dw==
