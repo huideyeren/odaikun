@@ -23,6 +23,7 @@
     "eslint.workingDirectories": [
     "./frontend"
     ],
-    "python.pythonPath": "/home/iosif/.virtualenvs/backend-zTC0KHjJ/bin/python",
+    "python.pythonPath": "~/.local/share/virtualenvs/backend-cZGO6YOD/bin/python",
     "python.analysis.completeFunctionParens": true,
+    "restructuredtext.confPath": "${workspaceFolder}/docs/source",
 }
