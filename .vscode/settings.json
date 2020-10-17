@@ -24,5 +24,6 @@
     "./frontend"
     ],
     "python.pythonPath": "/Users/yusuketakakura/.local/share/virtualenvs/backend-cZGO6YOD/python",
-    "monorepoWorkspace.folders.regex.tools": "^tool|script|scripts|util"
+    "monorepoWorkspace.folders.regex.tools": "^tool|script|scripts|util",
+    "restructuredtext.confPath": ""
 }
