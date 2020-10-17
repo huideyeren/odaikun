@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>app.db package &mdash; Odaikun  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Odaikun
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">app.db package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#app-db-crud-module">app.db.crud module</a></li>
+<li><a class="reference internal" href="#app-db-models-module">app.db.models module</a></li>
+<li><a class="reference internal" href="#module-app.db.schemas">app.db.schemas module</a></li>
+<li><a class="reference internal" href="#app-db-session-module">app.db.session module</a></li>
+<li><a class="reference internal" href="#module-app.db">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Odaikun</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>app.db package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/app.db.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="app-db-package">
+<h1>app.db package<a class="headerlink" href="#app-db-package" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="app-db-crud-module">
+<h2>app.db.crud module<a class="headerlink" href="#app-db-crud-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="app-db-models-module">
+<h2>app.db.models module<a class="headerlink" href="#app-db-models-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="module-app.db.schemas">
+<span id="app-db-schemas-module"></span><h2>app.db.schemas module<a class="headerlink" href="#module-app.db.schemas" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt id="app.db.schemas.Token">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">Token</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">access_token</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#Token"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.Token" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<p>Token JWTトークン</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>BaseModel</strong> (<em>BaseModel</em>) -- Pydanticでモデルのベースとなるクラス</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.Token.access_token">
+<code class="sig-name descname">access_token</code><a class="headerlink" href="#app.db.schemas.Token.access_token" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>アクセストークン本体</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.Token.token_type">
+<code class="sig-name descname">token_type</code><a class="headerlink" href="#app.db.schemas.Token.token_type" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>アクセストークンの型情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname">access_token</code><em class="property">: str</em><a class="headerlink" href="#id0" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id1">
+<code class="sig-name descname">token_type</code><em class="property">: str</em><a class="headerlink" href="#id1" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.TokenData">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">TokenData</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'user'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#TokenData"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TokenData" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<p>TokenData JWTトークンに格納するデータ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>BaseModel</strong> (<em>BaseModel</em>) -- Pydanticでモデルのベースとなるクラス</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.TokenData.email">
+<code class="sig-name descname">email</code><a class="headerlink" href="#app.db.schemas.TokenData.email" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>メールアドレス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TokenData.permissions">
+<code class="sig-name descname">permissions</code><a class="headerlink" href="#app.db.schemas.TokenData.permissions" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>権限を表す文字列</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id2">
+<code class="sig-name descname">email</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#id2" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id3">
+<code class="sig-name descname">permissions</code><em class="property">: str</em><a class="headerlink" href="#id3" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.Topic">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">picture_url</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_date</span><span class="p">:</span> <span class="n">datetime.date</span></em>, <em class="sig-param"><span class="n">is_visible</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_adopted</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contributor_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#Topic"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.Topic" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.TopicBase" title="app.db.schemas.TopicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.TopicBase</span></code></a></p>
+<dl class="py class">
+<dt id="app.db.schemas.Topic.Config">
+<em class="property">class </em><code class="sig-name descname">Config</code><a class="reference internal" href="_modules/app/db/schemas.html#Topic.Config"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.Topic.Config" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="app.db.schemas.Topic.Config.orm_mode">
+<code class="sig-name descname">orm_mode</code><em class="property"> = True</em><a class="headerlink" href="#app.db.schemas.Topic.Config.orm_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.Topic.id">
+<code class="sig-name descname">id</code><em class="property">: int</em><a class="headerlink" href="#app.db.schemas.Topic.id" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.TopicBase">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">TopicBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">picture_url</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_date</span><span class="p">:</span> <span class="n">datetime.date</span></em>, <em class="sig-param"><span class="n">is_visible</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_adopted</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contributor_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#TopicBase"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TopicBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicBase.contributor_id">
+<code class="sig-name descname">contributor_id</code><em class="property">: int</em><a class="headerlink" href="#app.db.schemas.TopicBase.contributor_id" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicBase.is_adopted">
+<code class="sig-name descname">is_adopted</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.TopicBase.is_adopted" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicBase.is_visible">
+<code class="sig-name descname">is_visible</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.TopicBase.is_visible" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicBase.picture_url">
+<code class="sig-name descname">picture_url</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#app.db.schemas.TopicBase.picture_url" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicBase.post_date">
+<code class="sig-name descname">post_date</code><em class="property">: datetime.date</em><a class="headerlink" href="#app.db.schemas.TopicBase.post_date" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicBase.topic">
+<code class="sig-name descname">topic</code><em class="property">: str</em><a class="headerlink" href="#app.db.schemas.TopicBase.topic" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.TopicCreate">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">TopicCreate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">picture_url</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_date</span><span class="p">:</span> <span class="n">datetime.date</span></em>, <em class="sig-param"><span class="n">is_visible</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_adopted</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contributor_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#TopicCreate"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TopicCreate" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.TopicBase" title="app.db.schemas.TopicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.TopicBase</span></code></a></p>
+<dl class="py class">
+<dt id="app.db.schemas.TopicCreate.Config">
+<em class="property">class </em><code class="sig-name descname">Config</code><a class="reference internal" href="_modules/app/db/schemas.html#TopicCreate.Config"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TopicCreate.Config" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.Config.orm_mode">
+<code class="sig-name descname">orm_mode</code><em class="property"> = True</em><a class="headerlink" href="#app.db.schemas.TopicCreate.Config.orm_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.contributor_id">
+<code class="sig-name descname">contributor_id</code><em class="property">: int</em><a class="headerlink" href="#app.db.schemas.TopicCreate.contributor_id" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.is_adopted">
+<code class="sig-name descname">is_adopted</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.TopicCreate.is_adopted" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.is_visible">
+<code class="sig-name descname">is_visible</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.TopicCreate.is_visible" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.picture_url">
+<code class="sig-name descname">picture_url</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#app.db.schemas.TopicCreate.picture_url" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.post_date">
+<code class="sig-name descname">post_date</code><em class="property">: datetime.date</em><a class="headerlink" href="#app.db.schemas.TopicCreate.post_date" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicCreate.topic">
+<code class="sig-name descname">topic</code><em class="property">: str</em><a class="headerlink" href="#app.db.schemas.TopicCreate.topic" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.TopicEdit">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">TopicEdit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">picture_url</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_date</span><span class="p">:</span> <span class="n">datetime.date</span></em>, <em class="sig-param"><span class="n">is_visible</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_adopted</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contributor_id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#TopicEdit"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TopicEdit" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.TopicBase" title="app.db.schemas.TopicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.TopicBase</span></code></a></p>
+<dl class="py class">
+<dt id="app.db.schemas.TopicEdit.Config">
+<em class="property">class </em><code class="sig-name descname">Config</code><a class="reference internal" href="_modules/app/db/schemas.html#TopicEdit.Config"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TopicEdit.Config" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.Config.orm_mode">
+<code class="sig-name descname">orm_mode</code><em class="property"> = True</em><a class="headerlink" href="#app.db.schemas.TopicEdit.Config.orm_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.contributor_id">
+<code class="sig-name descname">contributor_id</code><em class="property">: int</em><a class="headerlink" href="#app.db.schemas.TopicEdit.contributor_id" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.is_adopted">
+<code class="sig-name descname">is_adopted</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.TopicEdit.is_adopted" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.is_visible">
+<code class="sig-name descname">is_visible</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.TopicEdit.is_visible" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.picture_url">
+<code class="sig-name descname">picture_url</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#app.db.schemas.TopicEdit.picture_url" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.post_date">
+<code class="sig-name descname">post_date</code><em class="property">: datetime.date</em><a class="headerlink" href="#app.db.schemas.TopicEdit.post_date" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicEdit.topic">
+<code class="sig-name descname">topic</code><em class="property">: str</em><a class="headerlink" href="#app.db.schemas.TopicEdit.topic" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.TopicOut">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">TopicOut</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">picture_url</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">post_date</span><span class="p">:</span> <span class="n">datetime.date</span></em>, <em class="sig-param"><span class="n">is_visible</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_adopted</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">contributor_id</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">contributor</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#app.db.schemas.User" title="app.db.schemas.User">app.db.schemas.User</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#TopicOut"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.TopicOut" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.TopicBase" title="app.db.schemas.TopicBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.TopicBase</span></code></a></p>
+<dl class="py attribute">
+<dt id="app.db.schemas.TopicOut.contributor">
+<code class="sig-name descname">contributor</code><em class="property">: <a class="reference internal" href="#app.db.schemas.User" title="app.db.schemas.User">app.db.schemas.User</a></em><a class="headerlink" href="#app.db.schemas.TopicOut.contributor" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.User">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_superuser</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#User"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.User" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.UserBase</span></code></a></p>
+<p>User ユーザーの情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>UserBase</strong> (<a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><em>UserBase</em></a>) -- ユーザーの基礎的な情報</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.User.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#app.db.schemas.User.id" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ユーザーID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.User.Config">
+<em class="property">class </em><code class="sig-name descname">Config</code><a class="reference internal" href="_modules/app/db/schemas.html#User.Config"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.User.Config" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Userクラスの設定</p>
+<dl class="py attribute">
+<dt id="app.db.schemas.User.Config.orm_mode">
+<code class="sig-name descname">orm_mode</code><a class="headerlink" href="#app.db.schemas.User.Config.orm_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ORMモードか</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id4">
+<code class="sig-name descname">orm_mode</code><em class="property"> = True</em><a class="headerlink" href="#id4" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id5">
+<code class="sig-name descname">id</code><em class="property">: int</em><a class="headerlink" href="#id5" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.UserBase">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">UserBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_superuser</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#UserBase"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.UserBase" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydantic.main.BaseModel</span></code></p>
+<p>UserBase ユーザーの基礎的な情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>BaseModel</strong> (<em>BaseModel</em>) -- Pydanticでモデルのベースとなるクラス</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.UserBase.email">
+<code class="sig-name descname">email</code><a class="headerlink" href="#app.db.schemas.UserBase.email" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ユーザーのメールアドレス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserBase.is_active">
+<code class="sig-name descname">is_active</code><a class="headerlink" href="#app.db.schemas.UserBase.is_active" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>有効かどうかを表すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserBase.is_superuser">
+<code class="sig-name descname">is_superuser</code><a class="headerlink" href="#app.db.schemas.UserBase.is_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>管理者権限があるかどうかを表すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserBase.first_name">
+<code class="sig-name descname">first_name</code><a class="headerlink" href="#app.db.schemas.UserBase.first_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ユーザーの名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserBase.last_name">
+<code class="sig-name descname">last_name</code><a class="headerlink" href="#app.db.schemas.UserBase.last_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ユーザーの姓</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id6">
+<code class="sig-name descname">email</code><em class="property">: str</em><a class="headerlink" href="#id6" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id7">
+<code class="sig-name descname">first_name</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#id7" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id8">
+<code class="sig-name descname">is_active</code><em class="property">: bool</em><a class="headerlink" href="#id8" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id9">
+<code class="sig-name descname">is_superuser</code><em class="property">: bool</em><a class="headerlink" href="#id9" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="id10">
+<code class="sig-name descname">last_name</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#id10" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.UserCreate">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">UserCreate</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_superuser</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#UserCreate"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.UserCreate" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.UserBase</span></code></a></p>
+<p>UserCreate ユーザーを作成するときの情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>UserBase</strong> (<a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><em>UserBase</em></a>) -- ユーザーの基礎的な情報</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.UserCreate.password">
+<code class="sig-name descname">password</code><a class="headerlink" href="#app.db.schemas.UserCreate.password" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>パスワード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.UserCreate.Config">
+<em class="property">class </em><code class="sig-name descname">Config</code><a class="reference internal" href="_modules/app/db/schemas.html#UserCreate.Config"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.UserCreate.Config" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>UserCreateクラスの設定</p>
+<dl class="py attribute">
+<dt id="app.db.schemas.UserCreate.Config.orm_mode">
+<code class="sig-name descname">orm_mode</code><a class="headerlink" href="#app.db.schemas.UserCreate.Config.orm_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ORMモードか</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id11">
+<code class="sig-name descname">orm_mode</code><em class="property"> = True</em><a class="headerlink" href="#id11" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id12">
+<code class="sig-name descname">password</code><em class="property">: str</em><a class="headerlink" href="#id12" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.UserEdit">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">UserEdit</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_superuser</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#UserEdit"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.UserEdit" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.UserBase</span></code></a></p>
+<p>UserEdit ユーザーを編集するときの情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>UserBase</strong> (<a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><em>UserBase</em></a>) -- ユーザーの基礎的な情報</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.UserEdit.password">
+<code class="sig-name descname">password</code><a class="headerlink" href="#app.db.schemas.UserEdit.password" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>パスワード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>t.Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.UserEdit.Config">
+<em class="property">class </em><code class="sig-name descname">Config</code><a class="reference internal" href="_modules/app/db/schemas.html#UserEdit.Config"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.UserEdit.Config" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>UserEditクラスの設定</p>
+<dl class="py attribute">
+<dt id="app.db.schemas.UserEdit.Config.orm_mode">
+<code class="sig-name descname">orm_mode</code><a class="headerlink" href="#app.db.schemas.UserEdit.Config.orm_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ORMモードか</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id13">
+<code class="sig-name descname">orm_mode</code><em class="property"> = True</em><a class="headerlink" href="#id13" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="id14">
+<code class="sig-name descname">password</code><em class="property">: str</em><a class="headerlink" href="#id14" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="app.db.schemas.UserOut">
+<em class="property">class </em><code class="sig-prename descclassname">app.db.schemas.</code><code class="sig-name descname">UserOut</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">is_active</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">is_superuser</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">last_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/db/schemas.html#UserOut"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.db.schemas.UserOut" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">app.db.schemas.UserBase</span></code></a></p>
+<p>UserOut 出力用のユーザー情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>UserBase</strong> (<a class="reference internal" href="#app.db.schemas.UserBase" title="app.db.schemas.UserBase"><em>UserBase</em></a>) -- ユーザーの基礎的な情報</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt id="app.db.schemas.UserOut.email">
+<code class="sig-name descname">email</code><em class="property">: str</em><a class="headerlink" href="#app.db.schemas.UserOut.email" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserOut.first_name">
+<code class="sig-name descname">first_name</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#app.db.schemas.UserOut.first_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserOut.is_active">
+<code class="sig-name descname">is_active</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.UserOut.is_active" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserOut.is_superuser">
+<code class="sig-name descname">is_superuser</code><em class="property">: bool</em><a class="headerlink" href="#app.db.schemas.UserOut.is_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="app.db.schemas.UserOut.last_name">
+<code class="sig-name descname">last_name</code><em class="property">: Optional<span class="p">[</span>str<span class="p">]</span></em><a class="headerlink" href="#app.db.schemas.UserOut.last_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="app-db-session-module">
+<h2>app.db.session module<a class="headerlink" href="#app-db-session-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="module-app.db">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.db" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 著作権 2020, Iosif Takakura
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
