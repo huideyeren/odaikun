@@ -8,7 +8,7 @@ RUN apt update && \
     apt install -y postgresql-client
 
 RUN pip install --upgrade pip && pip install pipenv --no-cache-dir
-COPY Pipfile ./
+COPY Pipfile Pipfile.lock /app
 RUN pipenv install --system --deploy --dev
 
 COPY . .
