@@ -4,8 +4,8 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
 from app.core.security import get_password_hash
-
-from . import models, schemas
+from app.db import models
+from app.db.schemas import topics, users
 
 
 def get_user(db: Session, user_id: int):
@@ -57,7 +57,7 @@ def get_users(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.User).offset(skip).limit(limit).all()
 
 
-def create_user(db: Session, user: schemas.UserCreate):
+def create_user(db: Session, user: users.UserCreate):
     """
     create_user ユーザーを作成する
 
@@ -105,7 +105,7 @@ def delete_user(db: Session, user_id: int):
     return user
 
 
-def edit_user(db: Session, user_id: int, user: schemas.UserEdit):
+def edit_user(db: Session, user_id: int, user: users.UserEdit):
     """
     edit_user [summary]
 
@@ -202,7 +202,7 @@ def get_all_topics_by_keyword(db: Session, keyword: str):
     )
 
 
-def create_topic(db: Session, topic: schemas.TopicCreate, current_user: schemas.User):
+def create_topic(db: Session, topic: topics.TopicCreate, current_user: users.User):
     if not current_user:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
     topic.contributor_id = current_user.id
@@ -219,7 +219,7 @@ def create_topic(db: Session, topic: schemas.TopicCreate, current_user: schemas.
 
 
 def edit_topic(
-    db: Session, topic_id: int, topic: schemas.TopicEdit, current_user: schemas.User
+    db: Session, topic_id: int, topic: topics.TopicEdit, current_user: users.User
 ):
     if not current_user:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
@@ -238,7 +238,7 @@ def edit_topic(
     return db_topic
 
 
-def drop_topic(db: Session, topic_id: int, current_user: schemas.User):
+def drop_topic(db: Session, topic_id: int, current_user: users.User):
     if not current_user:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
     topic = get_topic(db, topic_id)

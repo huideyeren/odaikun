@@ -1,7 +1,6 @@
-from datetime import date
 from typing import Optional
 
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel
 
 
 class UserBase(BaseModel):
@@ -106,66 +105,4 @@ class User(UserBase):
             orm_mode (bool): ORMモードか
         """
 
-        orm_mode = True
-
-
-class Token(BaseModel):
-    """
-    Token JWTトークン
-
-    Args:
-        BaseModel (BaseModel): Pydanticでモデルのベースとなるクラス
-
-    Attributes:
-        access_token (str): アクセストークン本体
-        token_type (str): アクセストークンの型情報
-    """
-
-    access_token: str
-    token_type: str
-
-
-class TokenData(BaseModel):
-    """
-    TokenData JWTトークンに格納するデータ
-
-    Args:
-        BaseModel (BaseModel): Pydanticでモデルのベースとなるクラス
-
-    Attributes:
-        email (Optional[str]): メールアドレス
-        permissions (str): 権限を表す文字列
-    """
-
-    email: Optional[str] = None
-    permissions: str = "user"
-
-
-class TopicBase(BaseModel):
-    topic: str
-    picture_url: Optional[HttpUrl] = None
-    post_date: date
-    is_visible: bool = True
-    is_adopted: bool = False
-    contributor_id: int
-
-
-class TopicOut(TopicBase):
-    contributor: User
-
-
-class TopicCreate(TopicBase):
-    class Config:
-        orm_mode = True
-
-
-class TopicEdit(TopicBase):
-    class Config:
-        orm_mode = True
-
-
-class Topic(TopicBase):
-    id: int
-
-    class Config:
         orm_mode = True
