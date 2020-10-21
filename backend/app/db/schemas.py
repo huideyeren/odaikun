@@ -1,7 +1,7 @@
 from datetime import date
 from typing import Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, HttpUrl
 
 
 class UserBase(BaseModel):
@@ -143,7 +143,7 @@ class TokenData(BaseModel):
 
 class TopicBase(BaseModel):
     topic: str
-    picture_url: Optional[str] = None
+    picture_url: Optional[HttpUrl] = None
     post_date: date
     is_visible: bool = True
     is_adopted: bool = False
