@@ -10,6 +10,10 @@ mypy = "*"
 isort = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
+sphinx-autodoc-annotation = "*"
+sphinx-autodoc-typehints = "*"
+sphinx-git = "*"
+ghp-import = "*"
 
 [packages]
 alembic = "==1.4.2"

@@ -1,6 +1,14 @@
 app.db package
 ==============
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   app.db.schemas
+
 Submodules
 ----------
 
@@ -16,14 +24,6 @@ app.db.models module
 --------------------
 
 .. automodule:: app.db.models
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-app.db.schemas module
----------------------
-
-.. automodule:: app.db.schemas
    :members:
    :undoc-members:
    :show-inheritance:

@@ -3,49 +3,46 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql.schema import ForeignKey
 from sqlalchemy.sql.sqltypes import Date, Text
 
-from .session import Base
+from app.db.session import Base
 
 
 class User(Base):
     """
-    User
-
-    Userテーブルに対応するDBモデル
+    User userテーブルのテーブル定義
 
     Args:
-        Base ([type]): [description]
-
-    Attributes:
-        id (int): ユーザーID
-        email (str): ユーザーのメールアドレス
-        first_name (str): ユーザーの名
-        last_name (str): ユーザーの姓
-        hashed_password (str): ハッシュ化されたパスワード文字列
-        is_active (bool): 有効かどうかを表すフラグ
-        is_superuser (bool): 管理者権限があるかどうかを表すフラグ
+        Base (Type[__class_DeclarativeMeta]): テーブルのメタデータ
     """
 
-    __tablename__ = "user"
+    __tablename__ = "user"  #: テーブルの名前
 
-    id = Column(Integer, primary_key=True, index=True)
-    email = Column(String, unique=True, index=True, nullable=False)
-    first_name = Column(String)
-    last_name = Column(String)
-    hashed_password = Column(String, nullable=False)
-    is_active = Column(Boolean, default=True)
-    is_superuser = Column(Boolean, default=False)
+    id = Column(Integer, primary_key=True, index=True)  #: ID
+    email = Column(String, unique=True, index=True, nullable=False)  #: メールアドレス
+    first_name = Column(String)  #: 名
+    last_name = Column(String)  #: 姓
+    hashed_password = Column(String, nullable=False)  #: ハッシュ化されたパスワード
+    is_active = Column(Boolean, default=True)  #: アクティブな状態か？
+    is_superuser = Column(Boolean, default=False)  #: スーパーユーザーか？
 
-    topics = relationship("Topic", backref="user")
+    topics = relationship("Topic", backref="user")  #: topicテーブルとのリレーション
 
 
 class Topic(Base):
-    __tablename__ = "topic"
+    """
+    Topic topicテーブルのテーブル定義
 
-    id = Column(Integer, primary_key=True, index=True)
-    topic = Column(Text, index=True, nullable=False)
-    picture_url = Column(String)
-    post_date = Column(Date)
-    is_visible = Column(Boolean, default=True)
-    is_adopted = Column(Boolean, default=False)
-    contributor_id = Column(Integer, ForeignKey("user.id"))
-    contributor = relationship("User", foreign_keys=[contributor_id])
+    Args:
+        Base (Type[__class_DeclarativeMeta]): テーブルのメタデータ
+    """
+    __tablename__ = "topic"  #: テーブルの名前
+
+    id = Column(Integer, primary_key=True, index=True)  #: ID
+    topic = Column(Text, index=True, nullable=False)  #: お題本文
+    picture_url = Column(String)  #: 画像のURL
+    post_date = Column(Date)  #: 投稿日
+    is_visible = Column(Boolean, default=True)  #: 表示できる状態になっているか？
+    is_adopted = Column(Boolean, default=False)  #: 採用されたか？
+    contributor_id = Column(Integer, ForeignKey("user.id"))  #: 投稿者のユーザーID
+    contributor = relationship(
+        "User", foreign_keys=[contributor_id]
+    )  #: userテーブルとのリレーション
