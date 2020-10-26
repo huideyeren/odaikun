@@ -81,19 +81,11 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">app.api.api_v1.routers package</a><ul>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#app-api-api-v1-routers-auth-module">app.api.api_v1.routers.auth module</a></li>
-<li><a class="reference internal" href="#app-api-api-v1-routers-topics-module">app.api.api_v1.routers.topics module</a></li>
-<li><a class="reference internal" href="#app-api-api-v1-routers-users-module">app.api.api_v1.routers.users module</a></li>
-<li><a class="reference internal" href="#module-app.api.api_v1.routers">Module contents</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="commit.html">更新履歴</a></li>
 </ul>
-</li>
-</ul>
-</div>
+
             
           
         </div>
@@ -166,8 +158,8 @@
 <li class="toctree-l1"><a class="reference internal" href="app.api.api_v1.routers.tests.html">app.api.api_v1.routers.tests package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#module-app.api.api_v1.routers.tests.test_auth">app.api.api_v1.routers.tests.test_auth module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#app-api-api-v1-routers-tests-test-topics-module">app.api.api_v1.routers.tests.test_topics module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#app-api-api-v1-routers-tests-test-users-module">app.api.api_v1.routers.tests.test_users module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#module-app.api.api_v1.routers.tests.test_topics">app.api.api_v1.routers.tests.test_topics module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#module-app.api.api_v1.routers.tests.test_users">app.api.api_v1.routers.tests.test_users module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app.api.api_v1.routers.tests.html#module-app.api.api_v1.routers.tests">Module contents</a></li>
 </ul>
 </li>
@@ -177,14 +169,80 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </div>
-<div class="section" id="app-api-api-v1-routers-auth-module">
-<h2>app.api.api_v1.routers.auth module<a class="headerlink" href="#app-api-api-v1-routers-auth-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="module-app.api.api_v1.routers.auth">
+<span id="app-api-api-v1-routers-auth-module"></span><h2>app.api.api_v1.routers.auth module<a class="headerlink" href="#module-app.api.api_v1.routers.auth" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.api_v1.routers.auth.login">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.auth.</code><code class="sig-name descname">login</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">form_data</span><span class="o">=</span><span class="default_value">Depends(NoneType)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/auth.html#login"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.auth.login" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.auth.signup">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.auth.</code><code class="sig-name descname">signup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">form_data</span><span class="o">=</span><span class="default_value">Depends(NoneType)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/auth.html#signup"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.auth.signup" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="app-api-api-v1-routers-topics-module">
-<h2>app.api.api_v1.routers.topics module<a class="headerlink" href="#app-api-api-v1-routers-topics-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="module-app.api.api_v1.routers.topics">
+<span id="app-api-api-v1-routers-topics-module"></span><h2>app.api.api_v1.routers.topics module<a class="headerlink" href="#module-app.api.api_v1.routers.topics" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.api_v1.routers.topics.topic_create">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.topics.</code><code class="sig-name descname">topic_create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">topic</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_user)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/topics.html#topic_create"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.topics.topic_create" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.topics.topic_delete">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.topics.</code><code class="sig-name descname">topic_delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">topic_id</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_user)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/topics.html#topic_delete"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.topics.topic_delete" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.topics.topic_edit">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.topics.</code><code class="sig-name descname">topic_edit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">topic_id</span></em>, <em class="sig-param"><span class="n">topic</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_user)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/topics.html#topic_edit"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.topics.topic_edit" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.topics.topics_list">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.topics.</code><code class="sig-name descname">topics_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">response</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/topics.html#topics_list"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.topics.topics_list" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="app-api-api-v1-routers-users-module">
-<h2>app.api.api_v1.routers.users module<a class="headerlink" href="#app-api-api-v1-routers-users-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="module-app.api.api_v1.routers.users">
+<span id="app-api-api-v1-routers-users-module"></span><h2>app.api.api_v1.routers.users module<a class="headerlink" href="#module-app.api.api_v1.routers.users" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.api_v1.routers.users.user_create">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.users.</code><code class="sig-name descname">user_create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">user</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_superuser)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/users.html#user_create"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.users.user_create" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Create a new user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.users.user_delete">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.users.</code><code class="sig-name descname">user_delete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_superuser)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/users.html#user_delete"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.users.user_delete" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Delete existing user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.users.user_details">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.users.</code><code class="sig-name descname">user_details</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_superuser)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/users.html#user_details"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.users.user_details" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Get any user details</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.users.user_edit">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.users.</code><code class="sig-name descname">user_edit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">request</span></em>, <em class="sig-param"><span class="n">user_id</span></em>, <em class="sig-param"><span class="n">user</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_superuser)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/users.html#user_edit"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.users.user_edit" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Update existing user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.users.user_me">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.users.</code><code class="sig-name descname">user_me</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_user)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/users.html#user_me"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.users.user_me" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Get own user</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.users.users_list">
+<em class="property">async </em><code class="sig-prename descclassname">app.api.api_v1.routers.users.</code><code class="sig-name descname">users_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">response</span></em>, <em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_active_superuser)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/users.html#users_list"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.users.users_list" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Get all users</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-app.api.api_v1.routers">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.api.api_v1.routers" title="このヘッドラインへのパーマリンク">¶</a></h2>

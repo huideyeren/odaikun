@@ -81,18 +81,11 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">app.api.api_v1.routers.tests package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-app.api.api_v1.routers.tests.test_auth">app.api.api_v1.routers.tests.test_auth module</a></li>
-<li><a class="reference internal" href="#app-api-api-v1-routers-tests-test-topics-module">app.api.api_v1.routers.tests.test_topics module</a></li>
-<li><a class="reference internal" href="#app-api-api-v1-routers-tests-test-users-module">app.api.api_v1.routers.tests.test_users module</a></li>
-<li><a class="reference internal" href="#module-app.api.api_v1.routers.tests">Module contents</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="commit.html">更新履歴</a></li>
 </ul>
-</li>
-</ul>
-</div>
+
             
           
         </div>
@@ -190,15 +183,95 @@
 
 <dl class="py function">
 <dt id="app.api.api_v1.routers.tests.test_auth.verify_password_mock">
-<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_auth.</code><code class="sig-name descname">verify_password_mock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">second</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_auth.html#verify_password_mock"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_auth.verify_password_mock" title="この定義へのパーマリンク">¶</a></dt>
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_auth.</code><code class="sig-name descname">verify_password_mock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_auth.html#verify_password_mock"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_auth.verify_password_mock" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 </div>
-<div class="section" id="app-api-api-v1-routers-tests-test-topics-module">
-<h2>app.api.api_v1.routers.tests.test_topics module<a class="headerlink" href="#app-api-api-v1-routers-tests-test-topics-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="module-app.api.api_v1.routers.tests.test_topics">
+<span id="app-api-api-v1-routers-tests-test-topics-module"></span><h2>app.api.api_v1.routers.tests.test_topics module<a class="headerlink" href="#module-app.api.api_v1.routers.tests.test_topics" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_topics.test_delete_my_topic_by_superuser">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_topics.</code><code class="sig-name descname">test_delete_my_topic_by_superuser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_topic</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_topics.html#test_delete_my_topic_by_superuser"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_topics.test_delete_my_topic_by_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_topics.test_delete_topic">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_topics.</code><code class="sig-name descname">test_delete_topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_topic</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">user_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_topics.html#test_delete_topic"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_topics.test_delete_topic" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_topics.test_delete_topic_by_others">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_topics.</code><code class="sig-name descname">test_delete_topic_by_others</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_topic_written_by_superuser</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">user_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_topics.html#test_delete_topic_by_others"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_topics.test_delete_topic_by_others" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_topics.test_delete_topic_is_not_found">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_topics.</code><code class="sig-name descname">test_delete_topic_is_not_found</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_topic_written_by_superuser</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_topics.html#test_delete_topic_is_not_found"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_topics.test_delete_topic_is_not_found" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_topics.test_delete_topic_on_superuser">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_topics.</code><code class="sig-name descname">test_delete_topic_on_superuser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_topic_written_by_superuser</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_topics.html#test_delete_topic_on_superuser"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_topics.test_delete_topic_on_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_topics.test_get_topics">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_topics.</code><code class="sig-name descname">test_get_topics</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_topic</span></em>, <em class="sig-param"><span class="n">user_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_topics.html#test_get_topics"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_topics.test_get_topics" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="app-api-api-v1-routers-tests-test-users-module">
-<h2>app.api.api_v1.routers.tests.test_users module<a class="headerlink" href="#app-api-api-v1-routers-tests-test-users-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="module-app.api.api_v1.routers.tests.test_users">
+<span id="app-api-api-v1-routers-tests-test-users-module"></span><h2>app.api.api_v1.routers.tests.test_users module<a class="headerlink" href="#module-app.api.api_v1.routers.tests.test_users" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_authenticated_user_me">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_authenticated_user_me</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">user_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_authenticated_user_me"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_authenticated_user_me" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_delete_user">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_delete_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_superuser</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_delete_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_delete_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_delete_user_not_found">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_delete_user_not_found</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_delete_user_not_found"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_delete_user_not_found" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_edit_user">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_edit_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_superuser</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_edit_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_edit_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_edit_user_not_found">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_edit_user_not_found</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_edit_user_not_found"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_edit_user_not_found" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_get_user">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_get_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_user</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_get_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_get_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_get_users">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_get_users</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_superuser</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_get_users"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_get_users" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_unauthenticated_routes">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_unauthenticated_routes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_unauthenticated_routes"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_unauthenticated_routes" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_unauthorized_routes">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_unauthorized_routes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">user_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_unauthorized_routes"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_unauthorized_routes" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.api.api_v1.routers.tests.test_users.test_user_not_found">
+<code class="sig-prename descclassname">app.api.api_v1.routers.tests.test_users.</code><code class="sig-name descname">test_user_not_found</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">superuser_token_headers</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/api/api_v1/routers/tests/test_users.html#test_user_not_found"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.api.api_v1.routers.tests.test_users.test_user_not_found" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-app.api.api_v1.routers.tests">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.api.api_v1.routers.tests" title="このヘッドラインへのパーマリンク">¶</a></h2>

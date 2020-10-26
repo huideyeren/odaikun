@@ -81,11 +81,11 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">conftest module</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="commit.html">更新履歴</a></li>
 </ul>
-</div>
+
             
           
         </div>
@@ -149,8 +149,154 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="conftest-module">
-<h1>conftest module<a class="headerlink" href="#conftest-module" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <div class="section" id="module-conftest">
+<span id="conftest-module"></span><h1>conftest module<a class="headerlink" href="#module-conftest" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<dl class="py function">
+<dt id="conftest.client">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">client</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_db</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#client"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.client" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Get a TestClient instance that reads/write to the test database.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.create_test_db">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">create_test_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#create_test_db"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.create_test_db" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Create a test database and use it for the whole test session.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.get_password_hash">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">get_password_hash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#get_password_hash"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.get_password_hash" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Password hashing can be expensive so a mock will be much faster</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.get_test_db_url">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">get_test_db_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#get_test_db_url"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.get_test_db_url" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.superuser_token_headers">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">superuser_token_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_superuser</span></em>, <em class="sig-param"><span class="n">test_password</span></em>, <em class="sig-param"><span class="n">monkeypatch</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#superuser_token_headers"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.superuser_token_headers" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.test_db">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">test_db</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#test_db"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.test_db" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Modify the db session to automatically roll back after each test.
+This is to avoid tests affecting the database state of other tests.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.test_password">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">test_password</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#test_password"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.test_password" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.test_superuser">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">test_superuser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_db</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#test_superuser"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.test_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Superuser for testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="app.db.html#app.db.models.User" title="app.db.models.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.test_topic">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">test_topic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">test_user</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#test_topic"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.test_topic" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>test_topic Topic for testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>test_db</strong> (<em>[</em><em>type</em><em>]</em>) -- [description]</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>[description]</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="app.db.html#app.db.models.Topic" title="app.db.models.Topic">models.Topic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.test_topic_written_by_superuser">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">test_topic_written_by_superuser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_db</span></em>, <em class="sig-param"><span class="n">test_superuser</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#test_topic_written_by_superuser"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.test_topic_written_by_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>test_topic Topic for testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>test_db</strong> (<em>[</em><em>type</em><em>]</em>) -- [description]</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>[description]</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="app.db.html#app.db.models.Topic" title="app.db.models.Topic">models.Topic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.test_user">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">test_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">test_db</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#test_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.test_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Make a test user in the database</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="app.db.html#app.db.models.User" title="app.db.models.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.topic_token_headers">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">topic_token_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_user</span></em>, <em class="sig-param"><span class="n">test_password</span></em>, <em class="sig-param"><span class="n">monkeypatch</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#topic_token_headers"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.topic_token_headers" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.user_token_headers">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">user_token_headers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">client</span></em>, <em class="sig-param"><span class="n">test_user</span></em>, <em class="sig-param"><span class="n">test_password</span></em>, <em class="sig-param"><span class="n">monkeypatch</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#user_token_headers"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.user_token_headers" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="conftest.verify_password_mock">
+<code class="sig-prename descclassname">conftest.</code><code class="sig-name descname">verify_password_mock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">first</span></em>, <em class="sig-param"><span class="n">second</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/conftest.html#verify_password_mock"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#conftest.verify_password_mock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

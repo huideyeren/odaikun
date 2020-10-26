@@ -81,19 +81,11 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">app.core package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#app-core-auth-module">app.core.auth module</a></li>
-<li><a class="reference internal" href="#module-app.core.celery_app">app.core.celery_app module</a></li>
-<li><a class="reference internal" href="#module-app.core.config">app.core.config module</a></li>
-<li><a class="reference internal" href="#module-app.core.security">app.core.security module</a></li>
-<li><a class="reference internal" href="#module-app.core">Module contents</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="commit.html">更新履歴</a></li>
 </ul>
-</li>
-</ul>
-</div>
+
             
           
         </div>
@@ -162,8 +154,38 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </div>
-<div class="section" id="app-core-auth-module">
-<h2>app.core.auth module<a class="headerlink" href="#app-core-auth-module" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="module-app.core.auth">
+<span id="app-core-auth-module"></span><h2>app.core.auth module<a class="headerlink" href="#module-app.core.auth" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="app.core.auth.authenticate_user">
+<code class="sig-prename descclassname">app.core.auth.</code><code class="sig-name descname">authenticate_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span></em>, <em class="sig-param"><span class="n">email</span></em>, <em class="sig-param"><span class="n">password</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/auth.html#authenticate_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.auth.authenticate_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.core.auth.get_current_active_superuser">
+<em class="property">async </em><code class="sig-prename descclassname">app.core.auth.</code><code class="sig-name descname">get_current_active_superuser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_user)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/auth.html#get_current_active_superuser"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.auth.get_current_active_superuser" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="app.db.html#app.db.models.User" title="app.db.models.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="app.core.auth.get_current_active_user">
+<em class="property">async </em><code class="sig-prename descclassname">app.core.auth.</code><code class="sig-name descname">get_current_active_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">current_user</span><span class="o">=</span><span class="default_value">Depends(get_current_user)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/auth.html#get_current_active_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.auth.get_current_active_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.core.auth.get_current_user">
+<em class="property">async </em><code class="sig-prename descclassname">app.core.auth.</code><code class="sig-name descname">get_current_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span><span class="o">=</span><span class="default_value">Depends(get_db)</span></em>, <em class="sig-param"><span class="n">token</span><span class="o">=</span><span class="default_value">Depends(OAuth2PasswordBearer)</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/auth.html#get_current_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.auth.get_current_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="app.core.auth.sign_up_new_user">
+<code class="sig-prename descclassname">app.core.auth.</code><code class="sig-name descname">sign_up_new_user</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">db</span></em>, <em class="sig-param"><span class="n">email</span></em>, <em class="sig-param"><span class="n">password</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/auth.html#sign_up_new_user"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.auth.sign_up_new_user" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-app.core.celery_app">
 <span id="app-core-celery-app-module"></span><h2>app.core.celery_app module<a class="headerlink" href="#module-app.core.celery_app" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -175,18 +197,28 @@
 <span id="app-core-security-module"></span><h2>app.core.security module<a class="headerlink" href="#module-app.core.security" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <dl class="py function">
 <dt id="app.core.security.create_access_token">
-<code class="sig-prename descclassname">app.core.security.</code><code class="sig-name descname">create_access_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">dict</span></em>, <em class="sig-param"><span class="n">expires_delta</span><span class="p">:</span> <span class="n">datetime.timedelta</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/security.html#create_access_token"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.security.create_access_token" title="この定義へのパーマリンク">¶</a></dt>
+<code class="sig-prename descclassname">app.core.security.</code><code class="sig-name descname">create_access_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">expires_delta</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/security.html#create_access_token"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.security.create_access_token" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt id="app.core.security.get_password_hash">
-<code class="sig-prename descclassname">app.core.security.</code><code class="sig-name descname">get_password_hash</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">password</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="_modules/app/core/security.html#get_password_hash"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.security.get_password_hash" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-prename descclassname">app.core.security.</code><code class="sig-name descname">get_password_hash</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">password</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/security.html#get_password_hash"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.security.get_password_hash" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt id="app.core.security.verify_password">
-<code class="sig-prename descclassname">app.core.security.</code><code class="sig-name descname">verify_password</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plain_password</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">hashed_password</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="reference internal" href="_modules/app/core/security.html#verify_password"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.security.verify_password" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-prename descclassname">app.core.security.</code><code class="sig-name descname">verify_password</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plain_password</span></em>, <em class="sig-param"><span class="n">hashed_password</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/core/security.html#verify_password"><span class="viewcode-link">[ソース]</span></a><a class="headerlink" href="#app.core.security.verify_password" title="この定義へのパーマリンク">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-app.core">

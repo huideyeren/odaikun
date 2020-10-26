@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>conftest &mdash; Odaikun  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Odaikun
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../commit.html">更新履歴</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Odaikun</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">モジュールコード</a> &raquo;</li>
+        
+      <li>conftest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>conftest のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">typing</span> <span class="k">as</span> <span class="nn">t</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">fastapi.testclient</span> <span class="kn">import</span> <span class="n">TestClient</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">event</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy_utils</span> <span class="kn">import</span> <span class="n">create_database</span><span class="p">,</span> <span class="n">database_exists</span><span class="p">,</span> <span class="n">drop_database</span>
+
+<span class="kn">from</span> <span class="nn">app.core</span> <span class="kn">import</span> <span class="n">config</span><span class="p">,</span> <span class="n">security</span>
+<span class="kn">from</span> <span class="nn">app.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">app.db.session</span> <span class="kn">import</span> <span class="n">Base</span><span class="p">,</span> <span class="n">get_db</span>
+<span class="kn">from</span> <span class="nn">app.main</span> <span class="kn">import</span> <span class="n">app</span>
+
+
+<div class="viewcode-block" id="get_test_db_url"><a class="viewcode-back" href="../conftest.html#conftest.get_test_db_url">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_test_db_url</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">SQLALCHEMY_DATABASE_URI</span><span class="si">}</span><span class="s2">_test&quot;</span></div>
+
+
+<div class="viewcode-block" id="test_db"><a class="viewcode-back" href="../conftest.html#conftest.test_db">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">test_db</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Modify the db session to automatically roll back after each test.</span>
+<span class="sd">    This is to avoid tests affecting the database state of other tests.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Connect to the test database</span>
+    <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span>
+        <span class="n">get_test_db_url</span><span class="p">(),</span>
+    <span class="p">)</span>
+
+    <span class="n">connection</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+    <span class="n">trans</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+
+    <span class="c1"># Run a parent transaction that can roll back all changes</span>
+    <span class="n">test_session_maker</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+    <span class="n">test_session</span> <span class="o">=</span> <span class="n">test_session_maker</span><span class="p">()</span>
+    <span class="n">test_session</span><span class="o">.</span><span class="n">begin_nested</span><span class="p">()</span>
+
+    <span class="nd">@event</span><span class="o">.</span><span class="n">listens_for</span><span class="p">(</span><span class="n">test_session</span><span class="p">,</span> <span class="s2">&quot;after_transaction_end&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">restart_savepoint</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">transaction</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">transaction</span><span class="o">.</span><span class="n">nested</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">transaction</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">nested</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">expire_all</span><span class="p">()</span>
+            <span class="n">s</span><span class="o">.</span><span class="n">begin_nested</span><span class="p">()</span>
+
+    <span class="k">yield</span> <span class="n">test_session</span>
+
+    <span class="c1"># Roll back the parent transaction after the test is complete</span>
+    <span class="n">test_session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">trans</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+    <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="create_test_db"><a class="viewcode-back" href="../conftest.html#conftest.create_test_db">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">,</span> <span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">create_test_db</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a test database and use it for the whole test session.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">test_db_url</span> <span class="o">=</span> <span class="n">get_test_db_url</span><span class="p">()</span>
+
+    <span class="c1"># Create the test database</span>
+    <span class="k">assert</span> <span class="ow">not</span> <span class="n">database_exists</span><span class="p">(</span>
+        <span class="n">test_db_url</span>
+    <span class="p">),</span> <span class="s2">&quot;Test database already exists. Aborting tests.&quot;</span>
+    <span class="n">create_database</span><span class="p">(</span><span class="n">test_db_url</span><span class="p">)</span>
+    <span class="n">test_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">test_db_url</span><span class="p">)</span>
+    <span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">test_engine</span><span class="p">)</span>
+
+    <span class="c1"># Run the tests</span>
+    <span class="k">yield</span>
+
+    <span class="c1"># Drop the test database</span>
+    <span class="n">drop_database</span><span class="p">(</span><span class="n">test_db_url</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="client"><a class="viewcode-back" href="../conftest.html#conftest.client">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">client</span><span class="p">(</span><span class="n">test_db</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a TestClient instance that reads/write to the test database.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">get_test_db</span><span class="p">():</span>
+        <span class="k">yield</span> <span class="n">test_db</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">dependency_overrides</span><span class="p">[</span><span class="n">get_db</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_test_db</span>
+
+    <span class="k">yield</span> <span class="n">TestClient</span><span class="p">(</span><span class="n">app</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="test_password"><a class="viewcode-back" href="../conftest.html#conftest.test_password">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">test_password</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s2">&quot;securepassword&quot;</span></div>
+
+
+<div class="viewcode-block" id="get_password_hash"><a class="viewcode-back" href="../conftest.html#conftest.get_password_hash">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_password_hash</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Password hashing can be expensive so a mock will be much faster</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;supersecrethash&quot;</span></div>
+
+
+<div class="viewcode-block" id="test_user"><a class="viewcode-back" href="../conftest.html#conftest.test_user">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">test_user</span><span class="p">(</span><span class="n">test_db</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Make a test user in the database</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">(</span>
+        <span class="n">email</span><span class="o">=</span><span class="s2">&quot;fake@email.com&quot;</span><span class="p">,</span>
+        <span class="n">hashed_password</span><span class="o">=</span><span class="n">get_password_hash</span><span class="p">(),</span>
+        <span class="n">is_active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">user</span></div>
+
+
+<div class="viewcode-block" id="test_superuser"><a class="viewcode-back" href="../conftest.html#conftest.test_superuser">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">test_superuser</span><span class="p">(</span><span class="n">test_db</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Superuser for testing</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">(</span>
+        <span class="n">email</span><span class="o">=</span><span class="s2">&quot;fakeadmin@email.com&quot;</span><span class="p">,</span>
+        <span class="n">hashed_password</span><span class="o">=</span><span class="n">get_password_hash</span><span class="p">(),</span>
+        <span class="n">is_superuser</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">user</span></div>
+
+
+<div class="viewcode-block" id="test_topic"><a class="viewcode-back" href="../conftest.html#conftest.test_topic">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">test_topic</span><span class="p">(</span><span class="n">test_db</span><span class="p">,</span> <span class="n">test_user</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    test_topic Topic for testing</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        test_db ([type]): [description]</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        models.Topic: [description]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">user</span> <span class="o">=</span> <span class="n">test_user</span>
+
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span>
+        <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;今日のお題のテスト&quot;</span><span class="p">,</span>
+        <span class="n">picture_url</span><span class="o">=</span><span class="s2">&quot;https://huideyeren.info/images/mongolian-6cd0fdc2.jpg&quot;</span><span class="p">,</span>
+        <span class="n">post_date</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="s2">&quot;2019-12-04&quot;</span><span class="p">),</span>
+        <span class="n">is_visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">is_adopted</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">contributor_id</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">topic</span></div>
+
+
+<div class="viewcode-block" id="test_topic_written_by_superuser"><a class="viewcode-back" href="../conftest.html#conftest.test_topic_written_by_superuser">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">test_topic_written_by_superuser</span><span class="p">(</span><span class="n">test_db</span><span class="p">,</span> <span class="n">test_superuser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    test_topic Topic for testing</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        test_db ([type]): [description]</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        models.Topic: [description]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">user</span> <span class="o">=</span> <span class="n">test_superuser</span>
+
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span>
+        <span class="n">topic</span><span class="o">=</span><span class="s2">&quot;今日のお題のテスト&quot;</span><span class="p">,</span>
+        <span class="n">picture_url</span><span class="o">=</span><span class="s2">&quot;https://huideyeren.info/images/mongolian-6cd0fdc2.jpg&quot;</span><span class="p">,</span>
+        <span class="n">post_date</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="s2">&quot;2019-12-04&quot;</span><span class="p">),</span>
+        <span class="n">is_visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">is_adopted</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">contributor_id</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+    <span class="n">test_db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">topic</span></div>
+
+
+<div class="viewcode-block" id="verify_password_mock"><a class="viewcode-back" href="../conftest.html#conftest.verify_password_mock">[ドキュメント]</a><span class="k">def</span> <span class="nf">verify_password_mock</span><span class="p">(</span><span class="n">first</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">second</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="user_token_headers"><a class="viewcode-back" href="../conftest.html#conftest.user_token_headers">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">user_token_headers</span><span class="p">(</span>
+    <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">,</span> <span class="n">test_user</span><span class="p">,</span> <span class="n">test_password</span><span class="p">,</span> <span class="n">monkeypatch</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setattr</span><span class="p">(</span><span class="n">security</span><span class="p">,</span> <span class="s2">&quot;verify_password&quot;</span><span class="p">,</span> <span class="n">verify_password_mock</span><span class="p">)</span>
+
+    <span class="n">login_data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">test_user</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">test_password</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/token&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">login_data</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">a_token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">]</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">a_token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">headers</span></div>
+
+
+<div class="viewcode-block" id="superuser_token_headers"><a class="viewcode-back" href="../conftest.html#conftest.superuser_token_headers">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">superuser_token_headers</span><span class="p">(</span>
+    <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">,</span> <span class="n">test_superuser</span><span class="p">,</span> <span class="n">test_password</span><span class="p">,</span> <span class="n">monkeypatch</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setattr</span><span class="p">(</span><span class="n">security</span><span class="p">,</span> <span class="s2">&quot;verify_password&quot;</span><span class="p">,</span> <span class="n">verify_password_mock</span><span class="p">)</span>
+
+    <span class="n">login_data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">test_superuser</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">test_password</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/token&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">login_data</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">a_token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">]</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">a_token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">headers</span></div>
+
+
+<div class="viewcode-block" id="topic_token_headers"><a class="viewcode-back" href="../conftest.html#conftest.topic_token_headers">[ドキュメント]</a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<span class="k">def</span> <span class="nf">topic_token_headers</span><span class="p">(</span>
+    <span class="n">client</span><span class="p">:</span> <span class="n">TestClient</span><span class="p">,</span> <span class="n">test_user</span><span class="p">,</span> <span class="n">test_password</span><span class="p">,</span> <span class="n">monkeypatch</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">t</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setattr</span><span class="p">(</span><span class="n">security</span><span class="p">,</span> <span class="s2">&quot;verify_password&quot;</span><span class="p">,</span> <span class="n">verify_password_mock</span><span class="p">)</span>
+
+    <span class="n">login_data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="n">test_user</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="n">test_password</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/api/token&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">login_data</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">a_token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">]</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">a_token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">headers</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 著作権 2020, Iosif Takakura
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

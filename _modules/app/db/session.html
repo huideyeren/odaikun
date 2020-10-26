@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>app.tests.test_main &mdash; Odaikun  ドキュメント</title>
+  <title>app.db.session &mdash; Odaikun  ドキュメント</title>
   
 
   
@@ -132,7 +132,7 @@
         
           <li><a href="../../index.html">モジュールコード</a> &raquo;</li>
         
-      <li>app.tests.test_main</li>
+      <li>app.db.session</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -147,11 +147,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>app.tests.test_main のソースコード</h1><div class="highlight"><pre>
-<div class="viewcode-block" id="test_read_main"><a class="viewcode-back" href="../../../app.tests.html#app.tests.test_main.test_read_main">[ドキュメント]</a><span></span><span class="k">def</span> <span class="nf">test_read_main</span><span class="p">(</span><span class="n">client</span><span class="p">):</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/api/v1&quot;</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
-    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">}</span></div>
+  <h1>app.db.session のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+
+<span class="kn">from</span> <span class="nn">app.core</span> <span class="kn">import</span> <span class="n">config</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span>
+    <span class="n">config</span><span class="o">.</span><span class="n">SQLALCHEMY_DATABASE_URI</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">SessionLocal</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">autocommit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">autoflush</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+
+
+<span class="c1"># Dependency</span>
+<div class="viewcode-block" id="get_db"><a class="viewcode-back" href="../../../app.db.html#app.db.session.get_db">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_db</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    get_db DBに接続する</span>
+
+<span class="sd">    Yields:</span>
+<span class="sd">        sessionmaker: DBのセッション</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">SessionLocal</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">db</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 </pre></div>
 
            </div>

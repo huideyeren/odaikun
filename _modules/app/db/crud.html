@@ -1,0 +1,456 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>app.db.crud &mdash; Odaikun  ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="検索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Odaikun
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../commit.html">更新履歴</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Odaikun</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">モジュールコード</a> &raquo;</li>
+        
+      <li>app.db.crud</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>app.db.crud のソースコード</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">HTTPException</span><span class="p">,</span> <span class="n">status</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">Session</span>
+
+<span class="kn">from</span> <span class="nn">app.core.security</span> <span class="kn">import</span> <span class="n">get_password_hash</span>
+<span class="kn">from</span> <span class="nn">app.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">app.db.schemas</span> <span class="kn">import</span> <span class="n">topics</span><span class="p">,</span> <span class="n">users</span>
+
+
+<div class="viewcode-block" id="get_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    get_user ユーザー情報を取得する</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        db (Session): データベース接続</span>
+<span class="sd">        user_id (int): ユーザーのID</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: ユーザーが見つからない旨のHTTP 404 エラー</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        schemas.UserBase: ユーザー情報</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">user</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">404</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User not found&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">user</span></div>
+
+
+<div class="viewcode-block" id="get_user_by_email"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_user_by_email">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_user_by_email</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    get_user_by_email 指定したメールアドレスを持つユーザー情報を取得する</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        db (Session): データベース接続</span>
+<span class="sd">        email (str): メールアドレス</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        schemas.UserBase: [description]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="o">.</span><span class="n">email</span> <span class="o">==</span> <span class="n">email</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_users"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_users">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_users</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">skip</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    get_users 複数のユーザー情報を取得する</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        db (Session): データベース接続</span>
+<span class="sd">        skip (int, optional): スキップする件数。デフォルトは0件</span>
+<span class="sd">        limit (int, optional): 最大件数。デフォルトは100件</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        t.List[schemas.UserOut]: ユーザー情報のリスト</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">offset</span><span class="p">(</span><span class="n">skip</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="create_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.create_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">create_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">UserCreate</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    create_user ユーザーを作成する</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        db (Session): データベース接続</span>
+<span class="sd">        user (schemas.UserCreate): 作成するユーザーの情報</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        models.User: 作成されるユーザーの情報</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hashed_password</span> <span class="o">=</span> <span class="n">get_password_hash</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">password</span><span class="p">)</span>
+    <span class="n">db_user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">User</span><span class="p">(</span>
+        <span class="n">first_name</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">first_name</span><span class="p">,</span>
+        <span class="n">last_name</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">last_name</span><span class="p">,</span>
+        <span class="n">email</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="n">is_active</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">is_active</span><span class="p">,</span>
+        <span class="n">is_superuser</span><span class="o">=</span><span class="n">user</span><span class="o">.</span><span class="n">is_superuser</span><span class="p">,</span>
+        <span class="n">hashed_password</span><span class="o">=</span><span class="n">hashed_password</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">db_user</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_user</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_user</span></div>
+
+
+<div class="viewcode-block" id="delete_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.delete_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">delete_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    delete_user ユーザー情報を削除する</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        db (Session): データベース接続</span>
+<span class="sd">        user_id (int): 削除するユーザーのID</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: ユーザーが見つからない旨のHTTP 404 エラー</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        schemas.UserBase: 削除されるユーザー情報</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">get_user</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">user</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_404_NOT_FOUND</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User not found&quot;</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">user</span></div>
+
+
+<div class="viewcode-block" id="edit_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.edit_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">edit_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">UserEdit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    edit_user [summary]</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        db (Session): データベース接続</span>
+<span class="sd">        user_id (int): 編集するユーザーのID</span>
+<span class="sd">        user (schemas.UserEdit): 編集するユーザーのデータ</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        HTTPException: ユーザーが見つからない旨のHTTP 404 エラー</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        schemas.User: 編集されるユーザー情報</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">db_user</span> <span class="o">=</span> <span class="n">get_user</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">user_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">db_user</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_404_NOT_FOUND</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;User not found&quot;</span><span class="p">)</span>
+    <span class="n">update_data</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude_unset</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;password&quot;</span> <span class="ow">in</span> <span class="n">update_data</span><span class="p">:</span>
+        <span class="n">update_data</span><span class="p">[</span><span class="s2">&quot;hashed_password&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_password_hash</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">password</span><span class="p">)</span>
+        <span class="k">del</span> <span class="n">update_data</span><span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">update_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">db_user</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">db_user</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_user</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_user</span></div>
+
+
+<div class="viewcode-block" id="get_topic"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_topic">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_topic</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">topic_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">topic_id</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">topic</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">404</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Topic not found&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">topic</span></div>
+
+
+<div class="viewcode-block" id="get_topics"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_topics">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_topics</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_visible</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_all_topics"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_all_topics">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_all_topics</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_topics_by_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_topics_by_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_topics_by_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_visible</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">contributor_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_all_topics_by_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_all_topics_by_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_all_topics_by_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">contributor_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="get_adopted_topics"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_adopted_topics">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_adopted_topics</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_visible</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_adopted</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_adopted_topics_by_user"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_adopted_topics_by_user">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_adopted_topics_by_user</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_visible</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">contributor_id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_adopted</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_topics_by_keyword"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_topics_by_keyword">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_topics_by_keyword</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">keyword</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">is_visible</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">topic</span><span class="o">.</span><span class="n">like</span><span class="p">(</span><span class="s2">&quot;%</span><span class="se">\\</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">keyword</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_all_topics_by_keyword"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.get_all_topics_by_keyword">[ドキュメント]</a><span class="k">def</span> <span class="nf">get_all_topics_by_keyword</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">keyword</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="o">.</span><span class="n">topic</span><span class="o">.</span><span class="n">like</span><span class="p">(</span><span class="s2">&quot;%</span><span class="se">\\</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">keyword</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">,</span> <span class="n">escape</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">))</span>
+        <span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="create_topic"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.create_topic">[ドキュメント]</a><span class="k">def</span> <span class="nf">create_topic</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">topic</span><span class="p">:</span> <span class="n">topics</span><span class="o">.</span><span class="n">TopicCreate</span><span class="p">,</span> <span class="n">current_user</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">current_user</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_401_UNAUTHORIZED</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Login required&quot;</span><span class="p">)</span>
+    <span class="n">topic</span><span class="o">.</span><span class="n">contributor_id</span> <span class="o">=</span> <span class="n">current_user</span><span class="o">.</span><span class="n">id</span>
+    <span class="n">db_topic</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">Topic</span><span class="p">(</span>
+        <span class="n">topic</span><span class="o">=</span><span class="n">topic</span><span class="o">.</span><span class="n">topic</span><span class="p">,</span>
+        <span class="n">picture_url</span><span class="o">=</span><span class="n">topic</span><span class="o">.</span><span class="n">picture_url</span><span class="p">,</span>
+        <span class="n">post_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">(),</span>
+        <span class="n">contributor_id</span><span class="o">=</span><span class="n">topic</span><span class="o">.</span><span class="n">contributor_id</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">db_topic</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_topic</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_topic</span></div>
+
+
+<div class="viewcode-block" id="edit_topic"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.edit_topic">[ドキュメント]</a><span class="k">def</span> <span class="nf">edit_topic</span><span class="p">(</span>
+    <span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">topic_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">topic</span><span class="p">:</span> <span class="n">topics</span><span class="o">.</span><span class="n">TopicEdit</span><span class="p">,</span> <span class="n">current_user</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">User</span>
+<span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">current_user</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_401_UNAUTHORIZED</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Login required&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">current_user</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="n">topic</span><span class="o">.</span><span class="n">contributor_id</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_403_FORBIDDEN</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;You are not contributor&quot;</span><span class="p">)</span>
+    <span class="n">db_topic</span> <span class="o">=</span> <span class="n">get_topic</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">topic_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">db_topic</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_404_NOT_FOUND</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Topic not found&quot;</span><span class="p">)</span>
+    <span class="n">update_data</span> <span class="o">=</span> <span class="n">topic</span><span class="o">.</span><span class="n">dict</span><span class="p">(</span><span class="n">exclude_unset</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">update_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="n">db_topic</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">db_topic</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">db_topic</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">db_topic</span></div>
+
+
+<div class="viewcode-block" id="drop_topic"><a class="viewcode-back" href="../../../app.db.html#app.db.crud.drop_topic">[ドキュメント]</a><span class="k">def</span> <span class="nf">drop_topic</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Session</span><span class="p">,</span> <span class="n">topic_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">current_user</span><span class="p">:</span> <span class="n">users</span><span class="o">.</span><span class="n">User</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">current_user</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_401_UNAUTHORIZED</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Login required&quot;</span><span class="p">)</span>
+    <span class="n">topic</span> <span class="o">=</span> <span class="n">get_topic</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">topic_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">topic</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span><span class="n">status_code</span><span class="o">=</span><span class="mi">404</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;Topic not found&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">current_user</span><span class="o">.</span><span class="n">id</span> <span class="o">!=</span> <span class="n">topic</span><span class="o">.</span><span class="n">contributor_id</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">current_user</span><span class="o">.</span><span class="n">is_superuser</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">current_user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">topic</span><span class="o">.</span><span class="n">contributor_id</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="n">HTTPException</span><span class="p">(</span>
+            <span class="n">status</span><span class="o">.</span><span class="n">HTTP_403_FORBIDDEN</span><span class="p">,</span> <span class="n">detail</span><span class="o">=</span><span class="s2">&quot;You don&#39;t have permission&quot;</span>
+        <span class="p">)</span>
+    <span class="nb">setattr</span><span class="p">(</span><span class="n">topic</span><span class="p">,</span> <span class="s2">&quot;is_visible&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">refresh</span><span class="p">(</span><span class="n">topic</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">topic</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; 著作権 2020, Iosif Takakura
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
