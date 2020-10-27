@@ -153,7 +153,13 @@
 <span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">APIRouter</span><span class="p">,</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">Request</span><span class="p">,</span> <span class="n">Response</span>
 
 <span class="kn">from</span> <span class="nn">app.core.auth</span> <span class="kn">import</span> <span class="n">get_current_active_superuser</span><span class="p">,</span> <span class="n">get_current_active_user</span>
-<span class="kn">from</span> <span class="nn">app.db.crud</span> <span class="kn">import</span> <span class="n">create_user</span><span class="p">,</span> <span class="n">delete_user</span><span class="p">,</span> <span class="n">edit_user</span><span class="p">,</span> <span class="n">get_user</span><span class="p">,</span> <span class="n">get_users</span>
+<span class="kn">from</span> <span class="nn">app.db.crud.user_crud</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">create_user</span><span class="p">,</span>
+    <span class="n">delete_user</span><span class="p">,</span>
+    <span class="n">edit_user</span><span class="p">,</span>
+    <span class="n">get_user</span><span class="p">,</span>
+    <span class="n">get_users</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">app.db.schemas.users</span> <span class="kn">import</span> <span class="n">User</span><span class="p">,</span> <span class="n">UserCreate</span><span class="p">,</span> <span class="n">UserEdit</span>
 <span class="kn">from</span> <span class="nn">app.db.session</span> <span class="kn">import</span> <span class="n">get_db</span>
 

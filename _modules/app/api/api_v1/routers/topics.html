@@ -153,7 +153,7 @@
 <span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">APIRouter</span><span class="p">,</span> <span class="n">Depends</span><span class="p">,</span> <span class="n">Request</span><span class="p">,</span> <span class="n">Response</span>
 
 <span class="kn">from</span> <span class="nn">app.core.auth</span> <span class="kn">import</span> <span class="n">get_current_active_user</span>
-<span class="kn">from</span> <span class="nn">app.db.crud</span> <span class="kn">import</span> <span class="n">create_topic</span><span class="p">,</span> <span class="n">drop_topic</span><span class="p">,</span> <span class="n">edit_topic</span><span class="p">,</span> <span class="n">get_topics</span>
+<span class="kn">from</span> <span class="nn">app.db.crud.topic_crud</span> <span class="kn">import</span> <span class="n">create_topic</span><span class="p">,</span> <span class="n">drop_topic</span><span class="p">,</span> <span class="n">edit_topic</span><span class="p">,</span> <span class="n">get_topics</span>
 <span class="kn">from</span> <span class="nn">app.db.schemas.topics</span> <span class="kn">import</span> <span class="n">Topic</span><span class="p">,</span> <span class="n">TopicCreate</span><span class="p">,</span> <span class="n">TopicEdit</span>
 <span class="kn">from</span> <span class="nn">app.db.session</span> <span class="kn">import</span> <span class="n">get_db</span>
 
