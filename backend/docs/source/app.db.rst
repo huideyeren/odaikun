@@ -7,18 +7,11 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   app.db.crud
    app.db.schemas
 
 Submodules
 ----------
-
-app.db.crud module
-------------------
-
-.. automodule:: app.db.crud
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 app.db.models module
 --------------------

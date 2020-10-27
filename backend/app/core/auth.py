@@ -6,7 +6,7 @@ from jwt import PyJWTError
 
 from app.core import security
 from app.db import models, session
-from app.db.crud import create_user, get_user_by_email
+from app.db.crud.user_crud import create_user, get_user_by_email
 from app.db.schemas import tokens, users
 
 

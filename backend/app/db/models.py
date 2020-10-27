@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql.schema import ForeignKey
 from sqlalchemy.sql.sqltypes import Date, Text
 
-from app.db.session import Base
+from .session import Base
 
 
 class User(Base):
@@ -34,6 +34,7 @@ class Topic(Base):
     Args:
         Base (Type[__class_DeclarativeMeta]): テーブルのメタデータ
     """
+
     __tablename__ = "topic"  #: テーブルの名前
 
     id = Column(Integer, primary_key=True, index=True)  #: ID
