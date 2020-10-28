@@ -100,12 +100,12 @@ def get_password_hash() -> str:
 
 
 @pytest.fixture
-def test_user(test_db) -> user_table.User:
+def test_user(test_db) -> models.User:
     """
     Make a test user in the database
     """
 
-    user = user_table.User(
+    user = models.User(
         email="fake@email.com",
         hashed_password=get_password_hash(),
         is_active=True,
@@ -116,12 +116,12 @@ def test_user(test_db) -> user_table.User:
 
 
 @pytest.fixture
-def test_superuser(test_db) -> user_table.User:
+def test_superuser(test_db) -> models.User:
     """
     Superuser for testing
     """
 
-    user = user_table.User(
+    user = models.User(
         email="fakeadmin@email.com",
         hashed_password=get_password_hash(),
         is_superuser=True,
@@ -132,7 +132,7 @@ def test_superuser(test_db) -> user_table.User:
 
 
 @pytest.fixture
-def test_topic(test_db, test_user) -> topic_table.Topic:
+def test_topic(test_db, test_user) -> models.Topic:
     """
     test_topic Topic for testing
 
@@ -140,12 +140,12 @@ def test_topic(test_db, test_user) -> topic_table.Topic:
         test_db ([type]): [description]
 
     Returns:
-        topic_table.Topic: [description]
+        models.Topic: [description]
     """
 
     user = test_user
 
-    topic = topic_table.Topic(
+    topic = models.Topic(
         topic="今日のお題のテスト",
         picture_url="https://huideyeren.info/images/mongolian-6cd0fdc2.jpg",
         post_date=date.fromisoformat("2019-12-04"),
@@ -159,7 +159,7 @@ def test_topic(test_db, test_user) -> topic_table.Topic:
 
 
 @pytest.fixture
-def test_topic_written_by_superuser(test_db, test_superuser) -> topic_table.Topic:
+def test_topic_written_by_superuser(test_db, test_superuser) -> models.Topic:
     """
     test_topic Topic for testing
 
@@ -167,12 +167,12 @@ def test_topic_written_by_superuser(test_db, test_superuser) -> topic_table.Topi
         test_db ([type]): [description]
 
     Returns:
-        topic_table.Topic: [description]
+        models.Topic: [description]
     """
 
     user = test_superuser
 
-    topic = topic_table.Topic(
+    topic = models.Topic(
         topic="今日のお題のテスト",
         picture_url="https://huideyeren.info/images/mongolian-6cd0fdc2.jpg",
         post_date=date.fromisoformat("2019-12-04"),
