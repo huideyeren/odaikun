@@ -3,8 +3,8 @@ import typing as t
 from fastapi import APIRouter, Depends, Request, Response
 
 from app.core.auth import get_current_active_user
-from app.db.crud import create_topic, drop_topic, edit_topic, get_topics
-from app.db.schemas import Topic, TopicCreate, TopicEdit
+from app.db.crud.topic_crud import create_topic, drop_topic, edit_topic, get_topics
+from app.db.schemas.topics import Topic, TopicCreate, TopicEdit
 from app.db.session import get_db
 
 topics_router = r = APIRouter()

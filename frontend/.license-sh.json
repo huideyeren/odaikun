@@ -1,0 +1,21 @@
+{
+  "whitelist": [
+    "BSD",
+    "WTFPL",
+    "BSD-3-Clause",
+    "CC0-1.0",
+    "BSD-2-Clause",
+    "ISC",
+    "0BSD",
+    "MPL-1.1",
+    "Unlicense",
+    "CC-BY-4.0",
+    "BSD-like",
+    "Zlib",
+    "AFLv2.1",
+    "Apache-2.0",
+    "CC-BY-3.0",
+    "Public Domain",
+    "MIT"
+  ]
+}

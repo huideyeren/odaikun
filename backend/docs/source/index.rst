@@ -10,6 +10,8 @@ Welcome to Odaikun's documentation!
    :maxdepth: 10
    :caption: Contents:
 
+   commit
+
 
 
 Indices and tables
