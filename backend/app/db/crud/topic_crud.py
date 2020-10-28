@@ -3,70 +3,70 @@ import datetime
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.db import models
+from app.db.models import topic_table
 from app.db.schemas import topics, users
 
 
 def get_topic(db: Session, topic_id: int):
-    topic = db.query(models.Topic).filter(models.Topic.id == topic_id).first()
+    topic = db.query(topic_table.Topic).filter(topic_table.Topic.id == topic_id).first()
     if not topic:
         raise HTTPException(status_code=404, detail="Topic not found")
     return topic
 
 
 def get_topics(db: Session):
-    return db.query(models.Topic).filter(models.Topic.is_visible).all()
+    return db.query(topic_table.Topic).filter(topic_table.Topic.is_visible).all()
 
 
 def get_all_topics(db: Session):
-    return db.query(models.Topic).all()
+    return db.query(topic_table.Topic).all()
 
 
 def get_topics_by_user(db: Session, user_id: int):
     return (
-        db.query(models.Topic)
-        .filter(models.Topic.is_visible)
-        .filter(models.Topic.contributor_id == user_id)
+        db.query(topic_table.Topic)
+        .filter(topic_table.Topic.is_visible)
+        .filter(topic_table.Topic.contributor_id == user_id)
         .all()
     )
 
 
 def get_all_topics_by_user(db: Session, user_id: int):
-    return db.query(models.Topic).filter(models.Topic.contributor_id == user_id).all()
+    return db.query(topic_table.Topic).filter(topic_table.Topic.contributor_id == user_id).all()
 
 
 def get_adopted_topics(db: Session):
     return (
-        db.query(models.Topic)
-        .filter(models.Topic.is_visible)
-        .filter(models.Topic.is_adopted)
+        db.query(topic_table.Topic)
+        .filter(topic_table.Topic.is_visible)
+        .filter(topic_table.Topic.is_adopted)
         .all()
     )
 
 
 def get_adopted_topics_by_user(db: Session, user_id: int):
     return (
-        db.query(models.Topic)
-        .filter(models.Topic.is_visible)
-        .filter(models.Topic.contributor_id == user_id)
-        .filter(models.Topic.is_adopted)
+        db.query(topic_table.Topic)
+        .filter(topic_table.Topic.is_visible)
+        .filter(topic_table.Topic.contributor_id == user_id)
+        .filter(topic_table.Topic.is_adopted)
         .all()
     )
 
 
 def get_topics_by_keyword(db: Session, keyword: str):
     return (
-        db.query(models.Topic)
-        .filter(models.Topic.is_visible)
-        .filter(models.Topic.topic.like("%\\" + keyword + "%", escape="\\"))
+        db.query(topic_table.Topic)
+        .filter(topic_table.Topic.is_visible)
+        .filter(topic_table.Topic.topic.like("%\\" + keyword + "%", escape="\\"))
         .all()
     )
 
 
 def get_all_topics_by_keyword(db: Session, keyword: str):
     return (
-        db.query(models.Topic)
-        .filter(models.Topic.topic.like("%\\" + keyword + "%", escape="\\"))
+        db.query(topic_table.Topic)
+        .filter(topic_table.Topic.topic.like("%\\" + keyword + "%", escape="\\"))
         .all()
     )
 
@@ -75,7 +75,7 @@ def create_topic(db: Session, topic: topics.TopicCreate, current_user: users.Use
     if not current_user:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Login required")
     topic.contributor_id = current_user.id
-    db_topic = models.Topic(
+    db_topic = topic_table.Topic(
         topic=topic.topic,
         picture_url=topic.picture_url,
         post_date=datetime.date.today(),

@@ -5,8 +5,9 @@ from fastapi import Depends, HTTPException, status
 from jwt import PyJWTError
 
 from app.core import security
-from app.db import models, session
+from app.db import session
 from app.db.crud.user_crud import create_user, get_user_by_email
+from app.db.models import user_table
 from app.db.schemas import tokens, users
 
 
@@ -38,7 +39,7 @@ async def get_current_user(
 
 
 async def get_current_active_user(
-    current_user: models.User = Depends(get_current_user),
+    current_user: user_table.User = Depends(get_current_user),
 ):
     if not current_user.is_active:
         raise HTTPException(status_code=400, detail="Inactive user")
@@ -46,8 +47,8 @@ async def get_current_active_user(
 
 
 async def get_current_active_superuser(
-    current_user: models.User = Depends(get_current_user),
-) -> models.User:
+    current_user: user_table.User = Depends(get_current_user),
+) -> user_table.User:
     if not current_user.is_superuser:
         raise HTTPException(
             status_code=403, detail="The user doesn't have enough privileges"
