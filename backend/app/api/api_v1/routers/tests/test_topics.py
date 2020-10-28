@@ -1,4 +1,4 @@
-from app.db.models import topic_table
+from app.db import models
 
 
 def test_get_topics(client, test_topic, user_token_headers):
@@ -22,7 +22,7 @@ def test_delete_topic(client, test_topic, test_db, user_token_headers):
         f"/api/v1/topics/{test_topic.id}", headers=user_token_headers
     )
     assert response.status_code == 200
-    assert test_db.query(topic_table.Topic).filter(not topic_table.Topic.is_visible).all() == []
+    assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
 
 
 def test_delete_topic_on_superuser(
@@ -33,7 +33,7 @@ def test_delete_topic_on_superuser(
         headers=superuser_token_headers,
     )
     assert response.status_code == 200
-    assert test_db.query(topic_table.Topic).filter(not topic_table.Topic.is_visible).all() == []
+    assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
 
 
 def test_delete_topic_by_others(
@@ -45,8 +45,8 @@ def test_delete_topic_by_others(
     )
     assert response.status_code == 403
     assert (
-        test_db.query(topic_table.Topic)
-        .filter(topic_table.Topic.id == test_topic_written_by_superuser.id)
+        test_db.query(models.Topic)
+        .filter(models.Topic.id == test_topic_written_by_superuser.id)
         .first()
         == test_topic_written_by_superuser
     )
@@ -59,7 +59,7 @@ def test_delete_my_topic_by_superuser(
         f"/api/v1/topics/{test_topic.id}", headers=superuser_token_headers
     )
     assert response.status_code == 200
-    assert test_db.query(topic_table.Topic).filter(not topic_table.Topic.is_visible).all() == []
+    assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
 
 
 def test_delete_topic_is_not_found(
@@ -68,8 +68,8 @@ def test_delete_topic_is_not_found(
     response = client.delete("/api/v1/topics/9999", headers=superuser_token_headers)
     assert response.status_code == 404
     assert (
-        test_db.query(topic_table.Topic)
-        .filter(topic_table.Topic.id == test_topic_written_by_superuser.id)
+        test_db.query(models.Topic)
+        .filter(models.Topic.id == test_topic_written_by_superuser.id)
         .first()
         == test_topic_written_by_superuser
     )

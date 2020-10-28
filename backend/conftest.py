@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy_utils import create_database, database_exists, drop_database
 
 from app.core import config, security
-from app.db.models import topic_table, user_table
+from app.db import models
 from app.db.session import Base, get_db
 from app.main import app
 
