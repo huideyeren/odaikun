@@ -7,8 +7,8 @@ from app.db.crud.topic_crud import (
     create_topic,
     drop_topic,
     edit_topic,
-    get_topics,
     get_topic,
+    get_topics,
 )
 from app.db.schemas.topics import Topic, TopicCreate, TopicEdit
 from app.db.session import get_db
