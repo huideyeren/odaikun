@@ -1,7 +1,6 @@
 import typing as t
 
 from fastapi import APIRouter, Depends, Request, Response
-from fastapi import requests
 
 from app.core.auth import get_current_active_user
 from app.db.crud.topic_crud import (
@@ -38,7 +37,7 @@ async def topic_details(
     db=Depends(get_db),
 ):
     topic = get_topic(db, topic_id)
-    return Topic
+    return topic
 
 
 @r.post("/topics", response_model=Topic, response_model_exclude_none=True)
