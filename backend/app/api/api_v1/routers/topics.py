@@ -22,6 +22,16 @@ topics_router = r = APIRouter()
     response_model_exclude_none=True,
 )
 async def topics_list(response: Response, db=Depends(get_db)):
+    """
+    topics_list GETでリクエストを送るとお題リストを取得する。
+
+    Args:
+        response (Response): レスポンス
+        db (Any, optional): DB接続。初期値はDepends(get_db)。
+
+    Returns:
+        Any: 現在見える状態のお題のリスト
+    """
     topics = get_topics(db)
     return topics
 
@@ -36,6 +46,17 @@ async def topic_details(
     topic_id: int,
     db=Depends(get_db),
 ):
+    """
+    topic_details IDを指定してGETでリクエストを送ると指定されたIDのお題の詳細を取得する。
+
+    Args:
+        request (Request): リクエスト
+        topic_id (int): お題のID
+        db (Any, optional): DB接続。初期値はDepends(get_db)。
+
+    Returns:
+        Any: 指定されたIDのお題
+    """
     topic = get_topic(db, topic_id)
     return topic
 
@@ -47,6 +68,19 @@ async def topic_create(
     db=Depends(get_db),
     current_user=Depends(get_current_active_user),
 ):
+    """
+    topic_create POSTでリクエストを送るとお題を投稿する。
+
+    Args:
+        request (Request): リクエスト
+        topic (TopicCreate): 投稿するお題
+        db (Any, optional): DB接続。初期値はDepends(get_db)。
+        current_user (Any, optional):
+            現在のユーザー。初期値はDepends(get_current_active_user)。
+
+    Returns:
+        Topic: 作成されたお題
+    """
     return create_topic(db, topic, current_user)
 
 
@@ -58,6 +92,20 @@ async def topic_edit(
     db=Depends(get_db),
     current_user=Depends(get_current_active_user),
 ):
+    """
+    topic_edit IDを指定してPUTでリクエストを送ると指定されたIDのお題をアップデートする。
+
+    Args:
+        request (Request): リクエスト
+        topic_id (int): アップデートするお題のID
+        topic (TopicEdit): アップデートするお題の内容
+        db (Any, optional): DB接続。初期値はDepends(get_db)。
+        current_user (Any, optional):
+            現在のユーザー。初期値はDepends(get_current_active_user)。
+
+    Returns:
+        Any: アップデートされたお題
+    """
     return edit_topic(db, topic_id, topic, current_user)
 
 
@@ -68,4 +116,17 @@ async def topic_delete(
     db=Depends(get_db),
     current_user=Depends(get_current_active_user),
 ):
+    """
+    topic_delete IDを指定してDELETEでリクエストを送ると指定されたIDのお題を削除する。
+
+    Args:
+        request (Request): リクエスト
+        topic_id (int): お題のID
+        db (Any, optional): DB接続。初期値はDepends(get_db)。
+        current_user (Any, optional):
+            現在のユーザー。初期値はDepends(get_current_active_user)。
+
+    Returns:
+        Any: 削除されたお題
+    """
     return drop_topic(db, topic_id, current_user)
