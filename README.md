@@ -1,5 +1,11 @@
 # odaikun
 
+## Project
+
+[Kanban](https://github.com/huideyeren/odaikun/projects/1)
+[Development Documents](https://odaikun-doc.huideyeren.info/)
+
+
 ## Features
 
 - **FastAPI** with Python 3.8
