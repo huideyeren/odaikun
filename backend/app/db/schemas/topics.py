@@ -21,6 +21,7 @@ class TopicBase(BaseModel):
         is_adopted (bool): 採用済みかを表すフラグ。デフォルトはFalse。
         contributor_id (int): 投稿者のID。
     """
+
     topic: str
     picture_url: Optional[HttpUrl] = None
     post_date: date
@@ -39,6 +40,7 @@ class TopicOut(TopicBase):
     Attributes:
         contributor (User): 投稿者情報を格納するクラス
     """
+
     contributor: User
 
 
@@ -49,13 +51,15 @@ class TopicCreate(TopicBase):
     Args:
         TopicBase (TopicBase): お題に関する最低限の情報を表すクラス
     """
+
     class Config:
         """
         TopicCreate.Config TopicCreateクラスの設定
-        
+
         Attributes:
             orm_mode (bool): ORMモードか
         """
+
         orm_mode = True
 
 
@@ -66,13 +70,15 @@ class TopicEdit(TopicBase):
     Args:
         TopicBase (TopicBase): お題に関する最低限の情報を表すクラス
     """
+
     class Config:
         """
         TopicEdit.Config TopicCreateクラスの設定
-        
+
         Attributes:
             orm_mode (bool): ORMモードか
         """
+
         orm_mode = True
 
 
@@ -83,13 +89,15 @@ class Topic(TopicBase):
     Args:
         TopicBase (TopicBase): お題に関する最低限の情報を表すクラス
     """
+
     id: int
 
     class Config:
         """
         Topic.Config Topicクラスの設定
-        
+
         Attributes:
             orm_mode (bool): ORMモードか
         """
+
         orm_mode = True
