@@ -51,7 +51,7 @@ class UserCreate(UserBase):
 
     class Config:
         """
-        UserCreateクラスの設定
+        UserCreate.Config UserCreateクラスの設定
 
         Attributes:
             orm_mode (bool): ORMモードか
@@ -75,7 +75,7 @@ class UserEdit(UserBase):
 
     class Config:
         """
-        UserEditクラスの設定
+        UserEdit.Config UserEditクラスの設定
 
         Attributes:
             orm_mode (bool): ORMモードか
@@ -99,7 +99,7 @@ class User(UserBase):
 
     class Config:
         """
-        Userクラスの設定
+        User.Config Userクラスの設定
 
         Attributes:
             orm_mode (bool): ORMモードか
