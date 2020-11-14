@@ -47,6 +47,7 @@ def test_signup(client, monkeypatch):
         client (Any): HTTPクライアント
         monkeypatch (Any): パスワードのハッシュ化をスキップし、常に通す。
     """
+
     def get_password_hash_mock(first: str, second: str):
         return True
 
@@ -94,6 +95,7 @@ def test_wrong_password(client, test_db, test_user, test_password, monkeypatch):
         test_password (Any): テスト用のパスワード
         monkeypatch (Any): パスワードのハッシュ化をスキップし、常に通さない。
     """
+
     def verify_password_failed_mock(first: str, second: str):
         """
         verify_password_failed_mock パスワードを通さないようにするためのモック
