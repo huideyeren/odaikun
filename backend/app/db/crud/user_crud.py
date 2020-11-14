@@ -105,7 +105,7 @@ def delete_user(db: Session, user_id: int):
 
 def edit_user(db: Session, user_id: int, user: users.UserEdit):
     """
-    edit_user [summary]
+    edit_user ユーザー情報を編集する
 
     Args:
         db (Session): データベース接続
