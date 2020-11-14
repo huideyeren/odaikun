@@ -12,6 +12,19 @@ auth_router = r = APIRouter()
 
 @r.post("/token")
 async def login(db=Depends(get_db), form_data: OAuth2PasswordRequestForm = Depends()):
+    """
+    login ログインする
+
+    Args:
+        db (Any, optional): DB接続。 Defaults to Depends(get_db).
+        form_data (OAuth2PasswordRequestForm, optional): フォーム Defaults to Depends().
+
+    Raises:
+        HTTPException: 認証エラー
+
+    Returns:
+        Dict: アクセストークン
+    """
     user = authenticate_user(db, form_data.username, form_data.password)
     if not user:
         raise HTTPException(
@@ -35,6 +48,19 @@ async def login(db=Depends(get_db), form_data: OAuth2PasswordRequestForm = Depen
 
 @r.post("/signup")
 async def signup(db=Depends(get_db), form_data: OAuth2PasswordRequestForm = Depends()):
+    """
+    signup サインアップする
+
+    Args:
+        db (Any, optional): DB接続。 Defaults to Depends(get_db).
+        form_data (OAuth2PasswordRequestForm, optional): フォーム Defaults to Depends().
+
+    Raises:
+        HTTPException: [description]
+
+    Returns:
+        [type]: [description]
+    """
     user = sign_up_new_user(db, form_data.username, form_data.password)
     if not user:
         raise HTTPException(
