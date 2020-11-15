@@ -2,6 +2,14 @@ from app.db import models
 
 
 def test_get_users(client, test_superuser, superuser_token_headers):
+    """
+    test_get_users ユーザー情報を取得するテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        test_superuser (Any): テスト用管理者
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.get("/api/v1/users", headers=superuser_token_headers)
     assert response.status_code == 200
     assert response.json() == [
@@ -15,6 +23,15 @@ def test_get_users(client, test_superuser, superuser_token_headers):
 
 
 def test_delete_user(client, test_superuser, test_db, superuser_token_headers):
+    """
+    test_delete_user ユーザーを削除するテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        test_superuser (Any): テスト用管理者
+        test_db (Any): テスト用DB接続
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.delete(
         f"/api/v1/users/{test_superuser.id}", headers=superuser_token_headers
     )
@@ -23,11 +40,26 @@ def test_delete_user(client, test_superuser, test_db, superuser_token_headers):
 
 
 def test_delete_user_not_found(client, superuser_token_headers):
+    """
+    test_delete_user_not_found 削除するユーザーが見当たらない場合のテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.delete("/api/v1/users/4321", headers=superuser_token_headers)
     assert response.status_code == 404
 
 
 def test_edit_user(client, test_superuser, superuser_token_headers):
+    """
+    test_edit_user ユーザーを編集するテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        test_superuser (Any): テスト用管理者
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     new_user = {
         "email": "newemail@email.com",
         "is_active": False,
@@ -48,7 +80,14 @@ def test_edit_user(client, test_superuser, superuser_token_headers):
     assert response.json() == new_user
 
 
-def test_edit_user_not_found(client, test_db, superuser_token_headers):
+def test_edit_user_not_found(client, superuser_token_headers):
+    """
+    test_edit_user_not_found 編集するユーザーが見当たらない場合のテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     new_user = {
         "email": "newemail@email.com",
         "is_active": False,
@@ -66,6 +105,14 @@ def test_get_user(
     test_user,
     superuser_token_headers,
 ):
+    """
+    test_get_user 指定したIDのユーザー情報を取得するテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        test_user (Any): テスト用ユーザーデータ
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.get(
         f"/api/v1/users/{test_user.id}", headers=superuser_token_headers
     )
@@ -79,16 +126,36 @@ def test_get_user(
 
 
 def test_user_not_found(client, superuser_token_headers):
+    """
+    test_user_not_found 実在しないユーザー情報を取得するテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.get("/api/v1/users/123", headers=superuser_token_headers)
     assert response.status_code == 404
 
 
 def test_authenticated_user_me(client, user_token_headers):
+    """
+    test_authenticated_user_me 認証済みのユーザー情報が取得できるかのテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        user_token_headers (Any): テスト用一般ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.get("/api/v1/users/me", headers=user_token_headers)
     assert response.status_code == 200
 
 
 def test_unauthenticated_routes(client):
+    """
+    test_unauthenticated_routes 未認証の状態で情報が取得できないことのテスト
+
+    Args:
+        client (Any): HTTPクライアント
+    """
     response = client.get("/api/v1/users/me")
     assert response.status_code == 401
     response = client.get("/api/v1/users")
@@ -102,6 +169,13 @@ def test_unauthenticated_routes(client):
 
 
 def test_unauthorized_routes(client, user_token_headers):
+    """
+    test_unauthorized_routes 権限の無いURLにアクセスできないことのテスト
+
+    Args:
+        client (Any): HTTPクライアント
+        user_token_headers (Any): テスト用一般ユーザーの認証用JWTトークンヘッダー
+    """
     response = client.get("/api/v1/users", headers=user_token_headers)
     assert response.status_code == 403
     response = client.get("/api/v1/users/123", headers=user_token_headers)

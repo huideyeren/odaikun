@@ -6,6 +6,9 @@ from app.db.session import SessionLocal
 
 
 def init() -> None:
+    """
+    init 初期データの投入。個人情報なので慎重にね。
+    """
     db = SessionLocal()
 
     create_user(

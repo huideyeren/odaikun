@@ -6,7 +6,7 @@ def test_get_topics(client, test_topic, user_token_headers):
     test_get_topics お題一覧を取得するテスト
 
     Args:
-        client (Any): テストクライアント
+        client (Any): HTTPクライアント
         test_topic (Any): テスト用お題
         user_token_headers (Any): テスト用一般ユーザーの認証用JWTトークンヘッダー
     """
@@ -30,7 +30,7 @@ def test_delete_topic(client, test_topic, test_db, user_token_headers):
     test_delete_topic お題の作成者がお題を削除するテスト
 
     Args:
-        client (Any): テストクライアント
+        client (Any): HTTPクライアント
         test_topic (Any): テスト用お題
         test_db (Any): テスト用DB接続
         user_token_headers (Any): テスト用一般ユーザーの認証用JWTトークンヘッダー
@@ -49,7 +49,7 @@ def test_delete_topic_on_superuser(
     test_delete_topic_on_superuser 管理者が作成したお題を管理者が削除するテスト
 
     Args:
-        client (Any): テストクライアント
+        client (Any): HTTPクライアント
         test_topic_written_by_superuser (Any): 管理者が作成したテスト用お題
         test_db (Any): テスト用DB接続
         superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
@@ -69,7 +69,7 @@ def test_delete_topic_by_others(
     test_delete_topic_by_others 管理者以外の他人がお題を削除するテスト
 
     Args:
-        client (Any): テストクライアント
+        client (Any): HTTPクライアント
         test_topic_written_by_superuser (Any): 管理者が作成したテスト用お題
         test_db (Any): テスト用DB接続
         user_token_headers (Any): テスト用一般ユーザーの認証用JWTトークンヘッダー
@@ -94,7 +94,7 @@ def test_delete_my_topic_by_superuser(
     test_delete_my_topic_by_superuser 一般ユーザーが作成したお題を管理者が削除するテスト
 
     Args:
-        client (Any): テストクライアント
+        client (Any): HTTPクライアント
         test_topic (Any): 一般ユーザーが作成したテスト用お題
         test_db (Any): テスト用DB接続
         superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
@@ -113,7 +113,7 @@ def test_delete_topic_is_not_found(
     test_delete_topic_is_not_found 登録されていないお題を削除できないテスト
 
     Args:
-        client (Any): テストクライアント
+        client (Any): HTTPクライアント
         test_db (Any): テスト用DB接続
         superuser_token_headers (Any): テスト用管理者ユーザーの認証用JWTトークンヘッダー
     """
