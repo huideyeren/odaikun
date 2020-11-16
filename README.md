@@ -1,10 +1,11 @@
 # odaikun
 
+![Build and Test](https://github.com/huideyeren/odaikun/workflows/Build%20and%20Test/badge.svg)
+
 ## Project
 
-[Kanban](https://github.com/huideyeren/odaikun/projects/1)
-[Development Documents](https://odaikun-doc.huideyeren.info/)
-
+- [Kanban](https://github.com/huideyeren/odaikun/projects/1)
+- [Development Documents](https://odaikun-doc.huideyeren.info/)
 
 ## Features
 
