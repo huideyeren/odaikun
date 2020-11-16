@@ -106,9 +106,7 @@ def test_delete_my_topic_by_superuser(
     assert test_db.query(models.Topic).filter(not models.Topic.is_visible).all() == []
 
 
-def test_delete_topic_is_not_found(
-    client, test_db, superuser_token_headers
-):
+def test_delete_topic_is_not_found(client, test_db, superuser_token_headers):
     """
     test_delete_topic_is_not_found 登録されていないお題を削除できないテスト
 
@@ -119,8 +117,4 @@ def test_delete_topic_is_not_found(
     """
     response = client.delete("/api/v1/topics/9999", headers=superuser_token_headers)
     assert response.status_code == 404
-    assert (
-        test_db.query(models.Topic)
-        .filter(models.Topic.id == 9999)
-        .first() is None
-    )
+    assert test_db.query(models.Topic).filter(models.Topic.id == 9999).first() is None
