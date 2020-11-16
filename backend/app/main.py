@@ -15,6 +15,16 @@ app = FastAPI(title=config.PROJECT_NAME, docs_url="/api/docs", openapi_url="/api
 
 @app.middleware("http")
 async def db_session_middleware(request: Request, call_next):
+    """
+    db_session_middleware DB接続を生成する
+
+    Args:
+        request (Request): リクエスト
+        call_next (Any): 次のリクエストを呼ぶ
+
+    Returns:
+        Any: レスポンス
+    """
     request.state.db = SessionLocal()
     response = await call_next(request)
     request.state.db.close()
@@ -23,11 +33,23 @@ async def db_session_middleware(request: Request, call_next):
 
 @app.get("/api/v1")
 async def root():
+    """
+    root APIのルートにアクセスしたときの処理
+
+    Returns:
+        dict: 「Hello World」というメッセージ
+    """
     return {"message": "Hello World"}
 
 
 @app.get("/api/v1/task")
 async def example_task():
+    """
+    example_task サンプルタスク
+
+    Returns:
+        dict: 成功を表すメッセージ
+    """
     celery_app.send_task("app.tasks.example_task", args=["Hello World"])
 
     return {"message": "success"}
