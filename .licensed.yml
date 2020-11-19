@@ -20,18 +20,20 @@ apps:
 # Sources of metadata
 sources:
   yarn: true
+  pip: true
   pipenv: true
 
 # Dependencies with these licenses are allowed and will not raise errors or warnings.
 # This list does not have a default value and is required for `licensed status`
 # to succeed.
 allowed:
-  - mit
   - apache-2.0
   - bsd-2-clause
   - bsd-3-clause
-  - cc0-1.0
   - isc
+  - mit
+  - cc0-1.0
+  - unlicense
 
 # These dependencies are ignored during enumeration.
 # They will not be cached, and will not raise errors or warnings.
