@@ -19,7 +19,7 @@ apps:
 
 # Sources of metadata
 sources:
-  yarn: true
+  npm: true
   pip: true
   pipenv: true
 
