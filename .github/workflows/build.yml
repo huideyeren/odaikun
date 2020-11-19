@@ -34,20 +34,15 @@ jobs:
 
   licensed_ci:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [ 10.x, 12.x ]
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node }}
-
-    - run: npm install --production
-    - id: licensed
-      uses: jonabc/licensed-ci@v1.5.2
+    - uses: actions/checkout@develop
+    - uses: jonabc/setup-licensed@v1
       with:
         version: 2.x
+    - run: npm install
+    - id: licensed
+      uses: jonabc/licensed-ci@v1
+      with:
         github_token: ${{ secrets.TOKEN }}
         workflow: branch
     - uses: actions/github-script@0.2.0
