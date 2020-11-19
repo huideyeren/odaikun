@@ -39,6 +39,7 @@ jobs:
         uses: jonabc/licensed-ci@v1.5.2
         with: 
           github_token: ${{ secrets.TOKEN }}
+          workflow: branch
       - name: Deploy license.
         uses: actions/github-script@0.2.0
         if: always() && steps.licensed.outputs.pr_number
