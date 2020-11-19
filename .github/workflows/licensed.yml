@@ -16,7 +16,9 @@ jobs:
       with:
         python-version: '3.8'
     - run: pip install --upgrade pip && pip install pipenv --no-cache-dir
-    - run: pipenv install --system --deploy --dev
+      working-directory: ./backend
+    - run: pipenv sync
+      working-directory: ./backend
     - uses: jonabc/setup-licensed@v1
       with:
         version: 2.x
