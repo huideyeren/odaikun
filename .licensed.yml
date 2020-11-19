@@ -18,10 +18,10 @@ apps:
   - source_path: './frontend'
 
 # Sources of metadata
-sources:
-  npm: true
-  pip: true
-  pipenv: true
+# sources:
+#   npm: true
+#   pip: true
+#   pipenv: true
 
 # Dependencies with these licenses are allowed and will not raise errors or warnings.
 # This list does not have a default value and is required for `licensed status`
