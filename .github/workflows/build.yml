@@ -35,7 +35,7 @@ jobs:
   licensed_ci:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@develop
+    - uses: actions/checkout@v1
     - uses: jonabc/setup-licensed@v1
       with:
         version: 2.x
