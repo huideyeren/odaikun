@@ -1,0 +1,8 @@
+---
+name: isarray
+version: 1.0.0
+type: yarn
+homepage: git://github.com/juliangruber/isarray.git
+license: none
+licenses: []
+notices: []

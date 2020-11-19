@@ -1,0 +1,8 @@
+---
+name: eslint-utils
+version: 2.1.0
+type: yarn
+homepage: git+https://github.com/mysticatea/eslint-utils.git
+license: none
+licenses: []
+notices: []

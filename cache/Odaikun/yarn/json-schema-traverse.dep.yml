@@ -1,0 +1,8 @@
+---
+name: json-schema-traverse
+version: 0.4.1
+type: yarn
+homepage: git+https://github.com/epoberezkin/json-schema-traverse.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: "@babel/parser"
+version: 7.11.5
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

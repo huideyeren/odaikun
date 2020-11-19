@@ -1,0 +1,8 @@
+---
+name: ws
+version: 6.2.1
+type: yarn
+homepage: https://github.com/websockets/ws.git
+license: none
+licenses: []
+notices: []

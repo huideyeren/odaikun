@@ -1,0 +1,8 @@
+---
+name: "@babel/plugin-syntax-json-strings"
+version: 7.8.3
+type: yarn
+homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-json-strings
+license: none
+licenses: []
+notices: []

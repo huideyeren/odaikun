@@ -1,0 +1,8 @@
+---
+name: iconv-lite
+version: 0.4.24
+type: yarn
+homepage: git://github.com/ashtuchkin/iconv-lite.git
+license: none
+licenses: []
+notices: []

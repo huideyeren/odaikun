@@ -1,0 +1,8 @@
+---
+name: shallow-clone
+version: 3.0.1
+type: yarn
+homepage: https://github.com/jonschlinkert/shallow-clone.git
+license: none
+licenses: []
+notices: []

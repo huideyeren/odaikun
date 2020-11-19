@@ -1,0 +1,8 @@
+---
+name: path-browserify
+version: 0.0.1
+type: yarn
+homepage: git://github.com/substack/path-browserify.git
+license: none
+licenses: []
+notices: []

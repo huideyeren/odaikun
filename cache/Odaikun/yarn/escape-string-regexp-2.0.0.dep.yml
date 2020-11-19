@@ -1,0 +1,8 @@
+---
+name: escape-string-regexp
+version: 2.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/escape-string-regexp.git
+license: none
+licenses: []
+notices: []

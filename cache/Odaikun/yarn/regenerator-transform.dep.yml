@@ -1,0 +1,8 @@
+---
+name: regenerator-transform
+version: 0.14.5
+type: yarn
+homepage: https://github.com/facebook/regenerator/tree/master/packages/regenerator-transform
+license: none
+licenses: []
+notices: []

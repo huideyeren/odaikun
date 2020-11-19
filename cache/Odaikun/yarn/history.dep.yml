@@ -1,0 +1,8 @@
+---
+name: history
+version: 4.10.1
+type: yarn
+homepage: https://github.com/ReactTraining/history.git
+license: none
+licenses: []
+notices: []

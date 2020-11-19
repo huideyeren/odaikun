@@ -1,0 +1,8 @@
+---
+name: cssnano-preset-default
+version: 4.0.7
+type: yarn
+homepage: https://github.com/cssnano/cssnano.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: request
+version: 2.88.2
+type: yarn
+homepage: https://github.com/request/request.git
+license: none
+licenses: []
+notices: []

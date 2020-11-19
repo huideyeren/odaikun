@@ -1,0 +1,8 @@
+---
+name: minimatch
+version: 3.0.4
+type: yarn
+homepage: git://github.com/isaacs/minimatch.git
+license: none
+licenses: []
+notices: []

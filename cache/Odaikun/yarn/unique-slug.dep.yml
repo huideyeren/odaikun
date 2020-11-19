@@ -1,0 +1,8 @@
+---
+name: unique-slug
+version: 2.0.2
+type: yarn
+homepage: git://github.com/iarna/unique-slug.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: cache-base
+version: 1.0.1
+type: yarn
+homepage: https://github.com/jonschlinkert/cache-base.git
+license: none
+licenses: []
+notices: []

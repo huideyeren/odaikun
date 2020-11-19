@@ -1,0 +1,8 @@
+---
+name: postcss-modules-values
+version: 3.0.0
+type: yarn
+homepage: git+https://github.com/css-modules/postcss-modules-values.git
+license: none
+licenses: []
+notices: []

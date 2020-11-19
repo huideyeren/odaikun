@@ -1,0 +1,8 @@
+---
+name: flatten
+version: 1.0.3
+type: yarn
+homepage: git+https://github.com/mk-pmb/flatten-js.git
+license: none
+licenses: []
+notices: []

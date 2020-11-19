@@ -1,0 +1,8 @@
+---
+name: process-nextick-args
+version: 2.0.1
+type: yarn
+homepage: https://github.com/calvinmetcalf/process-nextick-args.git
+license: none
+licenses: []
+notices: []

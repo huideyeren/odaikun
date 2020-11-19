@@ -1,0 +1,8 @@
+---
+name: axobject-query
+version: 2.2.0
+type: yarn
+homepage: git+https://github.com/A11yance/axobject-query.git
+license: none
+licenses: []
+notices: []

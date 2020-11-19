@@ -1,0 +1,8 @@
+---
+name: babel-eslint
+version: 10.1.0
+type: yarn
+homepage: https://github.com/babel/babel-eslint.git
+license: none
+licenses: []
+notices: []

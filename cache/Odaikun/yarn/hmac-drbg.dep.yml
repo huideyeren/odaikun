@@ -1,0 +1,8 @@
+---
+name: hmac-drbg
+version: 1.0.1
+type: yarn
+homepage: git+ssh://git@github.com/indutny/hmac-drbg.git
+license: none
+licenses: []
+notices: []

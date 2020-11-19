@@ -1,0 +1,8 @@
+---
+name: jsdom
+version: 14.1.0
+type: yarn
+homepage: https://github.com/jsdom/jsdom.git
+license: none
+licenses: []
+notices: []

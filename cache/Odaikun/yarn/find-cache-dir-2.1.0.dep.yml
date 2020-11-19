@@ -1,0 +1,8 @@
+---
+name: find-cache-dir
+version: 2.1.0
+type: yarn
+homepage: https://github.com/avajs/find-cache-dir.git
+license: none
+licenses: []
+notices: []

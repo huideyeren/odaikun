@@ -1,0 +1,8 @@
+---
+name: once
+version: 1.4.0
+type: yarn
+homepage: git://github.com/isaacs/once
+license: none
+licenses: []
+notices: []

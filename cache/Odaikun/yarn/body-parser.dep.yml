@@ -1,0 +1,8 @@
+---
+name: body-parser
+version: 1.19.0
+type: yarn
+homepage: https://github.com/expressjs/body-parser.git
+license: none
+licenses: []
+notices: []

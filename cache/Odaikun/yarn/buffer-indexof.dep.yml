@@ -1,0 +1,8 @@
+---
+name: buffer-indexof
+version: 1.1.1
+type: yarn
+homepage: git://github.com/soldair/node-buffer-indexof.git
+license: none
+licenses: []
+notices: []

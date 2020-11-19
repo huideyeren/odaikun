@@ -1,0 +1,8 @@
+---
+name: load-json-file
+version: 4.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/load-json-file.git
+license: none
+licenses: []
+notices: []

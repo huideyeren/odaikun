@@ -1,0 +1,8 @@
+---
+name: http-deceiver
+version: 1.2.7
+type: yarn
+homepage: git+ssh://git@github.com/indutny/http-deceiver.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: wrap-ansi
+version: 5.1.0
+type: yarn
+homepage: https://github.com/chalk/wrap-ansi.git
+license: none
+licenses: []
+notices: []

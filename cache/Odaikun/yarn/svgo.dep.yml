@@ -1,0 +1,8 @@
+---
+name: svgo
+version: 1.3.2
+type: yarn
+homepage: git://github.com/svg/svgo.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: adjust-sourcemap-loader
+version: 2.0.0
+type: yarn
+homepage: git+https://github.com/bholloway/adjust-sourcemap-loader.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: dns-equal
+version: 1.0.0
+type: yarn
+homepage: git+https://github.com/watson/dns-equal.git
+license: none
+licenses: []
+notices: []

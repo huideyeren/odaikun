@@ -1,0 +1,8 @@
+---
+name: "@babel/compat-data"
+version: 7.11.0
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

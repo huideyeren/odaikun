@@ -1,0 +1,8 @@
+---
+name: internal-slot
+version: 1.0.2
+type: yarn
+homepage: git+https://github.com/ljharb/internal-slot.git
+license: none
+licenses: []
+notices: []

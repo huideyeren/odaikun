@@ -1,0 +1,8 @@
+---
+name: spdx-license-ids
+version: 3.0.6
+type: yarn
+homepage: https://github.com/jslicense/spdx-license-ids.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: eslint-module-utils
+version: 2.6.0
+type: yarn
+homepage: git+https://github.com/benmosher/eslint-plugin-import.git
+license: none
+licenses: []
+notices: []

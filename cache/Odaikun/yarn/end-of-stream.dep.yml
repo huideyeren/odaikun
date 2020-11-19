@@ -1,0 +1,8 @@
+---
+name: end-of-stream
+version: 1.4.4
+type: yarn
+homepage: git://github.com/mafintosh/end-of-stream.git
+license: none
+licenses: []
+notices: []

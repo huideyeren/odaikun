@@ -1,0 +1,8 @@
+---
+name: delayed-stream
+version: 1.0.0
+type: yarn
+homepage: git://github.com/felixge/node-delayed-stream.git
+license: none
+licenses: []
+notices: []

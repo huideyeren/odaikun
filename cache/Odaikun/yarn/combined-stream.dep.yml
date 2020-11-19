@@ -1,0 +1,8 @@
+---
+name: combined-stream
+version: 1.0.8
+type: yarn
+homepage: git://github.com/felixge/node-combined-stream.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: eslint-loader
+version: 3.0.3
+type: yarn
+homepage: https://github.com/webpack-contrib/eslint-loader.git
+license: none
+licenses: []
+notices: []

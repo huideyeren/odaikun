@@ -1,0 +1,8 @@
+---
+name: browserify-aes
+version: 1.2.0
+type: yarn
+homepage: git://github.com/crypto-browserify/browserify-aes.git
+license: none
+licenses: []
+notices: []

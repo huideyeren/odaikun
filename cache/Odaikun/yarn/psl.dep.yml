@@ -1,0 +1,8 @@
+---
+name: psl
+version: 1.8.0
+type: yarn
+homepage: git@github.com:lupomontero/psl.git
+license: none
+licenses: []
+notices: []

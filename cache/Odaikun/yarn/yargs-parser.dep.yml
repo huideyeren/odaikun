@@ -1,0 +1,8 @@
+---
+name: yargs-parser
+version: 13.1.2
+type: yarn
+homepage: git@github.com:yargs/yargs-parser.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: detect-node
+version: 2.0.4
+type: yarn
+homepage: https://github.com/iliakan/detect-node
+license: none
+licenses: []
+notices: []

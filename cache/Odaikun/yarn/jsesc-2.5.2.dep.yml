@@ -1,0 +1,8 @@
+---
+name: jsesc
+version: 2.5.2
+type: yarn
+homepage: https://github.com/mathiasbynens/jsesc.git
+license: none
+licenses: []
+notices: []

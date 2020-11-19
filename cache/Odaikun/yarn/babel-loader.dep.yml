@@ -1,0 +1,8 @@
+---
+name: babel-loader
+version: 8.1.0
+type: yarn
+homepage: https://github.com/babel/babel-loader.git
+license: none
+licenses: []
+notices: []

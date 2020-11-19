@@ -1,0 +1,8 @@
+---
+name: object-is
+version: 1.1.3
+type: yarn
+homepage: git://github.com/es-shims/object-is.git
+license: none
+licenses: []
+notices: []

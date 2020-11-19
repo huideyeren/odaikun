@@ -1,0 +1,8 @@
+---
+name: read-pkg-up
+version: 2.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/read-pkg-up.git
+license: none
+licenses: []
+notices: []

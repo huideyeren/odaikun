@@ -1,0 +1,8 @@
+---
+name: fb-watchman
+version: 2.0.1
+type: yarn
+homepage: git@github.com:facebook/watchman.git
+license: none
+licenses: []
+notices: []

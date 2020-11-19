@@ -1,0 +1,8 @@
+---
+name: safer-buffer
+version: 2.1.2
+type: yarn
+homepage: git+https://github.com/ChALkeR/safer-buffer.git
+license: none
+licenses: []
+notices: []

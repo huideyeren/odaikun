@@ -1,0 +1,8 @@
+---
+name: opn
+version: 5.5.0
+type: yarn
+homepage: https://github.com/sindresorhus/opn.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: evp_bytestokey
+version: 1.0.3
+type: yarn
+homepage: https://github.com/crypto-browserify/EVP_BytesToKey.git
+license: none
+licenses: []
+notices: []

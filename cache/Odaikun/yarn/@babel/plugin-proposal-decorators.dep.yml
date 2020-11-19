@@ -1,0 +1,8 @@
+---
+name: "@babel/plugin-proposal-decorators"
+version: 7.8.3
+type: yarn
+homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-decorators
+license: none
+licenses: []
+notices: []

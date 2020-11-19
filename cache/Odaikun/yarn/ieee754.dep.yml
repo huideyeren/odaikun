@@ -1,0 +1,8 @@
+---
+name: ieee754
+version: 1.1.13
+type: yarn
+homepage: git://github.com/feross/ieee754.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: async-limiter
+version: 1.0.1
+type: yarn
+homepage: https://github.com/strml/async-limiter.git
+license: none
+licenses: []
+notices: []

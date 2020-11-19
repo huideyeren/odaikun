@@ -1,0 +1,8 @@
+---
+name: external-editor
+version: 3.1.0
+type: yarn
+homepage: git+https://github.com/mrkmg/node-external-editor.git
+license: none
+licenses: []
+notices: []

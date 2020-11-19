@@ -1,0 +1,8 @@
+---
+name: fs.realpath
+version: 1.0.0
+type: yarn
+homepage: git+https://github.com/isaacs/fs.realpath.git
+license: none
+licenses: []
+notices: []

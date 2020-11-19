@@ -1,0 +1,8 @@
+---
+name: icss-utils
+version: 4.1.1
+type: yarn
+homepage: git+https://github.com/css-modules/icss-utils.git
+license: none
+licenses: []
+notices: []

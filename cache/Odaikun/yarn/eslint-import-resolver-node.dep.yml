@@ -1,0 +1,8 @@
+---
+name: eslint-import-resolver-node
+version: 0.3.4
+type: yarn
+homepage: https://github.com/benmosher/eslint-plugin-import
+license: none
+licenses: []
+notices: []

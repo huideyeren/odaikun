@@ -1,0 +1,8 @@
+---
+name: call-me-maybe
+version: 1.0.1
+type: yarn
+homepage: git+https://github.com/limulus/call-me-maybe.git
+license: none
+licenses: []
+notices: []

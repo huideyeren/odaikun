@@ -1,0 +1,8 @@
+---
+name: "@babel/plugin-proposal-optional-catch-binding"
+version: 7.10.4
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

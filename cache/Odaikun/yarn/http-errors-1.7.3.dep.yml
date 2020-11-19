@@ -1,0 +1,8 @@
+---
+name: http-errors
+version: 1.7.3
+type: yarn
+homepage: https://github.com/jshttp/http-errors.git
+license: none
+licenses: []
+notices: []

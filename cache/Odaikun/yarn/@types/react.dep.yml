@@ -1,0 +1,8 @@
+---
+name: "@types/react"
+version: 16.9.50
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

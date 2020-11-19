@@ -1,0 +1,8 @@
+---
+name: performance-now
+version: 2.1.0
+type: yarn
+homepage: git://github.com/braveg1rl/performance-now.git
+license: none
+licenses: []
+notices: []

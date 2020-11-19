@@ -1,0 +1,8 @@
+---
+name: string.prototype.trimend
+version: 1.0.1
+type: yarn
+homepage: git://github.com/es-shims/String.prototype.trimEnd.git
+license: none
+licenses: []
+notices: []

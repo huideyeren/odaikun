@@ -1,0 +1,8 @@
+---
+name: object.values
+version: 1.1.1
+type: yarn
+homepage: git://github.com/es-shims/Object.values.git
+license: none
+licenses: []
+notices: []

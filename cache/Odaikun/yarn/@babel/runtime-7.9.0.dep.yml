@@ -1,0 +1,8 @@
+---
+name: "@babel/runtime"
+version: 7.9.0
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

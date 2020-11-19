@@ -1,0 +1,8 @@
+---
+name: universalify
+version: 0.1.2
+type: yarn
+homepage: git+https://github.com/RyanZim/universalify.git
+license: none
+licenses: []
+notices: []

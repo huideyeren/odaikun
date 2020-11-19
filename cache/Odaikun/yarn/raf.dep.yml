@@ -1,0 +1,8 @@
+---
+name: raf
+version: 3.4.1
+type: yarn
+homepage: git://github.com/chrisdickinson/raf.git
+license: none
+licenses: []
+notices: []

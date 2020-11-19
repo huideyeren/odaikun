@@ -1,0 +1,8 @@
+---
+name: miller-rabin
+version: 4.0.1
+type: yarn
+homepage: git@github.com:indutny/miller-rabin
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: babel-plugin-macros
+version: 2.8.0
+type: yarn
+homepage: https://github.com/kentcdodds/babel-plugin-macros.git
+license: none
+licenses: []
+notices: []

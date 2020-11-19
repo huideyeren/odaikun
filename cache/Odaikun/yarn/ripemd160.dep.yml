@@ -1,0 +1,8 @@
+---
+name: ripemd160
+version: 2.0.2
+type: yarn
+homepage: https://github.com/crypto-browserify/ripemd160
+license: none
+licenses: []
+notices: []

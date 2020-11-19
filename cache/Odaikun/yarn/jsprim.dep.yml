@@ -1,0 +1,8 @@
+---
+name: jsprim
+version: 1.4.1
+type: yarn
+homepage: git://github.com/joyent/node-jsprim.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: object.entries
+version: 1.1.2
+type: yarn
+homepage: git://github.com/es-shims/Object.entries.git
+license: none
+licenses: []
+notices: []

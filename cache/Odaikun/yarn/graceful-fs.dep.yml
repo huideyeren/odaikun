@@ -1,0 +1,8 @@
+---
+name: graceful-fs
+version: 4.2.4
+type: yarn
+homepage: https://github.com/isaacs/node-graceful-fs
+license: none
+licenses: []
+notices: []

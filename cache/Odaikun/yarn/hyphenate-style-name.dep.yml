@@ -1,0 +1,8 @@
+---
+name: hyphenate-style-name
+version: 1.0.4
+type: yarn
+homepage: git+ssh://git@github.com/rexxars/hyphenate-style-name.git
+license: none
+licenses: []
+notices: []

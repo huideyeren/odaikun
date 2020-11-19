@@ -1,0 +1,8 @@
+---
+name: ajv-keywords
+version: 3.5.2
+type: yarn
+homepage: git+https://github.com/epoberezkin/ajv-keywords.git
+license: none
+licenses: []
+notices: []

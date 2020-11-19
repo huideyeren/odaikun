@@ -1,0 +1,8 @@
+---
+name: semver
+version: 7.0.0
+type: yarn
+homepage: https://github.com/npm/node-semver
+license: none
+licenses: []
+notices: []

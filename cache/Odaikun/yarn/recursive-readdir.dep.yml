@@ -1,0 +1,8 @@
+---
+name: recursive-readdir
+version: 2.2.2
+type: yarn
+homepage: git://github.com/jergason/recursive-readdir.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: rimraf
+version: 2.7.1
+type: yarn
+homepage: git://github.com/isaacs/rimraf.git
+license: none
+licenses: []
+notices: []

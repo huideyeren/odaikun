@@ -1,0 +1,8 @@
+---
+name: caniuse-api
+version: 3.0.0
+type: yarn
+homepage: https://github.com/nyalab/caniuse-api.git
+license: none
+licenses: []
+notices: []

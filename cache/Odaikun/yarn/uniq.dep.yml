@@ -1,0 +1,8 @@
+---
+name: uniq
+version: 1.0.1
+type: yarn
+homepage: git://github.com/mikolalysenko/uniq.git
+license: none
+licenses: []
+notices: []

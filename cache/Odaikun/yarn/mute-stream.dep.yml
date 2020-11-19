@@ -1,0 +1,8 @@
+---
+name: mute-stream
+version: 0.0.8
+type: yarn
+homepage: git://github.com/isaacs/mute-stream
+license: none
+licenses: []
+notices: []

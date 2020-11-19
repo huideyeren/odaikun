@@ -1,0 +1,8 @@
+---
+name: async-each
+version: 1.0.3
+type: yarn
+homepage: git://github.com/paulmillr/async-each.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: ret
+version: 0.1.15
+type: yarn
+homepage: git://github.com/fent/ret.js.git
+license: none
+licenses: []
+notices: []

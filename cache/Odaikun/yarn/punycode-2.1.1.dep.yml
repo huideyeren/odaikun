@@ -1,0 +1,8 @@
+---
+name: punycode
+version: 2.1.1
+type: yarn
+homepage: https://github.com/bestiejs/punycode.js.git
+license: none
+licenses: []
+notices: []

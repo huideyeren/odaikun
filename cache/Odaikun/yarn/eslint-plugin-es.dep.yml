@@ -1,0 +1,8 @@
+---
+name: eslint-plugin-es
+version: 2.0.0
+type: yarn
+homepage: git+https://github.com/mysticatea/eslint-plugin-es.git
+license: none
+licenses: []
+notices: []

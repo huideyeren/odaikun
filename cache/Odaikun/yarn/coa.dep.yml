@@ -1,0 +1,8 @@
+---
+name: coa
+version: 2.0.2
+type: yarn
+homepage: git://github.com/veged/coa.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: "@babel/plugin-transform-modules-amd"
+version: 7.10.5
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

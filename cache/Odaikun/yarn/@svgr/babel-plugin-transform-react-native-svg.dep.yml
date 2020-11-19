@@ -1,0 +1,8 @@
+---
+name: "@svgr/babel-plugin-transform-react-native-svg"
+version: 4.2.0
+type: yarn
+homepage: https://github.com/smooth-code/svgr/tree/master/packages/babel-plugin-transform-react-native-svg
+license: none
+licenses: []
+notices: []

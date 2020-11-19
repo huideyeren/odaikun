@@ -1,0 +1,8 @@
+---
+name: ext
+version: 1.4.0
+type: yarn
+homepage: https://github.com/medikoo/es5-ext/tree/ext
+license: none
+licenses: []
+notices: []

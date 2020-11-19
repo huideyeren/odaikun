@@ -1,0 +1,8 @@
+---
+name: websocket-driver
+version: 0.6.5
+type: yarn
+homepage: git://github.com/faye/websocket-driver-node.git
+license: none
+licenses: []
+notices: []

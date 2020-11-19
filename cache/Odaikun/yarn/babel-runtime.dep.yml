@@ -1,0 +1,8 @@
+---
+name: babel-runtime
+version: 6.26.0
+type: yarn
+homepage: https://github.com/babel/babel/tree/master/packages/babel-runtime
+license: none
+licenses: []
+notices: []

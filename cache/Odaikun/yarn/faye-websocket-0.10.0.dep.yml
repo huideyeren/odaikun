@@ -1,0 +1,8 @@
+---
+name: faye-websocket
+version: 0.10.0
+type: yarn
+homepage: git://github.com/faye/faye-websocket-node.git
+license: none
+licenses: []
+notices: []

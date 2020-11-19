@@ -1,0 +1,8 @@
+---
+name: on-finished
+version: 2.3.0
+type: yarn
+homepage: https://github.com/jshttp/on-finished.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: babel-plugin-istanbul
+version: 5.2.0
+type: yarn
+homepage: git+https://github.com/istanbuljs/babel-plugin-istanbul.git
+license: none
+licenses: []
+notices: []

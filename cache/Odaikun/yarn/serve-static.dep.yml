@@ -1,0 +1,8 @@
+---
+name: serve-static
+version: 1.14.1
+type: yarn
+homepage: https://github.com/expressjs/serve-static.git
+license: none
+licenses: []
+notices: []

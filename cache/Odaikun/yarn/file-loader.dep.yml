@@ -1,0 +1,8 @@
+---
+name: file-loader
+version: 4.3.0
+type: yarn
+homepage: https://github.com/webpack-contrib/file-loader.git
+license: none
+licenses: []
+notices: []

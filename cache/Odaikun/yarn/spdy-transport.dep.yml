@@ -1,0 +1,8 @@
+---
+name: spdy-transport
+version: 3.0.0
+type: yarn
+homepage: git://github.com/spdy-http2/spdy-transport.git
+license: none
+licenses: []
+notices: []

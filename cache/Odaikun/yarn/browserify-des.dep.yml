@@ -1,0 +1,8 @@
+---
+name: browserify-des
+version: 1.0.2
+type: yarn
+homepage: git+https://github.com/crypto-browserify/browserify-des.git
+license: none
+licenses: []
+notices: []

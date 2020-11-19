@@ -1,0 +1,8 @@
+---
+name: eslint-plugin-import
+version: 2.20.1
+type: yarn
+homepage: https://github.com/benmosher/eslint-plugin-import
+license: none
+licenses: []
+notices: []

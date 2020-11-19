@@ -1,0 +1,8 @@
+---
+name: loose-envify
+version: 1.4.0
+type: yarn
+homepage: git://github.com/zertosh/loose-envify.git
+license: none
+licenses: []
+notices: []

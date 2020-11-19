@@ -1,0 +1,8 @@
+---
+name: multicast-dns-service-types
+version: 1.1.0
+type: yarn
+homepage: https://github.com/mafintosh/multicast-dns-service-types.git
+license: none
+licenses: []
+notices: []

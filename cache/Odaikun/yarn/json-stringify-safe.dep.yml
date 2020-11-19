@@ -1,0 +1,8 @@
+---
+name: json-stringify-safe
+version: 5.0.1
+type: yarn
+homepage: git://github.com/isaacs/json-stringify-safe
+license: none
+licenses: []
+notices: []

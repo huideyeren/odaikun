@@ -1,0 +1,8 @@
+---
+name: detect-newline
+version: 2.1.0
+type: yarn
+homepage: https://github.com/sindresorhus/detect-newline.git
+license: none
+licenses: []
+notices: []

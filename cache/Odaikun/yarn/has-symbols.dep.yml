@@ -1,0 +1,8 @@
+---
+name: has-symbols
+version: 1.0.1
+type: yarn
+homepage: git://github.com/ljharb/has-symbols.git
+license: none
+licenses: []
+notices: []

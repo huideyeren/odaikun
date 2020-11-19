@@ -1,0 +1,8 @@
+---
+name: "@cnakazawa/watch"
+version: 1.0.4
+type: yarn
+homepage: git://github.com/mikeal/watch.git
+license: none
+licenses: []
+notices: []

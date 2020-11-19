@@ -1,0 +1,8 @@
+---
+name: spdy
+version: 4.0.2
+type: yarn
+homepage: git://github.com/indutny/node-spdy.git
+license: none
+licenses: []
+notices: []

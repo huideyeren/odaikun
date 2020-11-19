@@ -1,0 +1,8 @@
+---
+name: next-tick
+version: 1.0.0
+type: yarn
+homepage: git://github.com/medikoo/next-tick.git
+license: none
+licenses: []
+notices: []

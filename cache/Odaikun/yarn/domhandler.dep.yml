@@ -1,0 +1,8 @@
+---
+name: domhandler
+version: 2.4.2
+type: yarn
+homepage: git://github.com/fb55/DomHandler.git
+license: none
+licenses: []
+notices: []

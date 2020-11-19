@@ -1,0 +1,8 @@
+---
+name: verror
+version: 1.10.0
+type: yarn
+homepage: git://github.com/davepacheco/node-verror.git
+license: none
+licenses: []
+notices: []

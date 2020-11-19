@@ -1,0 +1,8 @@
+---
+name: "@babel/plugin-syntax-dynamic-import"
+version: 7.8.3
+type: yarn
+homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-dynamic-import
+license: none
+licenses: []
+notices: []

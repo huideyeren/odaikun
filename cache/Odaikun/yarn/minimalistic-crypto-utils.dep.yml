@@ -1,0 +1,8 @@
+---
+name: minimalistic-crypto-utils
+version: 1.0.1
+type: yarn
+homepage: git+ssh://git@github.com/indutny/minimalistic-crypto-utils.git
+license: none
+licenses: []
+notices: []
