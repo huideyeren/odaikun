@@ -31,3 +31,19 @@ jobs:
         run: docker-compose run frontend eslint-docker
       - name: Tests for frontend.
         run: docker-compose run frontend test
+      - name: Licensed CI
+        id: licensed
+        uses: jonabc/licensed-ci@v1.5.2
+        with: 
+          github_token: ${{ secrets.TOKEN }}
+      - name: Deploy license.
+        uses: actions/github-script@0.2.0
+        if: always() && steps.licensed.outputs.pr_number
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          script: |
+            github.issues.createComment({
+              ...context.repo,
+              issue_number: ${{ steps.licensed.outputs.pr_number }}
+              body: 'My custom PR message'
+            })
