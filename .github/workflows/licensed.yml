@@ -12,6 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - run: pip install --upgrade pip && pip install pipenv --no-cache-dir
+    - run: pipenv sync
     - uses: jonabc/setup-licensed@v1
       with:
         version: 2.x
