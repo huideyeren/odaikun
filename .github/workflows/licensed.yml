@@ -3,9 +3,9 @@ name: Check License by Licensed
 on:
   push:
     branches:
-      - master-license
-      - main-license
-      - develop-licence
+      - master
+      - main
+      - develop
 
 jobs:
   licensed_ci:
