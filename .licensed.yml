@@ -1,0 +1,59 @@
+# If not set, defaults to the directory name of `source_path`
+name: 'Odaikun'
+
+# Path is relative to the location of the configuration file and specifies
+# the root to expand all paths from
+# If not set, defaults to a git repository root
+root: '.'
+
+# Path is relative to configuration root and specifies where cached metadata will be stored.
+# If not set, defaults to '.licenses'
+cache_path: './cache'
+
+# Path is relative to configuration root and specifies the working directory when enumerating dependencies
+# Optional for single app configuration, required when specifying multiple apps
+# Defaults to current directory when running `licensed`
+apps:
+  - source_path: './backend'
+  - source_path: './frontend'
+
+# Sources of metadata
+sources:
+  yarn: true
+  pipenv: true
+
+# Dependencies with these licenses are allowed and will not raise errors or warnings.
+# This list does not have a default value and is required for `licensed status`
+# to succeed.
+allowed:
+  - mit
+  - apache-2.0
+  - bsd-2-clause
+  - bsd-3-clause
+  - cc0-1.0
+  - isc
+
+# These dependencies are ignored during enumeration.
+# They will not be cached, and will not raise errors or warnings.
+# This configuration is intended to be used for dependencies that don't need to
+# be included for compliance purposes, such as other projects owned by the current
+# project's owner, internal dependencies, and dependencies that aren't shipped with
+# the project like test frameworks.
+# ignored:
+#   bundler:
+#     - some-internal-gem
+#
+#   bower:
+#     - some-internal-package
+
+# These dependencies have licenses not on the `allowed` list and have been reviewed.
+# They will be cached and checked, but will not raise errors or warnings for a
+# non-allowed license.  Dependencies on this list will still raise errors if
+# license text cannot be found for the dependency.
+# reviewed:
+#   bundler:
+#     - bcrypt-ruby
+
+#   bower:
+#   - classlist # public domain
+#   - octicons
