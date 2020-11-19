@@ -1,0 +1,8 @@
+---
+name: tough-cookie
+version: 2.5.0
+type: yarn
+homepage: git://github.com/salesforce/tough-cookie.git
+license: none
+licenses: []
+notices: []

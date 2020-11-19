@@ -1,0 +1,8 @@
+---
+name: process
+version: 0.11.10
+type: yarn
+homepage: git://github.com/shtylman/node-process.git
+license: none
+licenses: []
+notices: []

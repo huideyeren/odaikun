@@ -1,0 +1,8 @@
+---
+name: memory-fs
+version: 0.4.1
+type: yarn
+homepage: https://github.com/webpack/memory-fs.git
+license: none
+licenses: []
+notices: []

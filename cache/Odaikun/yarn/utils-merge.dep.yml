@@ -1,0 +1,8 @@
+---
+name: utils-merge
+version: 1.0.1
+type: yarn
+homepage: git://github.com/jaredhanson/utils-merge.git
+license: none
+licenses: []
+notices: []

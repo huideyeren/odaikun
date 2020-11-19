@@ -1,0 +1,8 @@
+---
+name: ast-types-flow
+version: 0.0.7
+type: yarn
+homepage: git+https://github.com/kyldvs/ast-types-flow.git
+license: none
+licenses: []
+notices: []

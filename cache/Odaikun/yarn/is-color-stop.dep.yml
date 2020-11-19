@@ -1,0 +1,8 @@
+---
+name: is-color-stop
+version: 1.1.0
+type: yarn
+homepage: git+https://github.com/pigcan/is-color-stop.git
+license: none
+licenses: []
+notices: []

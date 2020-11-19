@@ -1,0 +1,8 @@
+---
+name: escodegen
+version: 1.14.3
+type: yarn
+homepage: http://github.com/estools/escodegen.git
+license: none
+licenses: []
+notices: []

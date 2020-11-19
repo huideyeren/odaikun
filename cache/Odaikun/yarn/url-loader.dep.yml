@@ -1,0 +1,8 @@
+---
+name: url-loader
+version: 2.3.0
+type: yarn
+homepage: https://github.com/webpack-contrib/url-loader.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: browserify-rsa
+version: 4.0.1
+type: yarn
+homepage: git@github.com:crypto-browserify/browserify-rsa.git
+license: none
+licenses: []
+notices: []

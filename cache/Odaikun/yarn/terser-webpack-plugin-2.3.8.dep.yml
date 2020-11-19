@@ -1,0 +1,8 @@
+---
+name: terser-webpack-plugin
+version: 2.3.8
+type: yarn
+homepage: https://github.com/webpack-contrib/terser-webpack-plugin.git
+license: none
+licenses: []
+notices: []

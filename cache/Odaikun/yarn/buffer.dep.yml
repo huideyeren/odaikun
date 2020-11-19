@@ -1,0 +1,8 @@
+---
+name: buffer
+version: 4.9.2
+type: yarn
+homepage: git://github.com/feross/buffer.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: sshpk
+version: 1.16.1
+type: yarn
+homepage: git+https://github.com/joyent/node-sshpk.git
+license: none
+licenses: []
+notices: []

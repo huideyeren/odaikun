@@ -1,0 +1,8 @@
+---
+name: cipher-base
+version: 1.0.4
+type: yarn
+homepage: git+https://github.com/crypto-browserify/cipher-base.git
+license: none
+licenses: []
+notices: []

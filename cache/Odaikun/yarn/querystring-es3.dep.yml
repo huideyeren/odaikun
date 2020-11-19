@@ -1,0 +1,8 @@
+---
+name: querystring-es3
+version: 0.2.1
+type: yarn
+homepage: git://github.com/mike-spainhower/querystring.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: cross-spawn
+version: 7.0.1
+type: yarn
+homepage: git@github.com:moxystudio/node-cross-spawn.git
+license: none
+licenses: []
+notices: []

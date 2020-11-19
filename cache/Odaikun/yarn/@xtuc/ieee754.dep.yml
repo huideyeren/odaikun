@@ -1,0 +1,8 @@
+---
+name: "@xtuc/ieee754"
+version: 1.2.0
+type: yarn
+homepage: git://github.com/feross/ieee754.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: "@types/babel__core"
+version: 7.1.10
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: pn
+version: 1.1.0
+type: yarn
+homepage: git://github.com/cscott/node-pn
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: regenerator-runtime
+version: 0.11.1
+type: yarn
+homepage: https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime
+license: none
+licenses: []
+notices: []

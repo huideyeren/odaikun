@@ -1,0 +1,8 @@
+---
+name: internal-ip
+version: 4.3.0
+type: yarn
+homepage: https://github.com/sindresorhus/internal-ip.git
+license: none
+licenses: []
+notices: []

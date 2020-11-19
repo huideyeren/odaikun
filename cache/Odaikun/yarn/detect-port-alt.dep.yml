@@ -1,0 +1,8 @@
+---
+name: detect-port-alt
+version: 1.1.6
+type: yarn
+homepage: git://github.com/node-modules/detect-port.git
+license: none
+licenses: []
+notices: []

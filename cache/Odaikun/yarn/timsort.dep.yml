@@ -1,0 +1,8 @@
+---
+name: timsort
+version: 0.3.0
+type: yarn
+homepage: https://github.com/mziccard/node-timsort.git
+license: none
+licenses: []
+notices: []

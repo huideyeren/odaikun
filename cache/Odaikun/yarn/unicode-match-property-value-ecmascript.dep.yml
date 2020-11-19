@@ -1,0 +1,8 @@
+---
+name: unicode-match-property-value-ecmascript
+version: 1.2.0
+type: yarn
+homepage: https://github.com/mathiasbynens/unicode-match-property-value-ecmascript.git
+license: none
+licenses: []
+notices: []

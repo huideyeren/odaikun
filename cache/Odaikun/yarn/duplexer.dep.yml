@@ -1,0 +1,8 @@
+---
+name: duplexer
+version: 0.1.2
+type: yarn
+homepage: git://github.com/Raynos/duplexer.git
+license: none
+licenses: []
+notices: []

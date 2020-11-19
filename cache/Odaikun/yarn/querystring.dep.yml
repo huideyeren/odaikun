@@ -1,0 +1,8 @@
+---
+name: querystring
+version: 0.2.0
+type: yarn
+homepage: git://github.com/Gozala/querystring.git
+license: none
+licenses: []
+notices: []

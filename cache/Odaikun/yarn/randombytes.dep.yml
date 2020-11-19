@@ -1,0 +1,8 @@
+---
+name: randombytes
+version: 2.1.0
+type: yarn
+homepage: git@github.com:crypto-browserify/randombytes.git
+license: none
+licenses: []
+notices: []

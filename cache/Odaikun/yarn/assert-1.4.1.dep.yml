@@ -1,0 +1,8 @@
+---
+name: assert
+version: 1.4.1
+type: yarn
+homepage: git://github.com/defunctzombie/commonjs-assert.git
+license: none
+licenses: []
+notices: []

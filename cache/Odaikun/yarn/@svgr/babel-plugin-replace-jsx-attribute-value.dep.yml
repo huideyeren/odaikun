@@ -1,0 +1,8 @@
+---
+name: "@svgr/babel-plugin-replace-jsx-attribute-value"
+version: 4.2.0
+type: yarn
+homepage: https://github.com/smooth-code/svgr/tree/master/packages/babel-plugin-replace-jsx-attribute-value
+license: none
+licenses: []
+notices: []

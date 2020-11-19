@@ -1,0 +1,8 @@
+---
+name: camel-case
+version: 4.1.1
+type: yarn
+homepage: git://github.com/blakeembrey/change-case.git
+license: none
+licenses: []
+notices: []

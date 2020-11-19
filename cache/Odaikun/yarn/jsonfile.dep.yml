@@ -1,0 +1,8 @@
+---
+name: jsonfile
+version: 4.0.0
+type: yarn
+homepage: git@github.com:jprichardson/node-jsonfile.git
+license: none
+licenses: []
+notices: []

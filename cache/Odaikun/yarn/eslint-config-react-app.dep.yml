@@ -1,0 +1,8 @@
+---
+name: eslint-config-react-app
+version: 5.2.1
+type: yarn
+homepage: https://github.com/facebook/create-react-app.git
+license: none
+licenses: []
+notices: []

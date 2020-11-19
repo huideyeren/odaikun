@@ -1,0 +1,8 @@
+---
+name: is-typedarray
+version: 1.0.0
+type: yarn
+homepage: git://github.com/hughsk/is-typedarray.git
+license: none
+licenses: []
+notices: []

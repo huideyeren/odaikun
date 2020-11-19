@@ -1,0 +1,8 @@
+---
+name: standard-engine
+version: 12.1.0
+type: yarn
+homepage: https://github.com/standard/standard-engine.git
+license: none
+licenses: []
+notices: []

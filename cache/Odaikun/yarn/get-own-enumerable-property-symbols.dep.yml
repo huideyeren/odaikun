@@ -1,0 +1,8 @@
+---
+name: get-own-enumerable-property-symbols
+version: 3.0.2
+type: yarn
+homepage: git+https://github.com/mightyiam/get-own-enumerable-property-symbols.git
+license: none
+licenses: []
+notices: []

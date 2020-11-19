@@ -1,0 +1,8 @@
+---
+name: ini
+version: 1.3.5
+type: yarn
+homepage: git://github.com/isaacs/ini.git
+license: none
+licenses: []
+notices: []

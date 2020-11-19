@@ -1,0 +1,8 @@
+---
+name: resolve-cwd
+version: 2.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/resolve-cwd.git
+license: none
+licenses: []
+notices: []

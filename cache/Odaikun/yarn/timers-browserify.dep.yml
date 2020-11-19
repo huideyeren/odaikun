@@ -1,0 +1,8 @@
+---
+name: timers-browserify
+version: 2.0.11
+type: yarn
+homepage: git://github.com/jryans/timers-browserify.git
+license: none
+licenses: []
+notices: []

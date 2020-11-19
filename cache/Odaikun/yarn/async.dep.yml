@@ -1,0 +1,8 @@
+---
+name: async
+version: 2.6.3
+type: yarn
+homepage: https://github.com/caolan/async.git
+license: none
+licenses: []
+notices: []

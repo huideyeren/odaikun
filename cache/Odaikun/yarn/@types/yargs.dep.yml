@@ -1,0 +1,8 @@
+---
+name: "@types/yargs"
+version: 13.0.11
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

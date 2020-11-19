@@ -1,0 +1,8 @@
+---
+name: clean-css
+version: 4.2.3
+type: yarn
+homepage: https://github.com/jakubpawlowicz/clean-css.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: array.prototype.flat
+version: 1.2.3
+type: yarn
+homepage: git://github.com/es-shims/Array.prototype.flat.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: typescript-tuple
+version: 2.2.1
+type: yarn
+homepage: git+https://github.com/ksxnodemodules/typescript-tuple.git
+license: none
+licenses: []
+notices: []

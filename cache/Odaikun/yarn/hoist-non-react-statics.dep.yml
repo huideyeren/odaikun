@@ -1,0 +1,8 @@
+---
+name: hoist-non-react-statics
+version: 3.3.2
+type: yarn
+homepage: git://github.com/mridgway/hoist-non-react-statics.git
+license: none
+licenses: []
+notices: []

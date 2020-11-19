@@ -1,0 +1,8 @@
+---
+name: eslint-config-standard
+version: 14.1.1
+type: yarn
+homepage: git://github.com/standard/eslint-config-standard.git
+license: none
+licenses: []
+notices: []

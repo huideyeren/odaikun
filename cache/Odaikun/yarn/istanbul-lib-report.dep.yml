@@ -1,0 +1,8 @@
+---
+name: istanbul-lib-report
+version: 2.0.8
+type: yarn
+homepage: git@github.com:istanbuljs/istanbuljs.git
+license: none
+licenses: []
+notices: []

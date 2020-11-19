@@ -1,0 +1,8 @@
+---
+name: webpack-log
+version: 2.0.0
+type: yarn
+homepage: https://github.com/webpack-contrib/webpack-log.git
+license: none
+licenses: []
+notices: []

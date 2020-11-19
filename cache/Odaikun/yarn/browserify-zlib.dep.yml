@@ -1,0 +1,8 @@
+---
+name: browserify-zlib
+version: 0.2.0
+type: yarn
+homepage: git+https://github.com/devongovett/browserify-zlib.git
+license: none
+licenses: []
+notices: []

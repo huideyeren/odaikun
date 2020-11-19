@@ -1,0 +1,8 @@
+---
+name: "@types/istanbul-lib-report"
+version: 3.0.0
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

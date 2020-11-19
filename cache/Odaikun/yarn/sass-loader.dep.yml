@@ -1,0 +1,8 @@
+---
+name: sass-loader
+version: 8.0.2
+type: yarn
+homepage: https://github.com/webpack-contrib/sass-loader.git
+license: none
+licenses: []
+notices: []

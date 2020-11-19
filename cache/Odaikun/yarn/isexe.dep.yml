@@ -1,0 +1,8 @@
+---
+name: isexe
+version: 2.0.0
+type: yarn
+homepage: git+https://github.com/isaacs/isexe.git
+license: none
+licenses: []
+notices: []

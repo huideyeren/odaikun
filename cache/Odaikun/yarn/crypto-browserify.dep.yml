@@ -1,0 +1,8 @@
+---
+name: crypto-browserify
+version: 3.12.0
+type: yarn
+homepage: git://github.com/crypto-browserify/crypto-browserify.git
+license: none
+licenses: []
+notices: []

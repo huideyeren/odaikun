@@ -1,0 +1,8 @@
+---
+name: parse5
+version: 5.1.0
+type: yarn
+homepage: git://github.com/inikulin/parse5.git
+license: none
+licenses: []
+notices: []

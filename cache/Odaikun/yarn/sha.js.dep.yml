@@ -1,0 +1,8 @@
+---
+name: sha.js
+version: 2.4.11
+type: yarn
+homepage: git://github.com/crypto-browserify/sha.js.git
+license: none
+licenses: []
+notices: []

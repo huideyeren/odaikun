@@ -1,0 +1,8 @@
+---
+name: source-map-support
+version: 0.5.19
+type: yarn
+homepage: https://github.com/evanw/node-source-map-support
+license: none
+licenses: []
+notices: []

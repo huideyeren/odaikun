@@ -1,0 +1,8 @@
+---
+name: q
+version: 1.5.1
+type: yarn
+homepage: git://github.com/kriskowal/q.git
+license: none
+licenses: []
+notices: []

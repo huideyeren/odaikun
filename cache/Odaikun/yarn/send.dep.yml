@@ -1,0 +1,8 @@
+---
+name: send
+version: 0.17.1
+type: yarn
+homepage: https://github.com/pillarjs/send.git
+license: none
+licenses: []
+notices: []

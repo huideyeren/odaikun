@@ -1,0 +1,8 @@
+---
+name: pkg-dir
+version: 3.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/pkg-dir.git
+license: none
+licenses: []
+notices: []

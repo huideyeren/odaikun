@@ -1,0 +1,8 @@
+---
+name: https-browserify
+version: 1.0.0
+type: yarn
+homepage: git://github.com/substack/https-browserify.git
+license: none
+licenses: []
+notices: []

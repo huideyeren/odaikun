@@ -1,0 +1,8 @@
+---
+name: node-libs-browser
+version: 2.2.1
+type: yarn
+homepage: git+https://github.com/webpack/node-libs-browser.git
+license: none
+licenses: []
+notices: []

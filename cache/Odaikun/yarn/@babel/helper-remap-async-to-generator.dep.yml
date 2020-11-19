@@ -1,0 +1,8 @@
+---
+name: "@babel/helper-remap-async-to-generator"
+version: 7.11.4
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

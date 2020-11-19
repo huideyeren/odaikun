@@ -1,0 +1,8 @@
+---
+name: console-browserify
+version: 1.2.0
+type: yarn
+homepage: git://github.com/browserify/console-browserify.git
+license: none
+licenses: []
+notices: []

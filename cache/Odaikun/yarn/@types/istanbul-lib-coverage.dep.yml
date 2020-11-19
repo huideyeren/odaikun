@@ -1,0 +1,8 @@
+---
+name: "@types/istanbul-lib-coverage"
+version: 2.0.3
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

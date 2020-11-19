@@ -1,0 +1,8 @@
+---
+name: text-table
+version: 0.2.0
+type: yarn
+homepage: git://github.com/substack/text-table.git
+license: none
+licenses: []
+notices: []

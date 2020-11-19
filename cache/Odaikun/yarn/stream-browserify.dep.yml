@@ -1,0 +1,8 @@
+---
+name: stream-browserify
+version: 2.0.2
+type: yarn
+homepage: git://github.com/browserify/stream-browserify.git
+license: none
+licenses: []
+notices: []

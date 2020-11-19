@@ -1,0 +1,8 @@
+---
+name: stealthy-require
+version: 1.1.1
+type: yarn
+homepage: git+https://github.com/analog-nico/stealthy-require.git
+license: none
+licenses: []
+notices: []

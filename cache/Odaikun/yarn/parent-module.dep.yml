@@ -1,0 +1,8 @@
+---
+name: parent-module
+version: 1.0.1
+type: yarn
+homepage: https://github.com/sindresorhus/parent-module.git
+license: none
+licenses: []
+notices: []

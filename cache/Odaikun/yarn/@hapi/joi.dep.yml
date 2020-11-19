@@ -1,0 +1,8 @@
+---
+name: "@hapi/joi"
+version: 15.1.1
+type: yarn
+homepage: git://github.com/hapijs/joi
+license: none
+licenses: []
+notices: []

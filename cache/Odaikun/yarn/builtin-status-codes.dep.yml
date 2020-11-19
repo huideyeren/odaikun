@@ -1,0 +1,8 @@
+---
+name: builtin-status-codes
+version: 3.0.0
+type: yarn
+homepage: https://github.com/bendrucker/builtin-status-codes.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: shell-quote
+version: 1.7.2
+type: yarn
+homepage: http://github.com/substack/node-shell-quote.git
+license: none
+licenses: []
+notices: []

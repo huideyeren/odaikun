@@ -1,0 +1,8 @@
+---
+name: "@babel/helper-member-expression-to-functions"
+version: 7.11.0
+type: yarn
+homepage: https://github.com/babel/babel.git
+license: none
+licenses: []
+notices: []

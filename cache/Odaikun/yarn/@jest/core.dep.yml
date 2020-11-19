@@ -1,0 +1,8 @@
+---
+name: "@jest/core"
+version: 24.9.0
+type: yarn
+homepage: https://github.com/facebook/jest
+license: none
+licenses: []
+notices: []

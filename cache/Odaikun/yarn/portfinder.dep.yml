@@ -1,0 +1,8 @@
+---
+name: portfinder
+version: 1.0.28
+type: yarn
+homepage: git@github.com:http-party/node-portfinder.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: spdx-correct
+version: 3.1.1
+type: yarn
+homepage: https://github.com/jslicense/spdx-correct.js.git
+license: none
+licenses: []
+notices: []

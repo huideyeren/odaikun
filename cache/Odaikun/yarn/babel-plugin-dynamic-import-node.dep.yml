@@ -1,0 +1,8 @@
+---
+name: babel-plugin-dynamic-import-node
+version: 2.3.3
+type: yarn
+homepage: git+https://github.com/airbnb/babel-plugin-dynamic-import-node.git
+license: none
+licenses: []
+notices: []

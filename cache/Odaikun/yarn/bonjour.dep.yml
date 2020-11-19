@@ -1,0 +1,8 @@
+---
+name: bonjour
+version: 3.5.0
+type: yarn
+homepage: https://github.com/watson/bonjour.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: functional-red-black-tree
+version: 1.0.1
+type: yarn
+homepage: git://github.com/mikolalysenko/functional-red-black-tree.git
+license: none
+licenses: []
+notices: []

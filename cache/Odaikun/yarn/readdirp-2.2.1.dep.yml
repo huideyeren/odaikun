@@ -1,0 +1,8 @@
+---
+name: readdirp
+version: 2.2.1
+type: yarn
+homepage: git://github.com/paulmillr/readdirp.git
+license: none
+licenses: []
+notices: []

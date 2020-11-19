@@ -1,0 +1,8 @@
+---
+name: webpack-sources
+version: 1.4.3
+type: yarn
+homepage: git+https://github.com/webpack/webpack-sources.git
+license: none
+licenses: []
+notices: []

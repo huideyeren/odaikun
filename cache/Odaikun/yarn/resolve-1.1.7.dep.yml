@@ -1,0 +1,8 @@
+---
+name: resolve
+version: 1.1.7
+type: yarn
+homepage: git://github.com/substack/node-resolve.git
+license: none
+licenses: []
+notices: []

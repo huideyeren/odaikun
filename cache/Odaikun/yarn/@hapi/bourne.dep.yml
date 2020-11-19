@@ -1,0 +1,8 @@
+---
+name: "@hapi/bourne"
+version: 1.3.2
+type: yarn
+homepage: git://github.com/hapijs/bourne
+license: none
+licenses: []
+notices: []

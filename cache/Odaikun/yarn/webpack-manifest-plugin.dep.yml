@@ -1,0 +1,8 @@
+---
+name: webpack-manifest-plugin
+version: 2.2.0
+type: yarn
+homepage: https://github.com/danethurber/webpack-manifest-plugin.git
+license: none
+licenses: []
+notices: []

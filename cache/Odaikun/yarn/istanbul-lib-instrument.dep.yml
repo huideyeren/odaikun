@@ -1,0 +1,8 @@
+---
+name: istanbul-lib-instrument
+version: 3.3.0
+type: yarn
+homepage: git@github.com:istanbuljs/istanbuljs.git
+license: none
+licenses: []
+notices: []

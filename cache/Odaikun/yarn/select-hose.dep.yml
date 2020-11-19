@@ -1,0 +1,8 @@
+---
+name: select-hose
+version: 2.0.0
+type: yarn
+homepage: git+ssh://git@github.com/indutny/select-hose.git
+license: none
+licenses: []
+notices: []

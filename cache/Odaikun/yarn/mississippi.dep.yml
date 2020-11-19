@@ -1,0 +1,8 @@
+---
+name: mississippi
+version: 3.0.0
+type: yarn
+homepage: git+https://github.com/maxogden/mississippi.git
+license: none
+licenses: []
+notices: []

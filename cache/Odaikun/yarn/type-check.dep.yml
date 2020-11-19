@@ -1,0 +1,8 @@
+---
+name: type-check
+version: 0.3.2
+type: yarn
+homepage: git://github.com/gkz/type-check.git
+license: none
+licenses: []
+notices: []

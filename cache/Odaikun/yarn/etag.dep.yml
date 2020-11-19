@@ -1,0 +1,8 @@
+---
+name: etag
+version: 1.8.1
+type: yarn
+homepage: https://github.com/jshttp/etag.git
+license: none
+licenses: []
+notices: []

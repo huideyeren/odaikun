@@ -1,0 +1,8 @@
+---
+name: core-js
+version: 2.6.11
+type: yarn
+homepage: https://github.com/zloirock/core-js.git
+license: none
+licenses: []
+notices: []

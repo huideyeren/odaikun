@@ -1,0 +1,8 @@
+---
+name: glob-to-regexp
+version: 0.3.0
+type: yarn
+homepage: https://github.com/fitzgen/glob-to-regexp.git
+license: none
+licenses: []
+notices: []

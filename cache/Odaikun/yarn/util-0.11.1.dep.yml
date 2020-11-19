@@ -1,0 +1,8 @@
+---
+name: util
+version: 0.11.1
+type: yarn
+homepage: git://github.com/defunctzombie/node-util
+license: none
+licenses: []
+notices: []

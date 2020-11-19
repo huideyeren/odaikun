@@ -1,0 +1,8 @@
+---
+name: "@svgr/babel-plugin-svg-em-dimensions"
+version: 4.2.0
+type: yarn
+homepage: https://github.com/smooth-code/svgr/tree/master/packages/babel-plugin-svg-em-dimensions
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: chokidar
+version: 3.4.2
+type: yarn
+homepage: git+https://github.com/paulmillr/chokidar.git
+license: none
+licenses: []
+notices: []

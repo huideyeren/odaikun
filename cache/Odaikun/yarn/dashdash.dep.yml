@@ -1,0 +1,8 @@
+---
+name: dashdash
+version: 1.14.1
+type: yarn
+homepage: git://github.com/trentm/node-dashdash.git
+license: none
+licenses: []
+notices: []

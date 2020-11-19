@@ -1,0 +1,8 @@
+---
+name: terser
+version: 4.8.0
+type: yarn
+homepage: https://github.com/terser/terser
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: parse-json
+version: 4.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/parse-json.git
+license: none
+licenses: []
+notices: []

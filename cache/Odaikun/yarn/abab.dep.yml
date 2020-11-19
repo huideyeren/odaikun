@@ -1,0 +1,8 @@
+---
+name: abab
+version: 2.0.5
+type: yarn
+homepage: git+https://github.com/jsdom/abab.git
+license: none
+licenses: []
+notices: []

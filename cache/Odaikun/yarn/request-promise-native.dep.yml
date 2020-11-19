@@ -1,0 +1,8 @@
+---
+name: request-promise-native
+version: 1.0.9
+type: yarn
+homepage: git+https://github.com/request/request-promise-native.git
+license: none
+licenses: []
+notices: []

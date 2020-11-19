@@ -1,0 +1,8 @@
+---
+name: typescript-logic
+version: 0.0.0
+type: yarn
+homepage: git+https://github.com/ksxnodemodules/typescript-logic.git
+license: none
+licenses: []
+notices: []

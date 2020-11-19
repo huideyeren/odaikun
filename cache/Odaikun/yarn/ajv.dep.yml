@@ -1,0 +1,8 @@
+---
+name: ajv
+version: 6.12.5
+type: yarn
+homepage: https://github.com/ajv-validator/ajv.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: node-forge
+version: 0.10.0
+type: yarn
+homepage: https://github.com/digitalbazaar/forge
+license: none
+licenses: []
+notices: []

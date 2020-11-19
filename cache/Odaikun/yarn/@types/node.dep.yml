@@ -1,0 +1,8 @@
+---
+name: "@types/node"
+version: 14.11.2
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

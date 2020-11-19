@@ -1,0 +1,8 @@
+---
+name: resolve-url-loader
+version: 3.1.1
+type: yarn
+homepage: git+https://github.com/bholloway/resolve-url-loader.git
+license: none
+licenses: []
+notices: []

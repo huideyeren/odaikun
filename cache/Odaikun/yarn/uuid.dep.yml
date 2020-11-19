@@ -1,0 +1,8 @@
+---
+name: uuid
+version: 3.4.0
+type: yarn
+homepage: https://github.com/uuidjs/uuid.git
+license: none
+licenses: []
+notices: []

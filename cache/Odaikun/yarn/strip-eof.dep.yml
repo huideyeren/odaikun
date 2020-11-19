@@ -1,0 +1,8 @@
+---
+name: strip-eof
+version: 1.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/strip-eof.git
+license: none
+licenses: []
+notices: []

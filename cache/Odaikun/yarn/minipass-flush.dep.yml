@@ -1,0 +1,8 @@
+---
+name: minipass-flush
+version: 1.0.5
+type: yarn
+homepage: git+https://github.com/isaacs/minipass-flush.git
+license: none
+licenses: []
+notices: []

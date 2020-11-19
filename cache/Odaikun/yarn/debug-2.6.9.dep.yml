@@ -1,0 +1,8 @@
+---
+name: debug
+version: 2.6.9
+type: yarn
+homepage: git://github.com/visionmedia/debug.git
+license: none
+licenses: []
+notices: []

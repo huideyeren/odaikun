@@ -1,0 +1,8 @@
+---
+name: move-concurrently
+version: 1.0.1
+type: yarn
+homepage: git+https://github.com/npm/move-concurrently.git
+license: none
+licenses: []
+notices: []

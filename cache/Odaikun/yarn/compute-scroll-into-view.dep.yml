@@ -1,0 +1,8 @@
+---
+name: compute-scroll-into-view
+version: 1.0.16
+type: yarn
+homepage: git+https://github.com/stipsan/compute-scroll-into-view.git
+license: none
+licenses: []
+notices: []

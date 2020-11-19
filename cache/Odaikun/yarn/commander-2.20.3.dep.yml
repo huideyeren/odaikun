@@ -1,0 +1,8 @@
+---
+name: commander
+version: 2.20.3
+type: yarn
+homepage: https://github.com/tj/commander.js.git
+license: none
+licenses: []
+notices: []

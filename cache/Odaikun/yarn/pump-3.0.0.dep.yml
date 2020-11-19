@@ -1,0 +1,8 @@
+---
+name: pump
+version: 3.0.0
+type: yarn
+homepage: git://github.com/mafintosh/pump.git
+license: none
+licenses: []
+notices: []
