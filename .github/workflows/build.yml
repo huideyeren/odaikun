@@ -31,6 +31,9 @@ jobs:
         run: docker-compose run frontend eslint-docker
       - name: Tests for frontend.
         run: docker-compose run frontend test
+      - uses: jonabc/setup-licensed@v1
+        with:
+          version: 2.x
       - name: Licensed CI
         id: licensed
         uses: jonabc/licensed-ci@v1.5.2
