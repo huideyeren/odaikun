@@ -1,0 +1,9 @@
+---
+name: chardet
+version: 3.0.4
+type: pipenv
+summary: Universal encoding detector for Python 2 and 3
+homepage: https://github.com/chardet/chardet
+license: none
+licenses: []
+notices: []

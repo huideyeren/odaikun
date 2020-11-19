@@ -1,0 +1,9 @@
+---
+name: httptools
+version: 0.1.1
+type: pipenv
+summary: A collection of framework independent HTTP protocol utils.
+homepage: https://github.com/MagicStack/httptools
+license: none
+licenses: []
+notices: []
