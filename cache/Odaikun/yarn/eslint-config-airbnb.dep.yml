@@ -1,0 +1,8 @@
+---
+name: eslint-config-airbnb
+version: 18.2.0
+type: yarn
+homepage: https://github.com/airbnb/javascript
+license: none
+licenses: []
+notices: []

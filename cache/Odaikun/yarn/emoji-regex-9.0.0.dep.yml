@@ -1,0 +1,8 @@
+---
+name: emoji-regex
+version: 9.0.0
+type: yarn
+homepage: https://github.com/mathiasbynens/emoji-regex.git
+license: none
+licenses: []
+notices: []

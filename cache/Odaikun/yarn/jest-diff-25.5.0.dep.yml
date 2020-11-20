@@ -1,0 +1,8 @@
+---
+name: jest-diff
+version: 25.5.0
+type: yarn
+homepage: https://github.com/facebook/jest.git
+license: none
+licenses: []
+notices: []

@@ -1,0 +1,8 @@
+---
+name: "@types/jest"
+version: 26.0.14
+type: yarn
+homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
+license: none
+licenses: []
+notices: []

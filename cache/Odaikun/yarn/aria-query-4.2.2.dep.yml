@@ -1,0 +1,8 @@
+---
+name: aria-query
+version: 4.2.2
+type: yarn
+homepage: git+https://github.com/A11yance/aria-query.git
+license: none
+licenses: []
+notices: []
