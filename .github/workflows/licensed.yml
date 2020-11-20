@@ -22,7 +22,7 @@ jobs:
     - uses: jonabc/setup-licensed@v1
       with:
         version: 2.x
-    - run: npm install
+    - run: npm install yarn --dev && yarn install
     - id: licensed
       uses: jonabc/licensed-ci@v1
       with:

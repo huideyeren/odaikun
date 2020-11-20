@@ -19,9 +19,12 @@ apps:
 
 # Sources of metadata
 sources:
-  npm: true
+  yarn: true
   pip: true
   pipenv: true
+
+yarn:
+  production_only: false
 
 # Dependencies with these licenses are allowed and will not raise errors or warnings.
 # This list does not have a default value and is required for `licensed status`
