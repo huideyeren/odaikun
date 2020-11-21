@@ -19,6 +19,8 @@ jobs:
       working-directory: ./backend
     - run: pipenv sync
       working-directory: ./backend
+    - run: npm install yarn --dev && yarn install
+      working-directory: ./frontend
     - uses: jonabc/setup-licensed@v1
       with:
         version: '2.x'
