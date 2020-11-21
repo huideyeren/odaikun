@@ -189,4 +189,22 @@ reviewed:
     - source-map-0.6.1
     - spdx-exceptions
     - sprintf-js
+    - ssri-6.0.1
+    - ssri-7.1.0
+    - string_decoder-1.1.1
+    - string_decoder-1.3.0
+    - svgo
+    - table
+    - terser
+    - tmpl
+    - tty-browserify
+    - typedarray
+    - uri-js
+    - walker
+    - webpack
+    - webpack-dev-server
+    - webpack-log
+    - websocket-driver-0.7.4
+    - websocket-extensions
+    - yargs
   
