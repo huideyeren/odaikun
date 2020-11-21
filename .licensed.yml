@@ -43,12 +43,14 @@ allowed:
 # be included for compliance purposes, such as other projects owned by the current
 # project's owner, internal dependencies, and dependencies that aren't shipped with
 # the project like test frameworks.
-# ignored:
-#   bundler:
-#     - some-internal-gem
-#
-#   bower:
-#     - some-internal-package
+ignored:
+  yarn:
+    - bindings
+    - file-uri-to-path
+    - fsevents-1.2.13
+    - fsevents-2.1.2
+    - fsevents-2.1.3
+    - nan
 
 # These dependencies have licenses not on the `allowed` list and have been reviewed.
 # They will be cached and checked, but will not raise errors or warnings for a
@@ -57,16 +59,3 @@ allowed:
 reviewed:
   pipenv:
     - SQLAlchemy-Utils
-  yarn:
-    - bindings
-    - file-uri-to-path
-    - fsevents-1.2.13
-    - fsevents-2.1.2
-    - fsevents-2.1.3
-    - nan
-#   bundler:
-#     - bcrypt-ruby
-
-#   bower:
-#   - classlist # public domain
-#   - octicons
