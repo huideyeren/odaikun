@@ -134,4 +134,59 @@ reviewed:
     - figgy-pudding
     - filesize
     - fs.realpath
+    - glob
+    - glob-to-regexp
+    - harmony-reflect
+    - hoist-non-react-statics
+    - http-parser-js
+    - http-proxy
+    - ieee754
+    - ignore-4.0.6
+    - ignore-5.1.8
+    - istanbul-lib-coverage
+    - istanbul-lib-instrument
+    - istanbul-lib-report
+    - istanbul-lib-source-maps
+    - istanbul-reports
+    - jsbn
+    - json-parse-even-better-errors
+    - json-schema
+    - json3
+    - jsonify
+    # 要注意
+    - language-subtag-registry
+    - lodash
+    - lodash._reinterpolate
+    - lodash.memoize
+    - lodash.sortby
+    - lodash.template
+    - lodash.templatesettings
+    - lodash.uniq
+    - makeerror
+    - neo-async
     - node-forge
+    - normalize-package-data
+    - pako
+    - path-browserify
+    - path-is-inside
+    - pn
+    - portfinder
+    - postcss-color-gray
+    - postcss-load-config
+    - postcss-loader
+    - qs-6.5.2
+    - qs-6.7.0
+    - react-transition-group
+    - readable-stream-2.3.7
+    - readable-stream-3.6.0
+    - readdirp-2.2.1
+    - retry
+    - sax
+    - saxes
+    - serialize-javascript
+    - sha.js
+    - source-map-0.5.7
+    - source-map-0.6.1
+    - spdx-exceptions
+    - sprintf-js
+  
