@@ -94,4 +94,44 @@ reviewed:
     - wheel
     - SQLAlchemy-Utils
   yarn:
+    - @hapi/address
+    - @hapi/bourne
+    - @hapi/hoek
+    - @hapi/joi
+    - @hapi/topo
+    - @material-ui/icons
+    - @typescript-eslint/parser
+    - @typescript-eslint/typescript-estree
+    - @webassemblyjs/helper-fsm
+    - @webassemblyjs/leb128
+    - @xtuc/ieee754
+    - abab
+    - aria-query-4.2.2
+    - atob
+    - bcrypt-pbkdf
+    - cacache-12.0.4
+    - caniuse-lite
+    - case-sensitive-paths-webpack-plugin
+    - color-convert-1.9.3
+    - color-convert-2.0.1
+    - css-mediaquery
+    - css-select-1.2.0
+    - default-gateway
+    - detect-node
+    - doctrine-1.5.0
+    - doctrine-2.1.0
+    - doctrine-3.0.0
+    - dom-serializer
+    - domain-browser
+    - electron-to-chromium
+    - escodegen
+    - eslint-plugin-flowtype-4.6.0
+    - eslint-plugin-flowtype-4.7.0
+    - eslint-plugin-promise
+    - espree
+    - esquery
+    - faye-websocket-0.11.3
+    - figgy-pudding
+    - filesize
+    - fs.realpath
     - node-forge
