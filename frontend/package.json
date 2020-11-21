@@ -6,7 +6,7 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.54",
-    "jwt-decode": "^2.2.0",
+    "jwt-decode": "^3.0.0",
     "ra-data-json-server": "^3.5.2",
     "ra-data-simple-rest": "^3.3.2",
     "react": "^16.13.1",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.1",
-    "@testing-library/react": "^10.0.4",
+    "@testing-library/react": "^11.0.4",
     "@testing-library/user-event": "^12.0.11",
     "@types/jest": "^26.0.3",
     "@types/jwt-decode": "^2.2.1",
