@@ -38,6 +38,7 @@ allowed:
   - unlicense
   - 0bsd
   - wtfpl
+  - mpl-2.0
 
 # These dependencies are ignored during enumeration.
 # They will not be cached, and will not raise errors or warnings.
@@ -60,6 +61,37 @@ ignored:
 # license text cannot be found for the dependency.
 reviewed:
   pipenv:
+    - amqp
+    - billiard
+    - celery
+    - certifi
+    - cffi
+    - chardet
+    - click-didyoumean
+    - click-repl
+    - cryptography
+    - idna
+    - ipython-genutils
+    - itsdangerous
+    - jedi
+    - kombu
+    - packaging
+    - parso
+    - passlib
+    - pexpect
+    - pickleshare
+    - psycopg2
+    - ptyprocess
+    - pycparser
+    - python-dateutil
+    - python-editor
+    - python-multipart
+    - requests
+    - rfc3986
+    - traitlets
+    - vine
+    - wcwidth
+    - wheel
     - SQLAlchemy-Utils
   yarn:
     - node-forge
