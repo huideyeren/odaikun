@@ -18,10 +18,9 @@ apps:
   - source_path: './frontend'
 
 # Sources of metadata
-# sources:
-#   yarn: true
-#   pip: true
-#   pipenv: true
+sources:
+  yarn: true
+  pipenv: true
 
 yarn:
   production_only: false
@@ -55,7 +54,9 @@ allowed:
 # They will be cached and checked, but will not raise errors or warnings for a
 # non-allowed license.  Dependencies on this list will still raise errors if
 # license text cannot be found for the dependency.
-# reviewed:
+reviewed:
+  pipenv:
+    - SQLAlchemy-Utils
 #   bundler:
 #     - bcrypt-ruby
 
