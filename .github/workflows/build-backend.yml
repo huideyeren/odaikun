@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Test for Backend
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master, develop ]
 
 jobs:
-  build:
+  build_backend:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +27,3 @@ jobs:
         run: docker-compose run backend mypy /app
       - name: Tests for backend.
         run: docker-compose run backend pytest -v
-      - name: Check JavaScript/TypeScript syntax.
-        run: docker-compose run frontend eslint-docker
-      - name: Tests for frontend.
-        run: docker-compose run frontend test

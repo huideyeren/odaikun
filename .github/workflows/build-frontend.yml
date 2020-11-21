@@ -1,0 +1,23 @@
+name: Build and Test for Frontend
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  build_frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and run containers.
+        run: |
+          docker-compose up -d
+          sleep 5
+          docker-compose run --rm backend alembic upgrade head
+          docker-compose run --rm backend python3 app/initial_data.py
+      - name: Check JavaScript/TypeScript syntax.
+        run: docker-compose run frontend eslint-docker
+      - name: Tests for frontend.
+        run: docker-compose run frontend test
