@@ -1,0 +1,16 @@
+---
+name: date-fns
+version: 1.30.1
+type: yarn
+homepage: https://github.com/date-fns/date-fns
+license: other
+licenses:
+- sources: LICENSE.md
+  text: |
+    # License
+
+    date-fns is licensed under the [MIT license](http://kossnocorp.mit-license.org).
+    Read more about MIT at [TLDRLegal](https://tldrlegal.com/license/mit-license).
+- sources: README.md
+  text: "[MIT © Sasha Koss](https://kossnocorp.mit-license.org/)"
+notices: []

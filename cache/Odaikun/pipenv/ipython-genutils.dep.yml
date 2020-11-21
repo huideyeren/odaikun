@@ -1,0 +1,9 @@
+---
+name: ipython-genutils
+version: 0.2.0
+type: pipenv
+summary: Vestigial utilities from IPython
+homepage: http://ipython.org
+license: none
+licenses: []
+notices: []

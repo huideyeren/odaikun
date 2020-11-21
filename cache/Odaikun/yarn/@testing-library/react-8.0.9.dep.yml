@@ -1,0 +1,71 @@
+---
+name: "@testing-library/react"
+version: 8.0.9
+type: yarn
+homepage: https://github.com/testing-library/react-testing-library.git
+license: mit
+licenses:
+- sources: LICENSE
+  text: |
+    The MIT License (MIT)
+    Copyright (c) 2017 Kent C. Dodds
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+- sources: README.md
+  text: |-
+    [MIT](LICENSE)
+
+    <!-- prettier-ignore-start -->
+
+    [npm]: https://www.npmjs.com/
+    [node]: https://nodejs.org
+    [build-badge]: https://img.shields.io/travis/testing-library/react-testing-library.svg?style=flat-square
+    [build]: https://travis-ci.org/testing-library/react-testing-library
+    [coverage-badge]: https://img.shields.io/codecov/c/github/testing-library/react-testing-library.svg?style=flat-square
+    [coverage]: https://codecov.io/github/testing-library/react-testing-library
+    [version-badge]: https://img.shields.io/npm/v/@testing-library/react.svg?style=flat-square
+    [package]: https://www.npmjs.com/package/@testing-library/react
+    [downloads-badge]: https://img.shields.io/npm/dm/@testing-library/react.svg?style=flat-square
+    [npmtrends]: http://www.npmtrends.com/@testing-library/react
+    [spectrum-badge]: https://withspectrum.github.io/badge/badge.svg
+    [spectrum]: https://spectrum.chat/testing-library
+    [license-badge]: https://img.shields.io/npm/l/@testing-library/react.svg?style=flat-square
+    [license]: https://github.com/testing-library/react-testing-library/blob/master/LICENSE
+    [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+    [prs]: http://makeapullrequest.com
+    [coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+    [coc]: https://github.com/testing-library/react-testing-library/blob/master/CODE_OF_CONDUCT.md
+    [github-watch-badge]: https://img.shields.io/github/watchers/testing-library/react-testing-library.svg?style=social
+    [github-watch]: https://github.com/testing-library/react-testing-library/watchers
+    [github-star-badge]: https://img.shields.io/github/stars/testing-library/react-testing-library.svg?style=social
+    [github-star]: https://github.com/testing-library/react-testing-library/stargazers
+    [twitter]: https://twitter.com/intent/tweet?text=Check%20out%20react-testing-library%20by%20%40@TestingLib%20https%3A%2F%2Fgithub.com%2Ftesting-library%2Freact-testing-library%20%F0%9F%91%8D
+    [twitter-badge]: https://img.shields.io/twitter/url/https/github.com/testing-library/react-testing-library.svg?style=social
+    [emojis]: https://github.com/all-contributors/all-contributors#emoji-key
+    [all-contributors]: https://github.com/all-contributors/all-contributors
+    [guiding-principle]: https://twitter.com/kentcdodds/status/977018512689455106
+    [bugs]: https://github.com/testing-library/react-testing-library/issues?q=is%3Aissue+is%3Aopen+label%3Abug+sort%3Acreated-desc
+    [requests]: https://github.com/testing-library/react-testing-library/issues?q=is%3Aissue+sort%3Areactions-%2B1-desc+label%3Aenhancement+is%3Aopen
+    [good-first-issue]: https://github.com/testing-library/react-testing-library/issues?utf8=✓&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A"good+first+issue"+
+    [reactiflux]: https://www.reactiflux.com/
+    [stackoverflow]: https://stackoverflow.com/questions/tagged/react-testing-library
+    [react-hooks-testing-library]: https://github.com/mpeyper/react-hooks-testing-library
+
+    <!-- prettier-ignore-end -->
+notices: []

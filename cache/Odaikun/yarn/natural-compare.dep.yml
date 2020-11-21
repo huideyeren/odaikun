@@ -1,0 +1,11 @@
+---
+name: natural-compare
+version: 1.4.0
+type: yarn
+homepage: git://github.com/litejs/natural-compare-lite.git
+license: mit
+licenses:
+- sources: README.md
+  text: "Copyright (c) 2012-2015 Lauri Rooden &lt;lauri@rooden.ee&gt;  \n[The MIT
+    License](http://lauri.rooden.ee/mit-license.txt)"
+notices: []

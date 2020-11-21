@@ -1,0 +1,10 @@
+---
+name: rework-visit
+version: 1.0.0
+type: yarn
+homepage: Unknown
+license: mit
+licenses:
+- sources: Readme.md
+  text: MIT
+notices: []
