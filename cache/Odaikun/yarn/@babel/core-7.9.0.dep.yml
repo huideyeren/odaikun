@@ -1,8 +1,0 @@
----
-name: "@babel/core"
-version: 7.9.0
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-core
-license: none
-licenses: []
-notices: []

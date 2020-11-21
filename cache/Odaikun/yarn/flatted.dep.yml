@@ -1,8 +1,0 @@
----
-name: flatted
-version: 2.0.2
-type: yarn
-homepage: git+https://github.com/WebReflection/flatted.git
-license: none
-licenses: []
-notices: []

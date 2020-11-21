@@ -1,8 +1,0 @@
----
-name: gzip-size
-version: 5.1.1
-type: yarn
-homepage: https://github.com/sindresorhus/gzip-size.git
-license: none
-licenses: []
-notices: []

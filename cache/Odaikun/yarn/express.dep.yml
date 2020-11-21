@@ -1,8 +1,0 @@
----
-name: express
-version: 4.17.1
-type: yarn
-homepage: https://github.com/expressjs/express.git
-license: none
-licenses: []
-notices: []

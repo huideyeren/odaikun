@@ -1,8 +1,0 @@
----
-name: sockjs-client
-version: 1.4.0
-type: yarn
-homepage: https://github.com/sockjs/sockjs-client.git
-license: none
-licenses: []
-notices: []

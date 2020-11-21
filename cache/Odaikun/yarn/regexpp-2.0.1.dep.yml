@@ -1,8 +1,0 @@
----
-name: regexpp
-version: 2.0.1
-type: yarn
-homepage: git+https://github.com/mysticatea/regexpp.git
-license: none
-licenses: []
-notices: []

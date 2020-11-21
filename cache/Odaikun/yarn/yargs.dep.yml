@@ -1,8 +1,0 @@
----
-name: yargs
-version: 13.3.2
-type: yarn
-homepage: https://github.com/yargs/yargs.git
-license: none
-licenses: []
-notices: []

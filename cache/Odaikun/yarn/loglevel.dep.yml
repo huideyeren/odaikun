@@ -1,8 +1,0 @@
----
-name: loglevel
-version: 1.7.0
-type: yarn
-homepage: git://github.com/pimterry/loglevel.git
-license: none
-licenses: []
-notices: []

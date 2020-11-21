@@ -1,8 +1,0 @@
----
-name: postcss-loader
-version: 3.0.0
-type: yarn
-homepage: https://github.com/postcss/postcss-loader.git
-license: none
-licenses: []
-notices: []

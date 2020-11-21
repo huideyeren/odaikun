@@ -1,8 +1,0 @@
----
-name: hpack.js
-version: 2.1.6
-type: yarn
-homepage: git+ssh://git@github.com/indutny/hpack.js.git
-license: none
-licenses: []
-notices: []

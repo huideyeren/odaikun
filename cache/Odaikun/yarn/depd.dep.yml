@@ -1,8 +1,0 @@
----
-name: depd
-version: 1.1.2
-type: yarn
-homepage: https://github.com/dougwilson/nodejs-depd.git
-license: none
-licenses: []
-notices: []

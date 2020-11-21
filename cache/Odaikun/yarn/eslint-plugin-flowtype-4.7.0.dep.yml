@@ -1,8 +1,0 @@
----
-name: eslint-plugin-flowtype
-version: 4.7.0
-type: yarn
-homepage: https://github.com/gajus/eslint-plugin-flowtype
-license: none
-licenses: []
-notices: []

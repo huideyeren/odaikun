@@ -1,8 +1,0 @@
----
-name: "@webassemblyjs/helper-wasm-section"
-version: 1.8.5
-type: yarn
-homepage: https://github.com/xtuc/webassemblyjs.git
-license: none
-licenses: []
-notices: []

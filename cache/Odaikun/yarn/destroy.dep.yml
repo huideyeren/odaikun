@@ -1,8 +1,0 @@
----
-name: destroy
-version: 1.0.4
-type: yarn
-homepage: https://github.com/stream-utils/destroy.git
-license: none
-licenses: []
-notices: []

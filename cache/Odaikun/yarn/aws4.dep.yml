@@ -1,8 +1,0 @@
----
-name: aws4
-version: 1.10.1
-type: yarn
-homepage: https://github.com/mhart/aws4.git
-license: none
-licenses: []
-notices: []

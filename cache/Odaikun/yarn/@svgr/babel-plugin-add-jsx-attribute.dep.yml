@@ -1,8 +1,0 @@
----
-name: "@svgr/babel-plugin-add-jsx-attribute"
-version: 4.2.0
-type: yarn
-homepage: https://github.com/smooth-code/svgr/tree/master/packages/babel-plugin-add-jsx-attribute
-license: none
-licenses: []
-notices: []

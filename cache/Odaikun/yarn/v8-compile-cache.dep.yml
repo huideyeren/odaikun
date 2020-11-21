@@ -1,8 +1,0 @@
----
-name: v8-compile-cache
-version: 2.1.1
-type: yarn
-homepage: https://github.com/zertosh/v8-compile-cache.git
-license: none
-licenses: []
-notices: []

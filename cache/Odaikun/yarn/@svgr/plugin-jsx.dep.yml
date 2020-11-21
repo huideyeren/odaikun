@@ -1,8 +1,0 @@
----
-name: "@svgr/plugin-jsx"
-version: 4.3.3
-type: yarn
-homepage: https://github.com/smooth-code/svgr/tree/master/packages/plugin-jsx
-license: none
-licenses: []
-notices: []

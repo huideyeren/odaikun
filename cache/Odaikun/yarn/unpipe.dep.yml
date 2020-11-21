@@ -1,8 +1,0 @@
----
-name: unpipe
-version: 1.0.0
-type: yarn
-homepage: https://github.com/stream-utils/unpipe.git
-license: none
-licenses: []
-notices: []

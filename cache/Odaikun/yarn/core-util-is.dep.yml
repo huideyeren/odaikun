@@ -1,8 +1,0 @@
----
-name: core-util-is
-version: 1.0.2
-type: yarn
-homepage: git://github.com/isaacs/core-util-is
-license: none
-licenses: []
-notices: []

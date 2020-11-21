@@ -1,8 +1,0 @@
----
-name: css-vendor
-version: 2.0.8
-type: yarn
-homepage: git@github.com:cssinjs/css-vendor.git
-license: none
-licenses: []
-notices: []

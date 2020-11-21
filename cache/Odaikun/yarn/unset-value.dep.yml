@@ -1,8 +1,0 @@
----
-name: unset-value
-version: 1.0.0
-type: yarn
-homepage: https://github.com/jonschlinkert/unset-value.git
-license: none
-licenses: []
-notices: []

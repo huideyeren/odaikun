@@ -1,8 +1,0 @@
----
-name: commander
-version: 4.1.1
-type: yarn
-homepage: https://github.com/tj/commander.js.git
-license: none
-licenses: []
-notices: []

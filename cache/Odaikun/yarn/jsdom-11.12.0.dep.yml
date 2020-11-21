@@ -1,8 +1,0 @@
----
-name: jsdom
-version: 11.12.0
-type: yarn
-homepage: https://github.com/jsdom/jsdom.git
-license: none
-licenses: []
-notices: []

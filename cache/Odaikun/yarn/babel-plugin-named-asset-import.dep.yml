@@ -1,8 +1,0 @@
----
-name: babel-plugin-named-asset-import
-version: 0.3.6
-type: yarn
-homepage: https://github.com/facebook/create-react-app.git
-license: none
-licenses: []
-notices: []

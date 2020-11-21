@@ -1,8 +1,0 @@
----
-name: regexpu-core
-version: 4.7.1
-type: yarn
-homepage: https://github.com/mathiasbynens/regexpu-core.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: babel-plugin-syntax-object-rest-spread
-version: 6.13.0
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-object-rest-spread
-license: none
-licenses: []
-notices: []

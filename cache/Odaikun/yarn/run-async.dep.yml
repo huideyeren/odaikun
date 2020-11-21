@@ -1,8 +1,0 @@
----
-name: run-async
-version: 2.4.1
-type: yarn
-homepage: https://github.com/SBoudrias/run-async.git
-license: none
-licenses: []
-notices: []

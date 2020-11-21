@@ -1,8 +1,0 @@
----
-name: hash-base
-version: 3.1.0
-type: yarn
-homepage: https://github.com/crypto-browserify/hash-base.git
-license: none
-licenses: []
-notices: []

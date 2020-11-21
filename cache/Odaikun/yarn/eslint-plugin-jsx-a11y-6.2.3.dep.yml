@@ -1,8 +1,0 @@
----
-name: eslint-plugin-jsx-a11y
-version: 6.2.3
-type: yarn
-homepage: https://github.com/evcohen/eslint-plugin-jsx-a11y
-license: none
-licenses: []
-notices: []

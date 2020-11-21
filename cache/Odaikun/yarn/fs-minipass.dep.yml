@@ -1,8 +1,0 @@
----
-name: fs-minipass
-version: 2.1.0
-type: yarn
-homepage: git+https://github.com/npm/fs-minipass.git
-license: none
-licenses: []
-notices: []

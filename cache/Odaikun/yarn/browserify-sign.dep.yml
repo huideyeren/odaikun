@@ -1,8 +1,0 @@
----
-name: browserify-sign
-version: 4.2.1
-type: yarn
-homepage: https://github.com/crypto-browserify/browserify-sign.git
-license: none
-licenses: []
-notices: []

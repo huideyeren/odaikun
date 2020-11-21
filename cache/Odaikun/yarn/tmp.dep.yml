@@ -1,8 +1,0 @@
----
-name: tmp
-version: 0.0.33
-type: yarn
-homepage: https://github.com/raszi/node-tmp.git
-license: none
-licenses: []
-notices: []

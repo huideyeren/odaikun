@@ -1,8 +1,0 @@
----
-name: source-map
-version: 0.6.1
-type: yarn
-homepage: http://github.com/mozilla/source-map.git
-license: none
-licenses: []
-notices: []

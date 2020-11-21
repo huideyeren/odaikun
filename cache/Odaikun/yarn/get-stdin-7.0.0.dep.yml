@@ -1,8 +1,0 @@
----
-name: get-stdin
-version: 7.0.0
-type: yarn
-homepage: https://github.com/sindresorhus/get-stdin.git
-license: none
-licenses: []
-notices: []

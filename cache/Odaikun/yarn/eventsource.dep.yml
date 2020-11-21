@@ -1,8 +1,0 @@
----
-name: eventsource
-version: 1.0.7
-type: yarn
-homepage: git://github.com/EventSource/eventsource.git
-license: none
-licenses: []
-notices: []

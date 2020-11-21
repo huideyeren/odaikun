@@ -1,8 +1,0 @@
----
-name: webpack
-version: 4.42.0
-type: yarn
-homepage: https://github.com/webpack/webpack.git
-license: none
-licenses: []
-notices: []

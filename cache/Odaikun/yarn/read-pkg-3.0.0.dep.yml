@@ -1,8 +1,0 @@
----
-name: read-pkg
-version: 3.0.0
-type: yarn
-homepage: https://github.com/sindresorhus/read-pkg.git
-license: none
-licenses: []
-notices: []

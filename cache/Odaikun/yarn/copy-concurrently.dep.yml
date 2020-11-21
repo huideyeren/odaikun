@@ -1,8 +1,0 @@
----
-name: copy-concurrently
-version: 1.0.5
-type: yarn
-homepage: git+https://github.com/npm/copy-concurrently.git
-license: none
-licenses: []
-notices: []

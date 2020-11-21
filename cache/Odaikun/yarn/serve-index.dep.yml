@@ -1,8 +1,0 @@
----
-name: serve-index
-version: 1.9.1
-type: yarn
-homepage: https://github.com/expressjs/serve-index.git
-license: none
-licenses: []
-notices: []

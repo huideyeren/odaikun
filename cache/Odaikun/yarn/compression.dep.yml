@@ -1,8 +1,0 @@
----
-name: compression
-version: 1.7.4
-type: yarn
-homepage: https://github.com/expressjs/compression.git
-license: none
-licenses: []
-notices: []

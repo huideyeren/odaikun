@@ -1,8 +1,0 @@
----
-name: bluebird
-version: 3.7.2
-type: yarn
-homepage: git://github.com/petkaantonov/bluebird.git
-license: none
-licenses: []
-notices: []

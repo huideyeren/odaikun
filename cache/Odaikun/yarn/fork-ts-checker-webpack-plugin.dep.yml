@@ -1,8 +1,0 @@
----
-name: fork-ts-checker-webpack-plugin
-version: 3.1.1
-type: yarn
-homepage: https://github.com/TypeStrong/fork-ts-checker-webpack-plugin.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: har-validator
-version: 5.1.5
-type: yarn
-homepage: https://github.com/ahmadnassri/node-har-validator.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: file-uri-to-path
-version: 1.0.0
-type: yarn
-homepage: git://github.com/TooTallNate/file-uri-to-path.git
-license: none
-licenses: []
-notices: []

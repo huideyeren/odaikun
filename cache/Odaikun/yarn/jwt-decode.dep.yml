@@ -1,8 +1,0 @@
----
-name: jwt-decode
-version: 2.2.0
-type: yarn
-homepage: git://github.com/auth0/jwt-decode
-license: none
-licenses: []
-notices: []

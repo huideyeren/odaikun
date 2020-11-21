@@ -1,8 +1,0 @@
----
-name: ajv-errors
-version: 1.0.1
-type: yarn
-homepage: git+https://github.com/epoberezkin/ajv-errors.git
-license: none
-licenses: []
-notices: []

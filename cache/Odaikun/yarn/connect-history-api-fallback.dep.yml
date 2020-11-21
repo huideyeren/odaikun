@@ -1,8 +1,0 @@
----
-name: connect-history-api-fallback
-version: 1.6.0
-type: yarn
-homepage: http://github.com/bripkens/connect-history-api-fallback.git
-license: none
-licenses: []
-notices: []

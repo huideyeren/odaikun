@@ -1,8 +1,0 @@
----
-name: resolve
-version: 1.15.0
-type: yarn
-homepage: git://github.com/browserify/resolve.git
-license: none
-licenses: []
-notices: []

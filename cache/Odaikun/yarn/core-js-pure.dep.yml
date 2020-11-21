@@ -1,8 +1,0 @@
----
-name: core-js-pure
-version: 3.6.5
-type: yarn
-homepage: https://github.com/zloirock/core-js.git
-license: none
-licenses: []
-notices: []

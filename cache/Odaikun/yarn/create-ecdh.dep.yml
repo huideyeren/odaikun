@@ -1,8 +1,0 @@
----
-name: create-ecdh
-version: 4.0.4
-type: yarn
-homepage: https://github.com/crypto-browserify/createECDH.git
-license: none
-licenses: []
-notices: []

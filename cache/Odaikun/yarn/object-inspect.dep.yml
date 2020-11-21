@@ -1,8 +1,0 @@
----
-name: object-inspect
-version: 1.8.0
-type: yarn
-homepage: git://github.com/inspect-js/object-inspect.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: prepend-http
-version: 1.0.4
-type: yarn
-homepage: https://github.com/sindresorhus/prepend-http.git
-license: none
-licenses: []
-notices: []

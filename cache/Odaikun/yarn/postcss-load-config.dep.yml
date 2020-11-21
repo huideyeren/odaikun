@@ -1,8 +1,0 @@
----
-name: postcss-load-config
-version: 2.1.2
-type: yarn
-homepage: https://github.com/postcss/postcss-load-config.git
-license: none
-licenses: []
-notices: []

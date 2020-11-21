@@ -1,8 +1,0 @@
----
-name: typescript-compare
-version: 0.0.2
-type: yarn
-homepage: git+https://github.com/ksxnodemodules/typescript-compare.git
-license: none
-licenses: []
-notices: []

@@ -1,9 +1,0 @@
----
-name: python-editor
-version: 1.0.4
-type: pipenv
-summary: Programmatically open an editor, capture the result.
-homepage: https://github.com/fmoo/python-editor
-license: none
-licenses: []
-notices: []

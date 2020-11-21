@@ -1,8 +1,0 @@
----
-name: style-loader
-version: 0.23.1
-type: yarn
-homepage: https://github.com/webpack-contrib/style-loader.git
-license: none
-licenses: []
-notices: []

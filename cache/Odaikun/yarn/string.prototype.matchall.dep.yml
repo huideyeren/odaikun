@@ -1,8 +1,0 @@
----
-name: string.prototype.matchall
-version: 4.0.2
-type: yarn
-homepage: git+https://github.com/ljharb/String.prototype.matchAll.git
-license: none
-licenses: []
-notices: []

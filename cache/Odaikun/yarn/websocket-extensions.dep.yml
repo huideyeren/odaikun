@@ -1,8 +1,0 @@
----
-name: websocket-extensions
-version: 0.1.4
-type: yarn
-homepage: git://github.com/faye/websocket-extensions-node.git
-license: none
-licenses: []
-notices: []

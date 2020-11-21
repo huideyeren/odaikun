@@ -1,8 +1,0 @@
----
-name: whatwg-url
-version: 6.5.0
-type: yarn
-homepage: https://github.com/jsdom/whatwg-url.git
-license: none
-licenses: []
-notices: []

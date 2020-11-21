@@ -1,8 +1,0 @@
----
-name: "@babel/plugin-syntax-async-generators"
-version: 7.8.4
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-async-generators
-license: none
-licenses: []
-notices: []

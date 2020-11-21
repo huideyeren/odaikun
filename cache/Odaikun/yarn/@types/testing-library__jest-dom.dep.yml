@@ -1,8 +1,0 @@
----
-name: "@types/testing-library__jest-dom"
-version: 5.9.4
-type: yarn
-homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: "@testing-library/jest-dom"
-version: 5.11.4
-type: yarn
-homepage: https://github.com/testing-library/jest-dom
-license: none
-licenses: []
-notices: []

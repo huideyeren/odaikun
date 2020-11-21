@@ -1,8 +1,0 @@
----
-name: acorn
-version: 6.4.1
-type: yarn
-homepage: https://github.com/acornjs/acorn.git
-license: none
-licenses: []
-notices: []

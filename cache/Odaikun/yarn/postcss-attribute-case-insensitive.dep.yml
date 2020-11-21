@@ -1,8 +1,0 @@
----
-name: postcss-attribute-case-insensitive
-version: 4.0.2
-type: yarn
-homepage: git+https://github.com/Semigradsky/postcss-attribute-case-insensitive.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: "@svgr/hast-util-to-babel-ast"
-version: 4.3.2
-type: yarn
-homepage: https://github.com/smooth-code/svgr/tree/master/packages/hast-util-to-babel-ast
-license: none
-licenses: []
-notices: []

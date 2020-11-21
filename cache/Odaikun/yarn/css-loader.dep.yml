@@ -1,8 +1,0 @@
----
-name: css-loader
-version: 3.4.2
-type: yarn
-homepage: https://github.com/webpack-contrib/css-loader.git
-license: none
-licenses: []
-notices: []

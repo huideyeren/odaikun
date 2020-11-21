@@ -1,8 +1,0 @@
----
-name: cosmiconfig
-version: 6.0.0
-type: yarn
-homepage: git+https://github.com/davidtheclark/cosmiconfig.git
-license: none
-licenses: []
-notices: []

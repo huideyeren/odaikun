@@ -1,8 +1,0 @@
----
-name: rxjs
-version: 6.6.3
-type: yarn
-homepage: https://github.com/reactivex/rxjs.git
-license: none
-licenses: []
-notices: []

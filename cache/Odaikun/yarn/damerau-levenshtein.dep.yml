@@ -1,8 +1,0 @@
----
-name: damerau-levenshtein
-version: 1.0.6
-type: yarn
-homepage: https://github.com/tad-lispy/node-damerau-levenshtein.git
-license: none
-licenses: []
-notices: []

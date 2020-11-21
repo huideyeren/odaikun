@@ -1,8 +1,0 @@
----
-name: glob-parent
-version: 5.1.1
-type: yarn
-homepage: https://github.com/gulpjs/glob-parent.git
-license: none
-licenses: []
-notices: []

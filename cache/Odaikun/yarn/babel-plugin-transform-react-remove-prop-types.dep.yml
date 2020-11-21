@@ -1,8 +1,0 @@
----
-name: babel-plugin-transform-react-remove-prop-types
-version: 0.4.24
-type: yarn
-homepage: https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types.git
-license: none
-licenses: []
-notices: []

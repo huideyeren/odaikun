@@ -1,8 +1,0 @@
----
-name: loader-utils
-version: 1.4.0
-type: yarn
-homepage: https://github.com/webpack/loader-utils.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: "@babel/preset-env"
-version: 7.9.0
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-preset-env
-license: none
-licenses: []
-notices: []

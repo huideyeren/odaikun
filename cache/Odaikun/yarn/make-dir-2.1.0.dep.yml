@@ -1,8 +1,0 @@
----
-name: make-dir
-version: 2.1.0
-type: yarn
-homepage: https://github.com/sindresorhus/make-dir.git
-license: none
-licenses: []
-notices: []

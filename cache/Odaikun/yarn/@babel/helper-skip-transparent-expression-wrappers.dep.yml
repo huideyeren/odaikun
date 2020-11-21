@@ -1,8 +1,0 @@
----
-name: "@babel/helper-skip-transparent-expression-wrappers"
-version: 7.11.0
-type: yarn
-homepage: https://github.com/babel/babel.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: object.fromentries
-version: 2.0.2
-type: yarn
-homepage: git://github.com/es-shims/Object.fromEntries.git
-license: none
-licenses: []
-notices: []

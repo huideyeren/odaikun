@@ -1,8 +1,0 @@
----
-name: popper.js
-version: 1.16.1-lts
-type: yarn
-homepage: git+https://github.com/FezVrasta/popper.js.git
-license: none
-licenses: []
-notices: []

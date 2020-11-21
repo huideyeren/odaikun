@@ -1,8 +1,0 @@
----
-name: extglob
-version: 2.0.4
-type: yarn
-homepage: https://github.com/micromatch/extglob.git
-license: none
-licenses: []
-notices: []

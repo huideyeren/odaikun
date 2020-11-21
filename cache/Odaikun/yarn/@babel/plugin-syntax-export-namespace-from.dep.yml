@@ -1,8 +1,0 @@
----
-name: "@babel/plugin-syntax-export-namespace-from"
-version: 7.8.3
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-export-namespace-from
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: query-string
-version: 4.3.4
-type: yarn
-homepage: https://github.com/sindresorhus/query-string.git
-license: none
-licenses: []
-notices: []

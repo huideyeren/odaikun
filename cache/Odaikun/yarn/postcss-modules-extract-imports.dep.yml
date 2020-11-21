@@ -1,8 +1,0 @@
----
-name: postcss-modules-extract-imports
-version: 2.0.0
-type: yarn
-homepage: https://github.com/css-modules/postcss-modules-extract-imports.git
-license: none
-licenses: []
-notices: []

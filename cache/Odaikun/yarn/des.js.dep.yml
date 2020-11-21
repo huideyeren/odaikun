@@ -1,8 +1,0 @@
----
-name: des.js
-version: 1.0.1
-type: yarn
-homepage: git+ssh://git@github.com/indutny/des.js.git
-license: none
-licenses: []
-notices: []

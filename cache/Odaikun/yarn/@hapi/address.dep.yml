@@ -1,8 +1,0 @@
----
-name: "@hapi/address"
-version: 2.1.4
-type: yarn
-homepage: git://github.com/hapijs/address
-license: none
-licenses: []
-notices: []

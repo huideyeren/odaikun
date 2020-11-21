@@ -1,8 +1,0 @@
----
-name: confusing-browser-globals
-version: 1.0.9
-type: yarn
-homepage: https://github.com/facebook/create-react-app.git
-license: none
-licenses: []
-notices: []

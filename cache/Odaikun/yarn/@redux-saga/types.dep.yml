@@ -1,8 +1,0 @@
----
-name: "@redux-saga/types"
-version: 1.1.0
-type: yarn
-homepage: https://github.com/redux-saga/redux-saga/tree/master/packages/types
-license: none
-licenses: []
-notices: []

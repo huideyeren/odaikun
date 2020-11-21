@@ -1,8 +1,0 @@
----
-name: spdx-expression-parse
-version: 3.0.1
-type: yarn
-homepage: https://github.com/jslicense/spdx-expression-parse.js.git
-license: none
-licenses: []
-notices: []

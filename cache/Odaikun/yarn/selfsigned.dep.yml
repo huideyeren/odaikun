@@ -1,8 +1,0 @@
----
-name: selfsigned
-version: 1.10.8
-type: yarn
-homepage: git://github.com/jfromaniello/selfsigned.git
-license: none
-licenses: []
-notices: []

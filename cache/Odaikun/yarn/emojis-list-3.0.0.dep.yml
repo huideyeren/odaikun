@@ -1,8 +1,0 @@
----
-name: emojis-list
-version: 3.0.0
-type: yarn
-homepage: git+https://github.com/kikobeats/emojis-list.git
-license: none
-licenses: []
-notices: []

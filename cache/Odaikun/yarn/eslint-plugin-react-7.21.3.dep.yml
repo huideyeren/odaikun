@@ -1,8 +1,0 @@
----
-name: eslint-plugin-react
-version: 7.21.3
-type: yarn
-homepage: https://github.com/yannickcr/eslint-plugin-react
-license: none
-licenses: []
-notices: []

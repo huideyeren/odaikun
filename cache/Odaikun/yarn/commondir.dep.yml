@@ -1,8 +1,0 @@
----
-name: commondir
-version: 1.0.1
-type: yarn
-homepage: http://github.com/substack/node-commondir.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: espree
-version: 6.2.1
-type: yarn
-homepage: https://github.com/eslint/espree.git
-license: none
-licenses: []
-notices: []

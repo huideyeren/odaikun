@@ -1,8 +1,0 @@
----
-name: nan
-version: 2.14.1
-type: yarn
-homepage: git://github.com/nodejs/nan.git
-license: none
-licenses: []
-notices: []

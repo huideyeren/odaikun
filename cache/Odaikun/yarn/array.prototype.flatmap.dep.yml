@@ -1,8 +1,0 @@
----
-name: array.prototype.flatmap
-version: 1.2.3
-type: yarn
-homepage: git://github.com/es-shims/Array.prototype.flatMap.git
-license: none
-licenses: []
-notices: []

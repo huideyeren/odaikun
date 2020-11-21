@@ -1,8 +1,0 @@
----
-name: bcrypt-pbkdf
-version: 1.0.2
-type: yarn
-homepage: git://github.com/joyent/node-bcrypt-pbkdf.git
-license: none
-licenses: []
-notices: []

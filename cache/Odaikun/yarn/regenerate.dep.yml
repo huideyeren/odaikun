@@ -1,8 +1,0 @@
----
-name: regenerate
-version: 1.4.1
-type: yarn
-homepage: https://github.com/mathiasbynens/regenerate.git
-license: none
-licenses: []
-notices: []

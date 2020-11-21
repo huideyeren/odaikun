@@ -1,8 +1,0 @@
----
-name: glob
-version: 7.1.6
-type: yarn
-homepage: git://github.com/isaacs/node-glob.git
-license: none
-licenses: []
-notices: []

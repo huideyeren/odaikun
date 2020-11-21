@@ -1,8 +1,0 @@
----
-name: dotenv
-version: 8.2.0
-type: yarn
-homepage: git://github.com/motdotla/dotenv.git
-license: none
-licenses: []
-notices: []

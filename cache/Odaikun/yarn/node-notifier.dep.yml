@@ -1,8 +1,0 @@
----
-name: node-notifier
-version: 5.4.3
-type: yarn
-homepage: git+ssh://git@github.com/mikaelbr/node-notifier.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: progress
-version: 2.0.3
-type: yarn
-homepage: git://github.com/visionmedia/node-progress
-license: none
-licenses: []
-notices: []

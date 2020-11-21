@@ -1,8 +1,0 @@
----
-name: babel-plugin-transform-object-rest-spread
-version: 6.26.0
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-object-rest-spread
-license: none
-licenses: []
-notices: []

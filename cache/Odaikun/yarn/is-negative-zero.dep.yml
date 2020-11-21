@@ -1,8 +1,0 @@
----
-name: is-negative-zero
-version: 2.0.0
-type: yarn
-homepage: git://github.com/ljharb/is-negative-zero.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: react-test-renderer
-version: 16.13.1
-type: yarn
-homepage: https://github.com/facebook/react.git
-license: none
-licenses: []
-notices: []

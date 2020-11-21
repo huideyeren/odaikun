@@ -1,8 +1,0 @@
----
-name: lru-cache
-version: 5.1.1
-type: yarn
-homepage: git://github.com/isaacs/node-lru-cache.git
-license: none
-licenses: []
-notices: []

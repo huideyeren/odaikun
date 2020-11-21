@@ -1,8 +1,0 @@
----
-name: expect
-version: 24.9.0
-type: yarn
-homepage: https://github.com/facebook/jest.git
-license: none
-licenses: []
-notices: []

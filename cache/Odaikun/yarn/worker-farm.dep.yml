@@ -1,8 +1,0 @@
----
-name: worker-farm
-version: 1.7.0
-type: yarn
-homepage: https://github.com/rvagg/node-worker-farm.git
-license: none
-licenses: []
-notices: []

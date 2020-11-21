@@ -1,8 +1,0 @@
----
-name: js-yaml
-version: 3.14.0
-type: yarn
-homepage: https://github.com/nodeca/js-yaml.git
-license: none
-licenses: []
-notices: []

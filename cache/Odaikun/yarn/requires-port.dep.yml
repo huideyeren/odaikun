@@ -1,8 +1,0 @@
----
-name: requires-port
-version: 1.0.0
-type: yarn
-homepage: https://github.com/unshiftio/requires-port
-license: none
-licenses: []
-notices: []

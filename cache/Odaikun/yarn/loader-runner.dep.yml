@@ -1,8 +1,0 @@
----
-name: loader-runner
-version: 2.4.0
-type: yarn
-homepage: git+https://github.com/webpack/loader-runner.git
-license: none
-licenses: []
-notices: []

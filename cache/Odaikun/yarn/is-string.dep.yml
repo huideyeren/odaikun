@@ -1,8 +1,0 @@
----
-name: is-string
-version: 1.0.5
-type: yarn
-homepage: git://github.com/ljharb/is-string.git
-license: none
-licenses: []
-notices: []

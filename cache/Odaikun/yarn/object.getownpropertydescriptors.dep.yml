@@ -1,8 +1,0 @@
----
-name: object.getownpropertydescriptors
-version: 2.1.0
-type: yarn
-homepage: git://github.com/es-shims/object.getownpropertydescriptors.git
-license: none
-licenses: []
-notices: []

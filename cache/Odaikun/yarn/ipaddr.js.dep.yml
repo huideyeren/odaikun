@@ -1,8 +1,0 @@
----
-name: ipaddr.js
-version: 1.9.1
-type: yarn
-homepage: git://github.com/whitequark/ipaddr.js
-license: none
-licenses: []
-notices: []

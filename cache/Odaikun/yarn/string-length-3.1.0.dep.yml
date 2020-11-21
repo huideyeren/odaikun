@@ -1,8 +1,0 @@
----
-name: string-length
-version: 3.1.0
-type: yarn
-homepage: https://github.com/sindresorhus/string-length.git
-license: none
-licenses: []
-notices: []

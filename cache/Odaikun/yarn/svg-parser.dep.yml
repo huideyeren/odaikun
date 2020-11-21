@@ -1,8 +1,0 @@
----
-name: svg-parser
-version: 2.0.4
-type: yarn
-homepage: git+https://github.com/Rich-Harris/svg-parser.git
-license: none
-licenses: []
-notices: []

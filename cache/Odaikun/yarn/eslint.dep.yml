@@ -1,8 +1,0 @@
----
-name: eslint
-version: 6.8.0
-type: yarn
-homepage: https://github.com/eslint/eslint.git
-license: none
-licenses: []
-notices: []

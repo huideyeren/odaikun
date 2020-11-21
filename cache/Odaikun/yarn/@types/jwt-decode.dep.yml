@@ -1,8 +1,0 @@
----
-name: "@types/jwt-decode"
-version: 2.2.1
-type: yarn
-homepage: https://www.github.com/DefinitelyTyped/DefinitelyTyped.git
-license: none
-licenses: []
-notices: []

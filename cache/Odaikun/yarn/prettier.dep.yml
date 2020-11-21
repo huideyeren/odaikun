@@ -1,8 +1,0 @@
----
-name: prettier
-version: 2.1.2
-type: yarn
-homepage: https://github.com/prettier/prettier.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: regenerate-unicode-properties
-version: 8.2.0
-type: yarn
-homepage: https://github.com/mathiasbynens/regenerate-unicode-properties.git
-license: none
-licenses: []
-notices: []

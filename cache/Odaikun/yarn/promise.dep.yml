@@ -1,8 +1,0 @@
----
-name: promise
-version: 8.1.0
-type: yarn
-homepage: https://github.com/then/promise.git
-license: none
-licenses: []
-notices: []

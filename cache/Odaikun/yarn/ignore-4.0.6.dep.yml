@@ -1,8 +1,0 @@
----
-name: ignore
-version: 4.0.6
-type: yarn
-homepage: git@github.com:kaelzhang/node-ignore.git
-license: none
-licenses: []
-notices: []

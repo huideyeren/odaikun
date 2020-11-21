@@ -1,8 +1,0 @@
----
-name: es-abstract
-version: 1.17.7
-type: yarn
-homepage: git://github.com/ljharb/es-abstract.git
-license: none
-licenses: []
-notices: []

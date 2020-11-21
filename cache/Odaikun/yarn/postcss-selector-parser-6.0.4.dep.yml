@@ -1,8 +1,0 @@
----
-name: postcss-selector-parser
-version: 6.0.4
-type: yarn
-homepage: https://github.com/postcss/postcss-selector-parser.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: "@sheerun/mutationobserver-shim"
-version: 0.3.3
-type: yarn
-homepage: github.com/megawac/MutationObserver.js
-license: none
-licenses: []
-notices: []

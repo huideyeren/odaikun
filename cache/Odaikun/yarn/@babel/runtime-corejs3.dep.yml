@@ -1,8 +1,0 @@
----
-name: "@babel/runtime-corejs3"
-version: 7.11.2
-type: yarn
-homepage: https://github.com/babel/babel.git
-license: none
-licenses: []
-notices: []

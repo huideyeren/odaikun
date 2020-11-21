@@ -1,8 +1,0 @@
----
-name: capture-exit
-version: 2.0.0
-type: yarn
-homepage: git+https://github.com/stefanpenner/capture-exit.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: default-gateway
-version: 4.2.0
-type: yarn
-homepage: https://github.com/silverwind/default-gateway.git
-license: none
-licenses: []
-notices: []

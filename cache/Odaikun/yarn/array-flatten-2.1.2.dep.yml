@@ -1,8 +1,0 @@
----
-name: array-flatten
-version: 2.1.2
-type: yarn
-homepage: git://github.com/blakeembrey/array-flatten.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: jest-environment-jsdom-fourteen
-version: 1.0.1
-type: yarn
-homepage: https://github.com/ianschmitz/jest-environment-jsdom-fourteen
-license: none
-licenses: []
-notices: []

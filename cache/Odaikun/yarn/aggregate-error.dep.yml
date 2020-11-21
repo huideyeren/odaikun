@@ -1,8 +1,0 @@
----
-name: aggregate-error
-version: 3.1.0
-type: yarn
-homepage: https://github.com/sindresorhus/aggregate-error.git
-license: none
-licenses: []
-notices: []

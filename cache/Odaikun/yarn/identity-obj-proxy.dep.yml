@@ -1,8 +1,0 @@
----
-name: identity-obj-proxy
-version: 3.0.0
-type: yarn
-homepage: git+https://github.com/keyanzhang/identity-obj-proxy.git
-license: none
-licenses: []
-notices: []

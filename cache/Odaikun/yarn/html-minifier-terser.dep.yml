@@ -1,8 +1,0 @@
----
-name: html-minifier-terser
-version: 5.1.1
-type: yarn
-homepage: git+https://github.com/DanielRuf/html-minifier-terser.git
-license: none
-licenses: []
-notices: []

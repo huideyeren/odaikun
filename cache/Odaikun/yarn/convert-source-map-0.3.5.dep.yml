@@ -1,8 +1,0 @@
----
-name: convert-source-map
-version: 0.3.5
-type: yarn
-homepage: git://github.com/thlorenz/convert-source-map.git
-license: none
-licenses: []
-notices: []

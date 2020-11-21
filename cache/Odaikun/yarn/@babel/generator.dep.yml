@@ -1,8 +1,0 @@
----
-name: "@babel/generator"
-version: 7.11.6
-type: yarn
-homepage: https://github.com/babel/babel.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: istanbul-reports
-version: 2.2.7
-type: yarn
-homepage: git@github.com:istanbuljs/istanbuljs
-license: none
-licenses: []
-notices: []

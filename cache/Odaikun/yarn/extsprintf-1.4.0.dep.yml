@@ -1,8 +1,0 @@
----
-name: extsprintf
-version: 1.4.0
-type: yarn
-homepage: git://github.com/davepacheco/node-extsprintf.git
-license: none
-licenses: []
-notices: []

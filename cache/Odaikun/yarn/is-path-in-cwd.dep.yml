@@ -1,8 +1,0 @@
----
-name: is-path-in-cwd
-version: 2.1.0
-type: yarn
-homepage: https://github.com/sindresorhus/is-path-in-cwd.git
-license: none
-licenses: []
-notices: []

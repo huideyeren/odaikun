@@ -1,8 +1,0 @@
----
-name: fast-json-stable-stringify
-version: 2.1.0
-type: yarn
-homepage: git://github.com/epoberezkin/fast-json-stable-stringify.git
-license: none
-licenses: []
-notices: []

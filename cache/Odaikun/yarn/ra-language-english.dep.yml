@@ -1,8 +1,0 @@
----
-name: ra-language-english
-version: 3.9.4
-type: yarn
-homepage: git+https://github.com/marmelab/react-admin.git
-license: none
-licenses: []
-notices: []

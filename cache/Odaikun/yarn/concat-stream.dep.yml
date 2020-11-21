@@ -1,8 +1,0 @@
----
-name: concat-stream
-version: 1.6.2
-type: yarn
-homepage: http://github.com/maxogden/concat-stream.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: postcss
-version: 7.0.35
-type: yarn
-homepage: https://github.com/postcss/postcss.git
-license: none
-licenses: []
-notices: []

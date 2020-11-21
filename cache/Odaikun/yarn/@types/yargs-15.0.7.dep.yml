@@ -1,8 +1,0 @@
----
-name: "@types/yargs"
-version: 15.0.7
-type: yarn
-homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
-license: none
-licenses: []
-notices: []

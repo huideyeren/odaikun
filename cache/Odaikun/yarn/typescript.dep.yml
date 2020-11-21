@@ -1,8 +1,0 @@
----
-name: typescript
-version: 4.0.3
-type: yarn
-homepage: https://github.com/Microsoft/TypeScript.git
-license: none
-licenses: []
-notices: []

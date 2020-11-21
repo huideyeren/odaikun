@@ -1,8 +1,0 @@
----
-name: promise-inflight
-version: 1.0.1
-type: yarn
-homepage: git+https://github.com/iarna/promise-inflight.git
-license: none
-licenses: []
-notices: []

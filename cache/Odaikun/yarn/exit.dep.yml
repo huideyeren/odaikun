@@ -1,8 +1,0 @@
----
-name: exit
-version: 0.1.2
-type: yarn
-homepage: git://github.com/cowboy/node-exit.git
-license: none
-licenses: []
-notices: []

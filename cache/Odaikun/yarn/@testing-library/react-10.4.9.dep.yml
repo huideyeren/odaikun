@@ -1,8 +1,0 @@
----
-name: "@testing-library/react"
-version: 10.4.9
-type: yarn
-homepage: https://github.com/testing-library/react-testing-library
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: eslint-config-standard-jsx
-version: 8.1.0
-type: yarn
-homepage: git://github.com/standard/eslint-config-standard-jsx.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: pnp-webpack-plugin
-version: 1.6.4
-type: yarn
-homepage: https://github.com/arcanis/pnp-webpack-plugin.git
-license: none
-licenses: []
-notices: []

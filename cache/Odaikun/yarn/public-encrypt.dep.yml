@@ -1,8 +1,0 @@
----
-name: public-encrypt
-version: 4.0.3
-type: yarn
-homepage: https://github.com/crypto-browserify/publicEncrypt.git
-license: none
-licenses: []
-notices: []

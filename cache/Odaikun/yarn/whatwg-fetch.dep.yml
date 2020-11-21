@@ -1,8 +1,0 @@
----
-name: whatwg-fetch
-version: 3.4.1
-type: yarn
-homepage: https://github.com/github/fetch.git
-license: none
-licenses: []
-notices: []

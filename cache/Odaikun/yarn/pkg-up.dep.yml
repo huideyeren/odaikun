@@ -1,8 +1,0 @@
----
-name: pkg-up
-version: 3.1.0
-type: yarn
-homepage: https://github.com/sindresorhus/pkg-up.git
-license: none
-licenses: []
-notices: []

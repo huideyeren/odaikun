@@ -1,8 +1,0 @@
----
-name: callsites
-version: 2.0.0
-type: yarn
-homepage: https://github.com/sindresorhus/callsites.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: nwsapi
-version: 2.2.0
-type: yarn
-homepage: git://github.com/dperini/nwsapi.git
-license: none
-licenses: []
-notices: []

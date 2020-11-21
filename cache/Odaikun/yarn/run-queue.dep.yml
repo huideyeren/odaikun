@@ -1,8 +1,0 @@
----
-name: run-queue
-version: 1.0.3
-type: yarn
-homepage: git+https://github.com/iarna/run-queue.git
-license: none
-licenses: []
-notices: []

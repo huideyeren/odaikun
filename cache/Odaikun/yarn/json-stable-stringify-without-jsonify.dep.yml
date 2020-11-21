@@ -1,8 +1,0 @@
----
-name: json-stable-stringify-without-jsonify
-version: 1.0.1
-type: yarn
-homepage: git://github.com/samn/json-stable-stringify.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: contains-path
-version: 0.1.0
-type: yarn
-homepage: https://github.com/jonschlinkert/contains-path.git
-license: none
-licenses: []
-notices: []

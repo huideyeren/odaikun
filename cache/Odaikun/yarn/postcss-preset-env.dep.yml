@@ -1,8 +1,0 @@
----
-name: postcss-preset-env
-version: 6.7.0
-type: yarn
-homepage: https://github.com/csstools/postcss-preset-env.git
-license: none
-licenses: []
-notices: []

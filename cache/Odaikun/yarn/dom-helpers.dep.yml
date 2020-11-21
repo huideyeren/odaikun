@@ -1,8 +1,0 @@
----
-name: dom-helpers
-version: 5.2.0
-type: yarn
-homepage: git+https://github.com/react-bootstrap/dom-helpers.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: "@babel/plugin-proposal-optional-chaining"
-version: 7.9.0
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-optional-chaining
-license: none
-licenses: []
-notices: []

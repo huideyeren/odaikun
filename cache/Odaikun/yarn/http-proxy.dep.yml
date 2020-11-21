@@ -1,8 +1,0 @@
----
-name: http-proxy
-version: 1.18.1
-type: yarn
-homepage: https://github.com/http-party/node-http-proxy.git
-license: none
-licenses: []
-notices: []

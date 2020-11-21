@@ -1,8 +1,0 @@
----
-name: eslint-plugin-react-hooks
-version: 2.5.1
-type: yarn
-homepage: https://github.com/facebook/react.git
-license: none
-licenses: []
-notices: []

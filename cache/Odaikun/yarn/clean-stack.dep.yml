@@ -1,8 +1,0 @@
----
-name: clean-stack
-version: 2.2.0
-type: yarn
-homepage: https://github.com/sindresorhus/clean-stack.git
-license: none
-licenses: []
-notices: []

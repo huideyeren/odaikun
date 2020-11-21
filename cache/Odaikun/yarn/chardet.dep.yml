@@ -1,8 +1,0 @@
----
-name: chardet
-version: 0.7.0
-type: yarn
-homepage: git@github.com:runk/node-chardet.git
-license: none
-licenses: []
-notices: []

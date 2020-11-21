@@ -1,8 +1,0 @@
----
-name: mini-css-extract-plugin
-version: 0.9.0
-type: yarn
-homepage: https://github.com/webpack-contrib/mini-css-extract-plugin.git
-license: none
-licenses: []
-notices: []

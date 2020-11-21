@@ -1,8 +1,0 @@
----
-name: require-directory
-version: 2.1.1
-type: yarn
-homepage: git://github.com/troygoode/node-require-directory.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: duplexify
-version: 3.7.1
-type: yarn
-homepage: git://github.com/mafintosh/duplexify
-license: none
-licenses: []
-notices: []

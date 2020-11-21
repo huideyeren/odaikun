@@ -1,8 +1,0 @@
----
-name: react-scripts
-version: 3.4.3
-type: yarn
-homepage: git+https://github.com/facebook/create-react-app.git
-license: none
-licenses: []
-notices: []

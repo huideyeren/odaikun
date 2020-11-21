@@ -1,8 +1,0 @@
----
-name: "@hapi/topo"
-version: 3.1.6
-type: yarn
-homepage: git://github.com/hapijs/topo
-license: none
-licenses: []
-notices: []

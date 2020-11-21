@@ -1,8 +1,0 @@
----
-name: "@babel/plugin-transform-flow-strip-types"
-version: 7.9.0
-type: yarn
-homepage: https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-flow-strip-types
-license: none
-licenses: []
-notices: []

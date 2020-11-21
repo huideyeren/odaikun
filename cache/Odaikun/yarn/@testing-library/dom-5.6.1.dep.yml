@@ -1,8 +1,0 @@
----
-name: "@testing-library/dom"
-version: 5.6.1
-type: yarn
-homepage: https://github.com/testing-library/dom-testing-library.git
-license: none
-licenses: []
-notices: []

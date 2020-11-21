@@ -1,8 +1,0 @@
----
-name: errno
-version: 0.1.7
-type: yarn
-homepage: https://github.com/rvagg/node-errno.git
-license: none
-licenses: []
-notices: []

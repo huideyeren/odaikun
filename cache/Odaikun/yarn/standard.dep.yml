@@ -1,8 +1,0 @@
----
-name: standard
-version: 14.3.4
-type: yarn
-homepage: git://github.com/standard/standard.git
-license: none
-licenses: []
-notices: []

@@ -1,8 +1,0 @@
----
-name: node-polyglot
-version: 2.4.0
-type: yarn
-homepage: git://github.com/airbnb/polyglot.js.git
-license: none
-licenses: []
-notices: []

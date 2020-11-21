@@ -1,8 +1,0 @@
----
-name: write-file-atomic
-version: 2.4.1
-type: yarn
-homepage: git@github.com:iarna/write-file-atomic.git
-license: none
-licenses: []
-notices: []

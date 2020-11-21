@@ -1,8 +1,0 @@
----
-name: regex-parser
-version: 2.2.10
-type: yarn
-homepage: git@github.com:IonicaBizau/regex-parser.js.git
-license: none
-licenses: []
-notices: []

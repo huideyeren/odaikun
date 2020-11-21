@@ -1,8 +1,0 @@
----
-name: require-main-filename
-version: 2.0.0
-type: yarn
-homepage: git+ssh://git@github.com/yargs/require-main-filename.git
-license: none
-licenses: []
-notices: []

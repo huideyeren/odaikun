@@ -1,8 +1,0 @@
----
-name: dom-serializer
-version: 0.2.2
-type: yarn
-homepage: git://github.com/cheeriojs/dom-renderer.git
-license: none
-licenses: []
-notices: []

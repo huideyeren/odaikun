@@ -1,8 +1,0 @@
----
-name: fs-write-stream-atomic
-version: 1.0.10
-type: yarn
-homepage: https://github.com/npm/fs-write-stream-atomic
-license: none
-licenses: []
-notices: []

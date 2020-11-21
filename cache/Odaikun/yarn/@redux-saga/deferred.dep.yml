@@ -1,8 +1,0 @@
----
-name: "@redux-saga/deferred"
-version: 1.1.2
-type: yarn
-homepage: https://github.com/redux-saga/redux-saga/tree/master/packages/deferred
-license: none
-licenses: []
-notices: []

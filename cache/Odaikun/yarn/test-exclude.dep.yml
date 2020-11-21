@@ -1,8 +1,0 @@
----
-name: test-exclude
-version: 5.2.3
-type: yarn
-homepage: git+https://github.com/istanbuljs/istanbuljs.git
-license: none
-licenses: []
-notices: []

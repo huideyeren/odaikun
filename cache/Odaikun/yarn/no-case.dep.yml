@@ -1,8 +1,0 @@
----
-name: no-case
-version: 3.0.3
-type: yarn
-homepage: git://github.com/blakeembrey/change-case.git
-license: none
-licenses: []
-notices: []

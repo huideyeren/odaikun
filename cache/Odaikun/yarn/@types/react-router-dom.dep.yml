@@ -1,8 +1,0 @@
----
-name: "@types/react-router-dom"
-version: 5.1.5
-type: yarn
-homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
-license: none
-licenses: []
-notices: []

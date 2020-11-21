@@ -1,8 +1,0 @@
----
-name: multicast-dns
-version: 6.2.3
-type: yarn
-homepage: https://github.com/mafintosh/multicast-dns.git
-license: none
-licenses: []
-notices: []

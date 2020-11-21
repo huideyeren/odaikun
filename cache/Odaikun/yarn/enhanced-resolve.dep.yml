@@ -1,8 +1,0 @@
----
-name: enhanced-resolve
-version: 4.3.0
-type: yarn
-homepage: git://github.com/webpack/enhanced-resolve.git
-license: none
-licenses: []
-notices: []

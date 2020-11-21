@@ -1,8 +1,0 @@
----
-name: natural-compare
-version: 1.4.0
-type: yarn
-homepage: git://github.com/litejs/natural-compare-lite.git
-license: none
-licenses: []
-notices: []
