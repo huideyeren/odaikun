@@ -94,17 +94,17 @@ reviewed:
     - wheel
     - SQLAlchemy-Utils
   yarn:
-    - @hapi/address
-    - @hapi/bourne
-    - @hapi/hoek
-    - @hapi/joi
-    - @hapi/topo
-    - @material-ui/icons
-    - @typescript-eslint/parser
-    - @typescript-eslint/typescript-estree
-    - @webassemblyjs/helper-fsm
-    - @webassemblyjs/leb128
-    - @xtuc/ieee754
+    - \@hapi/address
+    - \@hapi/bourne
+    - \@hapi/hoek
+    - \@hapi/joi
+    - \@hapi/topo
+    - \@material-ui/icons
+    - \@typescript-eslint/parser
+    - \@typescript-eslint/typescript-estree
+    - \@webassemblyjs/helper-fsm
+    - \@webassemblyjs/leb128
+    - \@xtuc/ieee754
     - abab
     - aria-query-4.2.2
     - atob
