@@ -1,0 +1,10 @@
+---
+name: is-regexp
+version: 1.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/is-regexp.git
+license: mit
+licenses:
+- sources: readme.md
+  text: MIT © [Sindre Sorhus](http://sindresorhus.com)
+notices: []

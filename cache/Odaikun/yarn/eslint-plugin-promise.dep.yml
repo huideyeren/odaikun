@@ -1,0 +1,10 @@
+---
+name: eslint-plugin-promise
+version: 4.2.1
+type: yarn
+homepage: git@github.com:xjamundx/eslint-plugin-promise.git
+license: other
+licenses:
+- sources: README.md
+  text: ''
+notices: []

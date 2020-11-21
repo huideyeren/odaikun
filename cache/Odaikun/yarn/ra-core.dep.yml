@@ -1,0 +1,11 @@
+---
+name: ra-core
+version: 3.10.2
+type: yarn
+homepage: https://github.com/marmelab/react-admin.git
+license: mit
+licenses:
+- sources: README.md
+  text: React-admin is licensed under the [MIT License](https://github.com/marmelab/react-admin/blob/master/LICENSE.md),
+    sponsored and supported by [marmelab](https://marmelab.com).
+notices: []

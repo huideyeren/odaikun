@@ -1,0 +1,70 @@
+---
+name: eslint-config-prettier
+version: 6.15.0
+type: yarn
+homepage: https://github.com/prettier/eslint-config-prettier.git
+license: mit
+licenses:
+- sources: LICENSE
+  text: |
+    The MIT License (MIT)
+
+    Copyright (c) 2017, 2018, 2019 Simon Lydell and contributors
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+- sources: README.md
+  text: |-
+    [MIT](LICENSE).
+
+    [@typescript-eslint/eslint-plugin]: https://github.com/typescript-eslint/typescript-eslint
+    [@typescript-eslint/quotes]: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md
+    [eslint 5.7.0]: https://eslint.org/blog/2018/10/eslint-v5.7.0-released
+    [prettier]: https://github.com/prettier/prettier
+    [arrow-body-style]: https://eslint.org/docs/rules/arrow-body-style
+    [babel/quotes]: https://github.com/babel/eslint-plugin-babel#rules
+    [curly]: https://eslint.org/docs/rules/curly
+    [eslint-config-airbnb]: https://www.npmjs.com/package/eslint-config-airbnb
+    [eslint-config-prettier#31]: https://github.com/prettier/eslint-config-prettier/issues/31
+    [eslint-config-prettier#71]: https://github.com/prettier/eslint-config-prettier/issues/71
+    [eslint-plugin-babel]: https://github.com/babel/eslint-plugin-babel
+    [eslint-plugin-flowtype]: https://github.com/gajus/eslint-plugin-flowtype
+    [eslint-plugin-prettier#65]: https://github.com/prettier/eslint-plugin-prettier/issues/65
+    [eslint-plugin-prettier]: https://github.com/prettier/eslint-plugin-prettier
+    [eslint-plugin-react]: https://github.com/yannickcr/eslint-plugin-react
+    [eslint-plugin-standard]: https://github.com/xjamundx/eslint-plugin-standard
+    [eslint-plugin-unicorn]: https://github.com/sindresorhus/eslint-plugin-unicorn
+    [eslint-plugin-vue]: https://github.com/vuejs/eslint-plugin-vue
+    [lines-around-comment]: https://eslint.org/docs/rules/lines-around-comment
+    [max-len]: https://eslint.org/docs/rules/max-len
+    [multiple configuration files]: https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
+    [no-confusing-arrow]: https://eslint.org/docs/rules/no-confusing-arrow
+    [no-mixed-operators]: https://eslint.org/docs/rules/no-mixed-operators
+    [no-restricted-syntax]: https://eslint.org/docs/rules/no-restricted-syntax
+    [no-sequences-full]: https://eslint.org/docs/rules/no-sequences#when-not-to-use-it
+    [no-sequences]: https://eslint.org/docs/rules/no-sequences
+    [no-tabs]: https://eslint.org/docs/rules/no-tabs
+    [no-unexpected-multiline]: https://eslint.org/docs/rules/no-unexpected-multiline
+    [overrides]: https://eslint.org/docs/user-guide/configuring#configuration-based-on-glob-patterns
+    [prefer-arrow-callback]: https://eslint.org/docs/rules/prefer-arrow-callback
+    [quotes]: https://eslint.org/docs/rules/quotes
+    [singlequote]: https://prettier.io/docs/en/options.html#quotes
+    [string formatting rules]: https://prettier.io/docs/en/rationale.html#strings
+    [vue/html-self-closing]: https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/html-self-closing.md
+    [vue/max-len]: https://github.com/vuejs/eslint-plugin-vue/blob/master/docs/rules/max-len.md
+notices: []

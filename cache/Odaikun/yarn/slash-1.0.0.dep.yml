@@ -1,0 +1,10 @@
+---
+name: slash
+version: 1.0.0
+type: yarn
+homepage: https://github.com/sindresorhus/slash.git
+license: mit
+licenses:
+- sources: readme.md
+  text: MIT © [Sindre Sorhus](http://sindresorhus.com)
+notices: []

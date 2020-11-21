@@ -1,0 +1,10 @@
+---
+name: uniqs
+version: 2.0.0
+type: yarn
+homepage: git://github.com/fgnass/uniqs.git
+license: mit
+licenses:
+- sources: README.md
+  text: MIT
+notices: []

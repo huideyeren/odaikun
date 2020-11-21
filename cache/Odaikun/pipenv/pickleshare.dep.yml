@@ -1,0 +1,9 @@
+---
+name: pickleshare
+version: 0.7.5
+type: pipenv
+summary: Tiny 'shelve'-like database with concurrency support
+homepage: https://github.com/pickleshare/pickleshare
+license: none
+licenses: []
+notices: []

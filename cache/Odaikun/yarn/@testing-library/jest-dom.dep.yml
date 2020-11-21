@@ -1,0 +1,77 @@
+---
+name: "@testing-library/jest-dom"
+version: 5.11.6
+type: yarn
+homepage: https://github.com/testing-library/jest-dom
+license: mit
+licenses:
+- sources: LICENSE
+  text: |
+    The MIT License (MIT)
+    Copyright (c) 2017 Kent C. Dodds
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+- sources: README.md
+  text: |-
+    MIT
+
+    [jest]: https://facebook.github.io/jest/
+    [dom-testing-library]: https://github.com/testing-library/dom-testing-library
+    [react-testing-library]:
+      https://github.com/testing-library/react-testing-library
+    [npm]: https://www.npmjs.com/
+    [node]: https://nodejs.org
+    [build-badge]:
+      https://img.shields.io/travis/testing-library/jest-dom.svg?style=flat-square
+    [build]: https://travis-ci.org/testing-library/jest-dom
+    [coverage-badge]:
+      https://img.shields.io/codecov/c/github/testing-library/jest-dom.svg?style=flat-square
+    [coverage]: https://codecov.io/github/testing-library/jest-dom
+    [version-badge]:
+      https://img.shields.io/npm/v/@testing-library/jest-dom.svg?style=flat-square
+    [package]: https://www.npmjs.com/package/@testing-library/jest-dom
+    [downloads-badge]:
+      https://img.shields.io/npm/dm/@testing-library/jest-dom.svg?style=flat-square
+    [npmtrends]: http://www.npmtrends.com/@testing-library/jest-dom
+    [license-badge]:
+      https://img.shields.io/npm/l/@testing-library/jest-dom.svg?style=flat-square
+    [license]: https://github.com/testing-library/jest-dom/blob/master/LICENSE
+    [prs-badge]:
+      https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+    [prs]: http://makeapullrequest.com
+    [coc-badge]:
+      https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+    [coc]:
+      https://github.com/testing-library/jest-dom/blob/master/other/CODE_OF_CONDUCT.md
+    [github-watch-badge]:
+      https://img.shields.io/github/watchers/testing-library/jest-dom.svg?style=social
+    [github-watch]: https://github.com/testing-library/jest-dom/watchers
+    [github-star-badge]:
+      https://img.shields.io/github/stars/testing-library/jest-dom.svg?style=social
+    [github-star]: https://github.com/testing-library/jest-dom/stargazers
+    [twitter]:
+      https://twitter.com/intent/tweet?text=Check%20out%20jest-dom%20by%20%40gnapse%20https%3A%2F%2Fgithub.com%2Ftesting-library%2Fjest-dom%20%F0%9F%91%8D
+    [twitter-badge]:
+      https://img.shields.io/twitter/url/https/github.com/testing-library/jest-dom.svg?style=social
+    [emojis]: https://allcontributors.org/docs/en/emoji-key
+    [all-contributors]: https://github.com/all-contributors/all-contributors
+    [guiding-principle]: https://testing-library.com/docs/guiding-principles
+    [discord-badge]: https://img.shields.io/discord/723559267868737556.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff&style=flat-square
+    [discord]: https://discord.gg/c6JN9fM
+notices: []

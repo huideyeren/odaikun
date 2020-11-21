@@ -1,0 +1,9 @@
+---
+name: click-repl
+version: 0.1.6
+type: pipenv
+summary: REPL plugin for Click
+homepage: https://github.com/untitaker/click-repl
+license: none
+licenses: []
+notices: []
