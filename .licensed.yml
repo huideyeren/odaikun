@@ -47,8 +47,45 @@ allowed:
 # project's owner, internal dependencies, and dependencies that aren't shipped with
 # the project like test frameworks.
 ignored:
+  pipenv:
+    - chardet
+    - click-didyoumean
+    - click-repl
+    - ipython-genutils
+    - pickleshare
+    - python-editor
   yarn:
+    - aria-query-4.2.2
     - bindings
+    - cacache-12.0.4
+    - cacache-13.0.1
+    - color-convert-1.9.3
+    - color-convert-2.0.1
+    - css-select-1.2.0
+    - doctrine-1.5.0
+    - doctrine-2.1.0
+    - doctrine-3.0.0
+    - eslint-plugin-flowtype-4.6.0
+    - eslint-plugin-flowtype-4.7.0
+    - faye-websocket-0.11.3
+    - harmony-reflect
+    - ignore-4.0.6
+    - ignore-5.1.8
+    - json-schema
+    - jsonify
+    - qs-6.5.2
+    - qs-6.7.0
+    - readable-stream-2.3.7
+    - readable-stream-3.6.0
+    - readdirp-2.2.1
+    - source-map-0.5.7
+    - source-map-0.6.1
+    - spdx-exceptions
+    - ssri-6.0.1
+    - ssri-7.1.0
+    - string_decoder-1.1.1
+    - string_decoder-1.3.0
+    - websocket-driver-0.7.4
     - file-uri-to-path
     - fsevents-1.2.13
     - fsevents-2.1.2
@@ -66,7 +103,6 @@ reviewed:
     - celery
     - certifi
     - cffi
-    - chardet
     - click-didyoumean
     - click-repl
     - cryptography
