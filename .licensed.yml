@@ -18,10 +18,10 @@ apps:
   - source_path: './frontend'
 
 # Sources of metadata
-sources:
-  yarn: true
-  pip: true
-  pipenv: true
+# sources:
+#   yarn: true
+#   pip: true
+#   pipenv: true
 
 yarn:
   production_only: false
