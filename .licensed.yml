@@ -36,6 +36,8 @@ allowed:
   - mit
   - cc0-1.0
   - unlicense
+  - 0bsd
+  - wtfpl
 
 # These dependencies are ignored during enumeration.
 # They will not be cached, and will not raise errors or warnings.
