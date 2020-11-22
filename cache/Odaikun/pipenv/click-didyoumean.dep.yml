@@ -1,9 +1,0 @@
----
-name: click-didyoumean
-version: 0.0.3
-type: pipenv
-summary: Enable git-like did-you-mean feature in click.
-homepage: https://github.com/timofurrer/click-didyoumean
-license: none
-licenses: []
-notices: []
