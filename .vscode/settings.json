@@ -23,7 +23,8 @@
     "eslint.workingDirectories": [
     "./frontend"
     ],
-    "python.pythonPath": "/Users/yusuketakakura/.local/share/virtualenvs/backend-cZGO6YOD/python",
+    "python.pythonPath": "/home/iosif/.pyenv/versions/3.8.5/bin/python",
     "monorepoWorkspace.folders.regex.tools": "^tool|script|scripts|util",
-    "restructuredtext.confPath": ""
+    "restructuredtext.confPath": "",
+    "python.analysis.completeFunctionParens": true
 }
