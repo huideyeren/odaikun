@@ -1,6 +1,6 @@
 ---
 name: "@babel/plugin-proposal-async-generator-functions"
-version: 7.12.1
+version: 7.12.12
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit

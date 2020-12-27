@@ -1,8 +1,8 @@
 ---
 name: is-arguments
-version: 1.0.4
+version: 1.1.0
 type: yarn
-homepage: git://github.com/ljharb/is-arguments.git
+homepage: git://github.com/inspect-js/is-arguments.git
 license: mit
 licenses:
 - sources: LICENSE

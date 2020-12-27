@@ -1,6 +1,6 @@
 ---
 name: domelementtype
-version: 2.0.2
+version: 2.1.0
 type: yarn
 homepage: git://github.com/fb55/domelementtype.git
 license: bsd-2-clause

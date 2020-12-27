@@ -1,6 +1,6 @@
 ---
 name: postcss-selector-not
-version: 4.0.0
+version: 4.0.1
 type: yarn
 homepage: https://github.com/postcss/postcss-selector-not.git
 license: mit

@@ -1,6 +1,6 @@
 ---
 name: is-core-module
-version: 2.1.0
+version: 2.2.0
 type: yarn
 homepage: git+https://github.com/inspect-js/is-core-module.git
 license: mit

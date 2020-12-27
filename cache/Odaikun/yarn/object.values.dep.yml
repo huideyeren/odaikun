@@ -1,6 +1,6 @@
 ---
 name: object.values
-version: 1.1.1
+version: 1.1.2
 type: yarn
 homepage: git://github.com/es-shims/Object.values.git
 license: mit

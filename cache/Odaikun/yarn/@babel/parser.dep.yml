@@ -1,6 +1,6 @@
 ---
 name: "@babel/parser"
-version: 7.12.7
+version: 7.12.11
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit

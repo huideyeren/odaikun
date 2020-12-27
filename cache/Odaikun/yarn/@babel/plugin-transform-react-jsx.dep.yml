@@ -1,6 +1,6 @@
 ---
 name: "@babel/plugin-transform-react-jsx"
-version: 7.12.7
+version: 7.12.12
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit

@@ -1,6 +1,6 @@
 ---
 name: "@babel/plugin-transform-typeof-symbol"
-version: 7.12.1
+version: 7.12.10
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit

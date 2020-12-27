@@ -1,6 +1,6 @@
 ---
 name: "@babel/helper-annotate-as-pure"
-version: 7.10.4
+version: 7.12.10
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit

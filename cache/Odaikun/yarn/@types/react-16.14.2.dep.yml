@@ -1,6 +1,6 @@
 ---
-name: "@types/yargs"
-version: 15.0.10
+name: "@types/react"
+version: 16.14.2
 type: yarn
 homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 license: mit

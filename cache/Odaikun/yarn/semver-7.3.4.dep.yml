@@ -1,6 +1,6 @@
 ---
 name: semver
-version: 7.3.2
+version: 7.3.4
 type: yarn
 homepage: https://github.com/npm/node-semver
 license: isc

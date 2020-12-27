@@ -1,8 +1,8 @@
 ---
 name: is-negative-zero
-version: 2.0.0
+version: 2.0.1
 type: yarn
-homepage: git://github.com/ljharb/is-negative-zero.git
+homepage: git://github.com/inspect-js/is-negative-zero.git
 license: mit
 licenses:
 - sources: LICENSE

@@ -1,6 +1,6 @@
 ---
 name: object-inspect
-version: 1.8.0
+version: 1.9.0
 type: yarn
 homepage: git://github.com/inspect-js/object-inspect.git
 license: mit

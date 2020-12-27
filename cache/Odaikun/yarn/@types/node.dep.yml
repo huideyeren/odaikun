@@ -1,6 +1,6 @@
 ---
 name: "@types/node"
-version: 14.14.9
+version: 14.14.16
 type: yarn
 homepage: https://github.com/DefinitelyTyped/DefinitelyTyped.git
 license: mit
