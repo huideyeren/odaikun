@@ -1,6 +1,6 @@
 ---
 name: ra-core
-version: 3.10.2
+version: 3.11.1
 type: yarn
 homepage: https://github.com/marmelab/react-admin.git
 license: mit

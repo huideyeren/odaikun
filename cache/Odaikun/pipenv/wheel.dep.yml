@@ -1,6 +1,6 @@
 ---
 name: wheel
-version: 0.35.1
+version: 0.36.1
 type: pipenv
 summary: A built-package format for Python
 homepage: https://github.com/pypa/wheel

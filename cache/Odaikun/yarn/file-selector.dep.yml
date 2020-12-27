@@ -1,6 +1,6 @@
 ---
 name: file-selector
-version: 0.1.18
+version: 0.1.19
 type: yarn
 homepage: https://github.com/react-dropzone/file-selector.git
 license: mit

@@ -1,6 +1,6 @@
 ---
 name: "@testing-library/dom"
-version: 7.28.1
+version: 7.29.0
 type: yarn
 homepage: https://github.com/testing-library/dom-testing-library
 license: mit

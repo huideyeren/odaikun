@@ -1,6 +1,6 @@
 ---
 name: xregexp
-version: 4.4.0
+version: 4.4.1
 type: yarn
 homepage: https://github.com/slevithan/xregexp.git
 license: mit

@@ -1,6 +1,6 @@
 ---
 name: csso
-version: 4.1.1
+version: 4.2.0
 type: yarn
 homepage: https://github.com/css/csso.git
 license: mit

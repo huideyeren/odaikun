@@ -1,6 +1,6 @@
 ---
-name: "@babel/helper-builder-react-jsx-experimental"
-version: 7.12.4
+name: "@babel/preset-react"
+version: 7.12.10
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit

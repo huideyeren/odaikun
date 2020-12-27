@@ -1,6 +1,6 @@
 ---
-name: "@babel/preset-react"
-version: 7.12.7
+name: "@babel/core"
+version: 7.12.10
 type: yarn
 homepage: https://github.com/babel/babel.git
 license: mit
