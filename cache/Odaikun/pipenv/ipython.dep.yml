@@ -1,12 +1,12 @@
 ---
 name: ipython
-version: 7.18.1
+version: 7.19.0
 type: pipenv
 summary: 'IPython: Productive Interactive Computing'
 homepage: https://ipython.org
 license: bsd-3-clause
 licenses:
-- sources: LICENSE.txt
+- sources: LICENSE
   text: |
     BSD 3-Clause License
 

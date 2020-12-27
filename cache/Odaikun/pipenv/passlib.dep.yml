@@ -1,10 +1,11 @@
 ---
 name: passlib
-version: 1.7.2
+version: 1.7.4
 type: pipenv
 summary: comprehensive password hashing framework supporting over 30 schemes
-homepage: https://bitbucket.org/ecollins/passlib
+homepage: https://passlib.readthedocs.io
 license: other
+review_changed_license: true
 licenses:
 - sources: LICENSE
   text: |
@@ -27,7 +28,7 @@ licenses:
     and is released under the `BSD license <http://www.opensource.org/licenses/bsd-license.php>`_::
 
         Passlib
-        Copyright (c) 2008-2019 Assurance Technologies, LLC.
+        Copyright (c) 2008-2020 Assurance Technologies, LLC.
         All rights reserved.
 
         Redistribution and use in source and binary forms, with or without

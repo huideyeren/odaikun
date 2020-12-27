@@ -1,6 +1,6 @@
 ---
 name: urllib3
-version: 1.25.11
+version: 1.26.2
 type: pipenv
 summary: HTTP library with thread-safe connection pooling, file post, and more.
 homepage: https://urllib3.readthedocs.io/
@@ -10,7 +10,7 @@ licenses:
   text: |
     MIT License
 
-    Copyright (c) 2008-2019 Andrey Petrov and contributors (see CONTRIBUTORS.txt)
+    Copyright (c) 2008-2020 Andrey Petrov and contributors (see CONTRIBUTORS.txt)
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal

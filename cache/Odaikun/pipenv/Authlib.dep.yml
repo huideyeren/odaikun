@@ -1,6 +1,6 @@
 ---
 name: Authlib
-version: 0.14.3
+version: 0.15.2
 type: pipenv
 summary: The ultimate Python library in building OAuth and OpenID Connect servers.
 homepage: https://authlib.org/

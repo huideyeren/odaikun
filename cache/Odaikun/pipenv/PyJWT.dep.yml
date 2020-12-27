@@ -1,9 +1,9 @@
 ---
 name: PyJWT
-version: 1.7.1
+version: 2.0.0
 type: pipenv
 summary: JSON Web Token implementation in Python
-homepage: http://github.com/jpadilla/pyjwt
+homepage: https://github.com/jpadilla/pyjwt
 license: mit
 licenses:
 - sources: LICENSE
@@ -30,12 +30,12 @@ licenses:
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
 notices:
-- sources: AUTHORS
-  text: "PyJWT lead developer\n---------------------\n\n - jpadilla <hello@jpadilla.com>\n\n\nOriginal
-    author\n------------------\n\n- progrium <progrium@gmail.com>\n\n\nPatches and
-    Suggestions\n-----------------------\n\n - Boris Feld <boris.feld@novapost.fr>
-    <lothiraldan@gmail.com>\n\n - Åsmund Ødegård <asmund@xal.no> <ao@mcash.no>\n   Adding
-    support for RSA-SHA256 privat/public signature.\n\n - Mark Adams <mark@markadams.me>\n\n
-    - Wouter Bolsterlee <uws@xs4all.nl>\n\n - Michael Davis <mike.philip.davis@gmail.com>
-    <mike.davis@workiva.com>\n\n - Vinod Gupta <codervinod@gmail.com>\n \n - Derek
-    Weitzel <djw8605@gmail.com>"
+- sources: AUTHORS.rst
+  text: |-
+    Authors
+    =======
+
+    ``pyjwt`` is currently written and maintained by `Jose Padilla <https://github.com/jpadilla>`_.
+    Originally written and maintained by `Jeff Lindsay <https://github.com/progrium>`_.
+
+    A full list of contributors can be found on GitHub’s `overview <https://github.com/jpadilla/pyjwt/graphs/contributors>`_.

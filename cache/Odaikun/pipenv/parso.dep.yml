@@ -1,6 +1,6 @@
 ---
 name: parso
-version: 0.7.1
+version: 0.8.1
 type: pipenv
 summary: A Python Parser
 homepage: https://github.com/davidhalter/parso

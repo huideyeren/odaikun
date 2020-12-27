@@ -1,6 +1,6 @@
 ---
 name: httpx
-version: 0.15.5
+version: 0.16.1
 type: pipenv
 summary: The next generation HTTP client.
 homepage: https://github.com/encode/httpx

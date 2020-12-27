@@ -1,6 +1,6 @@
 ---
 name: cffi
-version: 1.14.3
+version: 1.14.4
 type: pipenv
 summary: Foreign Function Interface for Python calling C code.
 homepage: http://cffi.readthedocs.org

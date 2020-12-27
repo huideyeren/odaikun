@@ -1,6 +1,6 @@
 ---
 name: jedi
-version: 0.17.2
+version: 0.18.0
 type: pipenv
 summary: An autocompletion tool for Python that can be used for text editors.
 homepage: https://github.com/davidhalter/jedi
@@ -61,5 +61,6 @@ notices:
     <jmfrank63@gmail.com>\n- Shane Steinert-Threlkeld (@shanest) <ssshanest@gmail.com>\n-
     Tim Gates (@timgates42) <tim.gates@iress.com>\n- Lior Goldberg (@goldberglior)\n-
     Ryan Clary (@mrclary)\n- Max Mäusezahl (@mmaeusezahl) <maxmaeusezahl@googlemail.com>\n-
-    Vladislav Serebrennikov (@endilll)\n- Andrii Kolomoiets (@muffinmad)\n\nAnd a
-    few more \"anonymous\" contributors.\n\nNote: (@user) means a github user name."
+    Vladislav Serebrennikov (@endilll)\n- Andrii Kolomoiets (@muffinmad)\n- Leo Ryu
+    (@Leo-Ryu)\n\nAnd a few more \"anonymous\" contributors.\n\nNote: (@user) means
+    a github user name."

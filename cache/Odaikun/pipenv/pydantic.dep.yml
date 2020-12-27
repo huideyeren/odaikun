@@ -1,6 +1,6 @@
 ---
 name: pydantic
-version: 1.7.2
+version: 1.7.3
 type: pipenv
 summary: Data validation and settings management using python 3.6 type hinting
 homepage: https://github.com/samuelcolvin/pydantic

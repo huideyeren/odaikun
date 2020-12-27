@@ -1,6 +1,6 @@
 ---
 name: pytest
-version: 6.1.0
+version: 6.2.1
 type: pipenv
 summary: 'pytest: simple powerful testing with Python'
 homepage: https://docs.pytest.org/en/latest/
