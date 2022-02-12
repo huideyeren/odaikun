@@ -1,5 +1,5 @@
 
-FROM python:3.9
+FROM python:3.10.0b3
 
 RUN mkdir /app
 WORKDIR /app
